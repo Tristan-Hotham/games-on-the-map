@@ -167,7 +167,7 @@ footer p{margin:0 0 10px}
   <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M60 4a56 56 0 0 1 0 112M60 4a56 56 0 0 0 0 112M8 44h104M8 76h104" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".45"/><path d="M28 78 Q58 18 92 46" fill="none" stroke="var(--flow)" stroke-width="3.5" stroke-linecap="round"/><circle cx="28" cy="78" r="8" fill="var(--made)"/><circle cx="92" cy="46" r="8" fill="var(--set)"/></svg>
   <p class="dek">Games love real places. New York has been invaded, flooded and rebuilt more times than anyone can count, and more games have been set on the Moon than on Mars. I mapped every video game that Wikidata or English Wikipedia ties to a real place: where each one is set, and where the studio that made it is based. Click a city to see its games, join the dots from studio to setting, or leave Earth altogether.</p>
 </header>
-<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Wikidata (CC0); English Wikipedia categories (CC BY-SA 4.0); Natural Earth; GeoNames</div>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: Wikidata (CC0); English Wikipedia categories (CC BY-SA 4.0); Natural Earth; GeoNames</div>
 
 <div class="stats">
   <div><b>6,691</b><span>games tied to a real place, out of 189,453 in Wikidata</span></div>
@@ -777,5 +777,6 @@ async function boot() {
 }
 boot().catch(e => { $("loading").textContent = "Could not load the data: " + e.message; });
 </script>
+<script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
