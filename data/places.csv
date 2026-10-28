@@ -1,0 +1,725 @@
+place_id,label,kind,lon,lat,country_a3,country,location_source,games
+Q30,United States,country,-98.5795,39.82818,USA,United States of America,Wikidata coordinates (P625),826
+Q17,Japan,country,136.0,35.0,JPN,Japan,Wikidata coordinates (P625),716
+Q60,New York City,local,-74.00611,40.71278,USA,United States of America,Wikidata coordinates (P625),529
+Q142,France,country,2.0,47.0,FRA,France,Wikidata coordinates (P625),411
+Q183,Germany,country,10.0,51.0,DEU,Germany,Wikidata coordinates (P625),364
+Q408,Australia,country,133.0,-25.0,AUS,Australia,Wikidata coordinates (P625),315
+Q38,Italy,country,12.5,42.5,ITA,Italy,Wikidata coordinates (P625),302
+Q84,London,local,-0.1275,51.50722,GBR,United Kingdom,Wikidata coordinates (P625),288
+Q1490,Tokyo,local,139.69167,35.68944,JPN,Japan,Wikidata coordinates (P625),276
+Q21,England,region,-1.0,53.0,GBR,United Kingdom,Wikidata coordinates (P625),271
+Q79,Egypt,country,29.0,27.0,EGY,Egypt,Wikidata coordinates (P625),270
+Q96,Mexico,country,-102.0,23.0,MEX,Mexico,Wikidata coordinates (P625),239
+Q99,California,region,-120.0,37.0,USA,United States of America,Wikidata coordinates (P625),236
+Q29520,China,historical,105.0,35.0,CHN,China,Wikidata coordinates (P625),235
+Q159,Russia,country,94.25,66.41667,RUS,Russia,Wikidata coordinates (P625),211
+Q65,Los Angeles,local,-118.24368,34.05223,USA,United States of America,Wikidata coordinates (P625),197
+Q16,Canada,country,-109.0,56.0,CAN,Canada,Wikidata coordinates (P625),195
+Q29,Spain,country,-3.5,40.2,ESP,Spain,Wikidata coordinates (P625),178
+Q145,United Kingdom,country,-2.0,54.6,GBR,United Kingdom,Wikidata coordinates (P625),172
+Q155,Brazil,country,-53.0,-14.0,BRA,Brazil,Wikidata coordinates (P625),167
+Q62,San Francisco,local,-122.41944,37.775,USA,United States of America,Wikidata coordinates (P625),158
+Q90,Paris,local,2.35222,48.85667,FRA,France,Wikidata coordinates (P625),158
+Q15180,Soviet Union,historical,90.0,65.0,RUS,Russia,Wikidata coordinates (P625),153
+ne:JPN:Japan,Japan,historical,138.44217,36.142538,JPN,Japan,hand list: placed at the Natural Earth label point of Japan,141
+Q41,Greece,country,23.0,38.5,GRC,Greece,Wikidata coordinates (P625),131
+Q1227,Nevada,region,-117.0,39.0,USA,United States of America,Wikidata coordinates (P625),125
+Q31,Belgium,country,4.66806,50.64111,BEL,Belgium,Wikidata coordinates (P625),125
+Q668,India,country,83.0,22.8,IND,India,Wikidata coordinates (P625),124
+Q46,Europe,broad,15.5,53.5,,,Wikidata coordinates (P625),123
+Q235,Monaco,country,7.42,43.73111,MCO,Monaco,Wikidata coordinates (P625),118
+Q22,Scotland,region,-5.0,57.0,GBR,United Kingdom,Wikidata coordinates (P625),116
+Q8646,Hong Kong,country,114.15861,22.27833,HKG,Hong Kong,Wikidata coordinates (P625),111
+Q40,Austria,country,14.0,48.0,AUT,Austria,Wikidata coordinates (P625),102
+Q1439,Texas,region,-100.0,31.0,USA,United States of America,Wikidata coordinates (P625),100
+Q55,Netherlands,country,5.55,52.31667,NLD,Netherlands,Wikidata coordinates (P625),99
+Q816,Arizona,region,-111.65694,34.28667,USA,United States of America,Wikidata coordinates (P625),99
+Q2624848,Las Vegas Valley,region,-115.184,36.1318,USA,United States of America,Wikidata coordinates (P625),95
+Q34,Sweden,country,15.0,61.0,SWE,Sweden,Wikidata coordinates (P625),94
+Q1297,Chicago,local,-87.62778,41.88194,USA,United States of America,Wikidata coordinates (P625),91
+Q148,People's Republic of China,country,103.45194,35.84472,CHN,China,Wikidata coordinates (P625),88
+Q20,Norway,country,10.68333,59.93333,NOR,Norway,Wikidata coordinates (P625),86
+Q51,Antarctica,country,0.0,-90.0,ATA,Antarctica,Wikidata coordinates (P625),86
+Q45,Portugal,country,-9.18333,38.7,PRT,Portugal,Wikidata coordinates (P625),83
+Q61,"Washington, D.C.",local,-77.03667,38.895,USA,United States of America,Wikidata coordinates (P625),83
+Q2277,Roman Empire,historical,12.5,41.9,ITA,Italy,Wikidata coordinates (P625),82
+Q39,Switzerland,country,8.23197,46.79856,CHE,Switzerland,Wikidata coordinates (P625),82
+Q28,Hungary,country,19.0,47.0,HUN,Hungary,Wikidata coordinates (P625),80
+Q8652,Miami,local,-80.19361,25.77417,USA,United States of America,Wikidata coordinates (P625),79
+Q213,Czech Republic,country,15.0,50.0,CZE,Czechia,Wikidata coordinates (P625),78
+Q1261,Colorado,region,-105.5,39.0,USA,United States of America,Wikidata coordinates (P625),75
+Q33,Finland,country,27.0,65.0,FIN,Finland,Wikidata coordinates (P625),75
+Q782,Hawaii,region,-158.0,21.5,USA,United States of America,Wikidata coordinates (P625),75
+Q258,South Africa,country,24.0,-29.0,ZAF,South Africa,Wikidata coordinates (P625),73
+Q797,Alaska,region,-150.0,64.0,USA,United States of America,Wikidata coordinates (P625),72
+Q881,Vietnam,country,108.0,16.0,VNM,Vietnam,Wikidata coordinates (P625),69
+Q36,Poland,country,19.0,52.0,POL,Poland,Wikidata coordinates (P625),68
+Q212,Ukraine,country,32.0,49.0,UKR,Ukraine,Wikidata coordinates (P625),67
+Q833,Malaysia,country,102.31436,3.78051,MYS,Malaysia,Wikidata coordinates (P625),67
+gn:Barcelona,Barcelona,local,2.15899,41.38879,ESP,Spain,"GeoNames cities15000 exact name match (geonameid 3128760, population 1,686,208)",67
+Q796,Iraq,country,43.0,33.0,IRQ,Iraq,Wikidata coordinates (P625),65
+Q414,Argentina,country,-64.0,-34.0,ARG,Argentina,Wikidata coordinates (P625),63
+Q812,Florida,region,-81.63167,28.13333,USA,United States of America,Wikidata coordinates (P625),63
+Q664,New Zealand,country,174.0,-41.2,NZL,New Zealand,Wikidata coordinates (P625),60
+Q27,Ireland,country,-8.0,53.0,IRL,Ireland,Wikidata coordinates (P625),58
+Q340,Montreal,local,-73.58684,45.50334,CAN,Canada,Wikidata coordinates (P625),58
+Q64,Berlin,local,13.38333,52.51667,DEU,Germany,Wikidata coordinates (P625),58
+Q869,Thailand,country,101.0,14.0,THA,Thailand,Wikidata coordinates (P625),58
+Q8686,Shanghai,local,121.46917,31.2325,CHN,China,Wikidata coordinates (P625),57
+Q334,Singapore,country,103.8,1.3,SGP,Singapore,Wikidata coordinates (P625),54
+Q43,Turkey,country,36.0,39.0,TUR,Turkey,Wikidata coordinates (P625),54
+Q649,Moscow,local,37.6175,55.75056,RUS,Russia,Wikidata coordinates (P625),54
+Q1016,Libya,country,17.0,27.0,LBY,Libya,Wikidata coordinates (P625),52
+Q174,São Paulo,local,-46.63395,-23.55039,BRA,Brazil,Wikidata coordinates (P625),52
+Q794,Iran,country,53.0,32.0,IRN,Iran,Wikidata coordinates (P625),52
+Q5428,Siberia,region,105.0,60.0,RUS,Russia,Wikidata coordinates (P625),51
+Q884,South Korea,country,128.0,36.0,KOR,South Korea,Wikidata coordinates (P625),51
+Q11768,Ancient Egypt,historical,31.3,29.8,EGY,Egypt,Wikidata coordinates (P625),50
+Q241,Cuba,country,-79.5,22.0,CUB,Cuba,Wikidata coordinates (P625),50
+Q220,Rome,local,12.48278,41.89306,ITA,Italy,Wikidata coordinates (P625),48
+Q11772,Ancient Greece,historical,23.0,38.5,GRC,Greece,Wikidata coordinates (P625),47
+Q419,Peru,country,-76.0,-9.4,PER,Peru,Wikidata coordinates (P625),47
+Q851,Saudi Arabia,country,44.11667,23.71667,SAU,Saudi Arabia,Wikidata coordinates (P625),47
+Q1408,New Jersey,region,-74.5,40.0,USA,United States of America,Wikidata coordinates (P625),46
+Q664609,Caribbean,broad,-73.0,15.0,,,Wikidata coordinates (P625),46
+gn:New York (state),New York (state),region,-73.75623,42.65258,USA,United States of America,hand list: placed at Albany (GeoNames),46
+Q15,Africa,broad,15.0,0.0,,,Wikidata coordinates (P625),45
+Q1522,New Mexico,region,-106.0,34.0,USA,United States of America,Wikidata coordinates (P625),45
+Q21195,Scandinavia,broad,14.76094,64.77964,,,Wikidata coordinates (P625),45
+gn:Indianapolis,Indianapolis,local,-86.15804,39.76838,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 4259418, population 887,642)",45
+Q5083,Seattle,local,-122.33,47.605,USA,United States of America,Wikidata coordinates (P625),44
+Q829,Utah,region,-111.5,39.5,USA,United States of America,Wikidata coordinates (P625),44
+Q739,Colombia,country,-73.25,4.0,COL,Colombia,Wikidata coordinates (P625),43
+Q889,Afghanistan,country,66.0,33.0,AFG,Afghanistan,Wikidata coordinates (P625),42
+gn:Georgia (U.S. state),Georgia (U.S. state),region,-84.38798,33.749,USA,United States of America,hand list: placed at Atlanta (GeoNames),42
+ne:CHN:China,China,historical,106.337289,32.498178,CHN,China,hand list: placed at the Natural Earth label point of China,42
+Q928,Philippines,country,123.0,12.0,PHL,Philippines,Wikidata coordinates (P625),41
+gn:Virginia,Virginia,region,-77.46026,37.55376,USA,United States of America,hand list: placed at Richmond (GeoNames),41
+Q1391,Maryland,region,-76.7,39.0,USA,United States of America,Wikidata coordinates (P625),40
+Q1588,Louisiana,region,-92.0,31.0,USA,United States of America,Wikidata coordinates (P625),40
+Q114,Kenya,country,38.0,0.1,KEN,Kenya,Wikidata coordinates (P625),39
+Q232,Kazakhstan,country,68.0,48.0,KAZ,Kazakhstan,Wikidata coordinates (P625),39
+Q23768,Las Vegas,local,-115.14861,36.16722,USA,United States of America,Wikidata coordinates (P625),39
+Q34404,New Orleans,local,-90.07833,29.97611,USA,United States of America,Wikidata coordinates (P625),39
+gn:Washington (state),Washington (state),region,-122.90169,47.04491,USA,United States of America,hand list: placed at Olympia (GeoNames),39
+gn:the American frontier,American frontier,region,-104.9847,39.73915,USA,United States of America,hand list: placed at Denver (GeoNames),39
+Q641,Venice,local,12.33194,45.43972,ITA,Italy,Wikidata coordinates (P625),38
+Q800,Costa Rica,country,-84.0,10.0,CRI,Costa Rica,Wikidata coordinates (P625),38
+Q252,Indonesia,country,118.0,-2.0,IDN,Indonesia,Wikidata coordinates (P625),36
+Q1028,Morocco,country,-6.0,32.0,MAR,Morocco,Wikidata coordinates (P625),34
+Q12439,Detroit,local,-83.0475,42.33167,USA,United States of America,Wikidata coordinates (P625),33
+Q18,South America,broad,-59.0,-21.0,,,Wikidata coordinates (P625),32
+Q298,Chile,country,-71.0,-33.0,CHL,Chile,Wikidata coordinates (P625),32
+Q423,North Korea,country,127.0,40.0,PRK,North Korea,Wikidata coordinates (P625),32
+Q804,Panama,country,-80.36667,8.61667,PAN,Panama,Wikidata coordinates (P625),32
+Q538,Insular Oceania,broad,166.0,-21.0,,,Wikidata coordinates (P625),31
+Q685,Solomon Islands,country,159.81667,-9.46667,SLB,Solomon Is.,Wikidata coordinates (P625),31
+Q771,Massachusetts,region,-71.8,42.3,USA,United States of America,Wikidata coordinates (P625),31
+gn:Pennsylvania,Pennsylvania,region,-76.88442,40.2737,USA,United States of America,hand list: placed at Harrisburg (GeoNames),31
+Q1537,Wisconsin,region,-89.5,44.5,USA,United States of America,Wikidata coordinates (P625),30
+Q189,Iceland,country,-19.0,65.0,ISL,Iceland,Wikidata coordinates (P625),30
+Q846,Qatar,country,51.21277,25.26954,QAT,Qatar,Wikidata coordinates (P625),30
+Q878,United Arab Emirates,country,54.3,24.4,ARE,United Arab Emirates,Wikidata coordinates (P625),30
+Q218,Romania,country,25.0,46.0,ROU,Romania,Wikidata coordinates (P625),29
+Q7204,Middle East,broad,45.0,28.0,,,Wikidata coordinates (P625),29
+Q766,Jamaica,country,-77.4,18.18,JAM,Jamaica,Wikidata coordinates (P625),29
+Q837,Nepal,country,84.0,28.0,NPL,Nepal,Wikidata coordinates (P625),29
+Q25,Wales,region,-3.63333,52.35,GBR,United Kingdom,Wikidata coordinates (P625),28
+Q34600,Kyoto,local,135.76811,35.01161,JPN,Japan,Wikidata coordinates (P625),28
+Q100,Boston,local,-71.05778,42.36028,USA,United States of America,Wikidata coordinates (P625),27
+Q612,Dubai,local,55.30944,25.26972,ARE,United Arab Emirates,Wikidata coordinates (P625),27
+Q824,Oregon,region,-120.575,43.93583,USA,United States of America,Wikidata coordinates (P625),27
+Q948,Tunisia,country,10.0,34.0,TUN,Tunisia,Wikidata coordinates (P625),27
+Q398,Bahrain,country,50.554816,26.055972,BHR,Bahrain,"Natural Earth country, label point",26
+Q56037,East Berlin,local,13.40444,52.51861,DEU,Germany,Wikidata coordinates (P625),26
+ne:GBR:England,England,historical,-2.116346,54.402739,GBR,United Kingdom,hand list: placed at the Natural Earth label point of United Kingdom,26
+Q858,Syria,country,38.58333,35.21667,SYR,Syria,Wikidata coordinates (P625),25
+Q227,Azerbaijan,country,47.7,40.3,AZE,Azerbaijan,Wikidata coordinates (P625),24
+Q35765,Osaka,local,135.50211,34.69375,JPN,Japan,Wikidata coordinates (P625),24
+Q924,Tanzania,country,34.85389,-6.30694,TZA,Tanzania,Wikidata coordinates (P625),24
+Q224,Croatia,country,15.46667,45.25,HRV,Croatia,Wikidata coordinates (P625),22
+Q25322,Arctic,broad,0.0,89.9997,,,Wikidata coordinates (P625),22
+Q8684,Seoul,local,126.99,37.56,KOR,South Korea,Wikidata coordinates (P625),22
+ne:HKG:British Hong Kong,British Hong Kong,historical,114.097769,22.448829,HKG,Hong Kong,hand list: placed at the Natural Earth label point of Hong Kong,22
+Q1454,North Carolina,region,-80.0,35.5,USA,United States of America,Wikidata coordinates (P625),21
+Q35,Denmark,country,10.0,56.0,DNK,Denmark,Wikidata coordinates (P625),21
+Q48,Asia,broad,108.0,35.0,,,Wikidata coordinates (P625),21
+Q836,Myanmar,country,96.0,22.0,MMR,Myanmar,Wikidata coordinates (P625),21
+Q1747689,Ancient Rome,historical,12.48,41.89,ITA,Italy,Wikidata coordinates (P625),20
+Q717,Venezuela,country,-67.0,8.0,VEN,Venezuela,Wikidata coordinates (P625),20
+Q843,Pakistan,country,71.0,30.0,PAK,Pakistan,Wikidata coordinates (P625),20
+Q1460,Sicily,region,14.01667,37.6,ITA,Italy,Wikidata coordinates (P625),19
+Q406,Istanbul,local,28.96028,41.01,TUR,Turkey,Wikidata coordinates (P625),19
+Q49,North America,broad,-105.0,47.0,,,Wikidata coordinates (P625),19
+Q766445,Okinawa Prefecture,region,127.68083,26.21222,JPN,Japan,Wikidata coordinates (P625),19
+gn:Montana,Montana,region,-112.03611,46.59271,USA,United States of America,hand list: placed at Helena (GeoNames),19
+Q1166,Michigan,region,-85.58,44.34,USA,United States of America,Wikidata coordinates (P625),18
+Q1345,Philadelphia,local,-75.16361,39.95278,USA,United States of America,Wikidata coordinates (P625),18
+Q38283,Yokohama,local,139.63422,35.45033,JPN,Japan,Wikidata coordinates (P625),18
+Q39473,Transylvania,region,23.58333,46.76667,ROU,Romania,Wikidata coordinates (P625),18
+Q724,Maine,region,-69.0,45.5,USA,United States of America,Wikidata coordinates (P625),18
+Q8680,British Empire,historical,-0.1275,51.50722,GBR,United Kingdom,Wikidata coordinates (P625),18
+gn:San Diego,San Diego,local,-117.16472,32.71571,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 5391811, population 1,404,452)",18
+Q17252,Tibet,region,91.1,29.65,CHN,China,Wikidata coordinates (P625),17
+Q18389,New England,region,-70.30643,44.20556,USA,United States of America,Wikidata coordinates (P625),17
+Q223,Greenland,country,-39.335251,74.319387,GRL,Greenland,"Natural Earth country, label point",17
+Q656,Saint Petersburg,local,30.31667,59.95,RUS,Russia,Wikidata coordinates (P625),17
+gn:Tennessee,Tennessee,region,-86.78444,36.16589,USA,United States of America,hand list: placed at Nashville (GeoNames),17
+gn:Wyoming,Wyoming,region,-104.82025,41.13998,USA,United States of America,hand list: placed at Cheyenne (GeoNames),17
+Q1397,Ohio,region,-82.5,40.5,USA,United States of America,Wikidata coordinates (P625),16
+Q24639,Vancouver,local,-123.11389,49.26083,CAN,Canada,Wikidata coordinates (P625),16
+Q262,Algeria,country,1.0,28.0,DZA,Algeria,Wikidata coordinates (P625),16
+Q1045,Somalia,country,47.0,6.0,SOM,Somalia,Wikidata coordinates (P625),15
+Q424,Cambodia,country,105.0,12.5,KHM,Cambodia,Wikidata coordinates (P625),15
+Q801,Israel,country,35.0,31.0,ISR,Israel,Wikidata coordinates (P625),15
+gn:Abbasid Caliphate,Abbasid Caliphate,historical,44.40088,33.34058,IRQ,Iraq,hand list: placed at Baghdad (GeoNames),15
+gn:Kansas,Kansas,region,-95.67804,39.04833,USA,United States of America,hand list: placed at Topeka (GeoNames),15
+Q1085,Prague,local,14.42139,50.0875,CZE,Czechia,Wikidata coordinates (P625),14
+Q172,Toronto,local,-79.38667,43.67028,CAN,Canada,Wikidata coordinates (P625),14
+Q225,Bosnia and Herzegovina,country,18.0,44.0,BIH,Bosnia and Herz.,Wikidata coordinates (P625),14
+Q3130,Sydney,local,151.21,-33.86778,AUS,Australia,Wikidata coordinates (P625),14
+Q32,Luxembourg,country,6.13,49.77,LUX,Luxembourg,Wikidata coordinates (P625),14
+Q691,Papua New Guinea,country,143.910216,-5.695285,PNG,Papua New Guinea,"Natural Earth country, label point",14
+Q865,Taiwan,country,121.0,24.0,TWN,Taiwan,Wikidata coordinates (P625),14
+Q1211,South Dakota,region,-100.0,44.5,USA,United States of America,Wikidata coordinates (P625),13
+Q12544,Byzantine Empire,historical,28.98,41.0125,TUR,Turkey,Wikidata coordinates (P625),13
+Q916,Angola,country,17.35,-12.35,AGO,Angola,Wikidata coordinates (P625),13
+gn:Illinois,Illinois,region,-93.29824,37.21533,USA,United States of America,hand list: placed at Springfield (GeoNames),13
+Q191,Estonia,country,26.0,59.0,EST,Estonia,Wikidata coordinates (P625),12
+Q229,Cyprus,country,33.0,35.0,CYP,Cyprus,Wikidata coordinates (P625),12
+Q778,The Bahamas,country,-77.4,25.0,BHS,Bahamas,Wikidata coordinates (P625),12
+Q817,Kuwait,country,47.6,29.16667,KWT,Kuwait,Wikidata coordinates (P625),12
+Q822,Lebanon,country,35.76667,33.83333,LBN,Lebanon,Wikidata coordinates (P625),12
+gn:Dallas,Dallas,local,-96.80667,32.78306,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 4684888, population 1,326,087)",12
+gn:Kent,Kent,region,0.51667,51.26667,GBR,United Kingdom,hand list: placed at Maidstone (GeoNames),12
+Q219,Bulgaria,country,25.5,42.75,BGR,Bulgaria,Wikidata coordinates (P625),11
+Q230,Georgia,country,44.0,42.0,GEO,Georgia,Wikidata coordinates (P625),11
+Q23556,Atlanta,local,-84.38972,33.75444,USA,United States of America,Wikidata coordinates (P625),11
+Q710,Kiribati,country,173.03333,1.46667,KIR,Kiribati,Wikidata coordinates (P625),11
+Q711,Mongolia,country,105.0,46.0,MNG,Mongolia,Wikidata coordinates (P625),11
+Q750,Bolivia,country,-64.99123,-17.05687,BOL,Bolivia,Wikidata coordinates (P625),11
+Q790,Haiti,country,-72.8,19.0,HTI,Haiti,Wikidata coordinates (P625),11
+gn:Connecticut,Connecticut,region,-72.68509,41.76371,USA,United States of America,hand list: placed at Hartford (GeoNames),11
+gn:Surrey,Surrey,region,-0.57427,51.23536,GBR,United Kingdom,hand list: placed at Guildford (GeoNames),11
+Q1019,Madagascar,country,47.0,-20.0,MDG,Madagascar,Wikidata coordinates (P625),10
+Q1033,Nigeria,country,8.0,9.0,NGA,Nigeria,Wikidata coordinates (P625),10
+Q1218,Jerusalem,local,35.23416,31.77668,PSX,Palestine,Wikidata coordinates (P625),10
+Q1524,Athens,local,23.72806,37.98417,GRC,Greece,Wikidata coordinates (P625),10
+Q403,Serbia,country,20.93333,43.95,SRB,Serbia,Wikidata coordinates (P625),10
+Q854,Sri Lanka,country,80.704823,7.581097,LKA,Sri Lanka,"Natural Earth country, label point",10
+gn:Arkansas,Arkansas,region,-92.28959,34.74648,USA,United States of America,hand list: placed at Little Rock (GeoNames),10
+gn:Idaho,Idaho,region,-116.20345,43.6135,USA,United States of America,hand list: placed at Boise (GeoNames),10
+gn:the Northern Mariana Islands,Northern Mariana Islands,region,145.7545,15.21233,MNP,N. Mariana Is.,hand list: placed at Saipan (GeoNames),10
+ne:BMU,Bermuda,country,-64.763573,32.296592,BMU,Bermuda,"Natural Earth country, label point",10
+ne:COD,Democratic Republic of the Congo,country,23.458829,-1.858167,COD,Dem. Rep. Congo,"Natural Earth country, label point",10
+Q1030,Namibia,country,17.108166,-20.575298,NAM,Namibia,"Natural Earth country, label point",9
+Q1387,Rhode Island,region,-71.5,41.7,USA,United States of America,Wikidata coordinates (P625),9
+Q211,Latvia,country,25.0,57.0,LVA,Latvia,Wikidata coordinates (P625),9
+Q214,Slovakia,country,19.7,48.7,SVK,Slovakia,Wikidata coordinates (P625),9
+Q233,Malta,country,14.4,35.9,MLT,Malta,Wikidata coordinates (P625),9
+Q810,Jordan,country,36.5,31.2,JOR,Jordan,Wikidata coordinates (P625),9
+Q813,Kyrgyzstan,country,74.532637,41.66854,KGZ,Kyrgyzstan,"Natural Earth country, label point",9
+Q902,Bangladesh,country,89.86667,24.01667,BGD,Bangladesh,Wikidata coordinates (P625),9
+gn:Denver,Denver,local,-104.9847,39.73915,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 5419384, population 729,019)",9
+gn:Gibraltar,Gibraltar,local,-5.35257,36.14474,ESP,Spain,hand list: placed at Gibraltar (GeoNames),9
+gn:Nebraska,Nebraska,region,-96.66696,40.8,USA,United States of America,hand list: placed at Lincoln (GeoNames),9
+Q1049,Sudan,country,29.260657,16.330746,SDN,Sudan,"Natural Earth country, label point",8
+Q11299,Manhattan,region,-73.99417,40.72833,USA,United States of America,Wikidata coordinates (P625),8
+Q1371,West Virginia,region,-80.5,39.0,USA,United States of America,Wikidata coordinates (P625),8
+Q1527,Minnesota,region,-94.0,46.0,USA,United States of America,Wikidata coordinates (P625),8
+Q1649,Oklahoma,region,-98.0,35.5,USA,United States of America,Wikidata coordinates (P625),8
+Q170377,Blackpool,local,-3.05,53.81667,GBR,United Kingdom,Wikidata coordinates (P625),8
+Q177567,Amazon rainforest,broad,-60.03,-3.16,,,Wikidata coordinates (P625),8
+Q222,Albania,country,20.11384,40.654855,ALB,Albania,"Natural Earth country, label point",8
+Q265,Uzbekistan,country,64.005429,41.693603,UZB,Uzbekistan,"Natural Earth country, label point",8
+Q712,Fiji,country,178.0,-18.0,FJI,Fiji,Wikidata coordinates (P625),8
+Q805,Yemen,country,48.0,15.5,YEM,Yemen,Wikidata coordinates (P625),8
+Q811,Nicaragua,country,-85.069347,12.670697,NIC,Nicaragua,"Natural Earth country, label point",8
+gn:Northamptonshire,Northamptonshire,region,-0.88333,52.25,GBR,United Kingdom,hand list: placed at Northampton (GeoNames),8
+gn:St. Louis,St. Louis,local,-90.19789,38.62727,USA,United States of America,hand list: placed at St. Louis (GeoNames),8
+ne:PYF,French Polynesia,country,-149.46157,-17.628081,PYF,Fr. Polynesia,"Natural Earth country, label point",8
+Q1036,Uganda,country,32.39,1.28,UGA,Uganda,Wikidata coordinates (P625),7
+Q1342,Pittsburgh,local,-80.0,40.44167,USA,United States of America,Wikidata coordinates (P625),7
+Q1603,Kentucky,region,-85.0,37.5,USA,United States of America,Wikidata coordinates (P625),7
+Q184,Belarus,country,28.04667,53.52833,BLR,Belarus,Wikidata coordinates (P625),7
+Q2044,Florence,local,11.25417,43.77139,ITA,Italy,Wikidata coordinates (P625),7
+Q34266,Russian Empire,historical,70.1167,58.65,RUS,Russia,Wikidata coordinates (P625),7
+Q35581,Hokkaidō,region,142.79222,43.46055,JPN,Japan,Wikidata coordinates (P625),7
+Q695,Palau,country,134.580157,7.518252,PLW,Palau,"Natural Earth country, label point",7
+Q709,Marshall Islands,country,169.29,9.82,MHL,Marshall Is.,Wikidata coordinates (P625),7
+Q863,Tajikistan,country,71.36667,38.58333,TJK,Tajikistan,Wikidata coordinates (P625),7
+Q8678,Rio de Janeiro,local,-43.20555,-22.91111,BRA,Brazil,Wikidata coordinates (P625),7
+Q9903,Ming dynasty,region,103.08333,32.8,CHN,China,Wikidata coordinates (P625),7
+gn:Abu Dhabi,Abu Dhabi,local,54.39696,24.45118,ARE,United Arab Emirates,hand list: placed at Abu Dhabi (GeoNames),7
+gn:Cornwall,Cornwall,region,-5.05436,50.26526,GBR,United Kingdom,hand list: placed at Truro (GeoNames),7
+"gn:Daytona Beach, Florida","Daytona Beach, Florida",local,-81.02283,29.21081,USA,United States of America,hand list: placed at Daytona Beach (GeoNames),7
+gn:Hampshire,Hampshire,region,-1.3187,51.06513,GBR,United Kingdom,hand list: placed at Winchester (GeoNames),7
+gn:Iowa,Iowa,region,-93.60911,41.60054,USA,United States of America,hand list: placed at Des Moines (GeoNames),7
+gn:Missouri,Missouri,region,-92.17352,38.5767,USA,United States of America,hand list: placed at Jefferson City (GeoNames),7
+gn:Yorkshire,Yorkshire,region,-1.08271,53.95763,GBR,United Kingdom,hand list: placed at York (GeoNames),7
+Q1029,Mozambique,country,35.0,-19.0,MOZ,Mozambique,Wikidata coordinates (P625),6
+Q126084,Acre,local,35.08389,32.92611,ISR,Israel,Wikidata coordinates (P625),6
+Q16551,Vermont,region,-72.7,44.0,USA,United States of America,Wikidata coordinates (P625),6
+Q215,Slovenia,country,14.915312,46.06076,SVN,Slovenia,"Natural Earth country, label point",6
+Q237,Vatican City,country,12.453,41.904,VAT,Vatican,Wikidata coordinates (P625),6
+Q242,Belize,country,-88.712962,17.202068,BLZ,Belize,"Natural Earth country, label point",6
+Q418096,Akihabara,local,139.77306,35.69833,JPN,Japan,Wikidata coordinates (P625),6
+Q657,Chad,country,18.645041,15.142959,TCD,Chad,"Natural Earth country, label point",6
+Q727,Amsterdam,local,4.88333,52.36667,NLD,Netherlands,Wikidata coordinates (P625),6
+Q85,Cairo,local,31.23583,30.04444,EGY,Egypt,Wikidata coordinates (P625),6
+Q954,Zimbabwe,country,29.925444,-18.91164,ZWE,Zimbabwe,"Natural Earth country, label point",6
+gn:Chechnya,Chechnya,region,45.68895,43.31195,RUS,Russia,hand list: placed at Grozny (GeoNames),6
+gn:South Carolina,South Carolina,region,-81.03481,34.00071,USA,United States of America,hand list: placed at Columbia (GeoNames),6
+gn:the Isle of Man,Isle of Man,region,-4.48333,54.15,IMN,Isle of Man,hand list: placed at Douglas (GeoNames),6
+ne:DOM,Dominican Republic,country,-70.653998,19.104137,DOM,Dominican Rep.,"Natural Earth country, label point",6
+Q18125,Manchester,local,-2.24528,53.47944,GBR,United Kingdom,Wikidata coordinates (P625),5
+Q236,Montenegro,country,19.21667,42.76667,MNE,Montenegro,Wikidata coordinates (P625),5
+Q3711,Belgrade,local,20.45694,44.81778,SRB,Serbia,Wikidata coordinates (P625),5
+Q490595,Daytona Beach,local,-81.02278,29.21083,USA,United States of America,Wikidata coordinates (P625),5
+Q67461071,Somerset,region,-2.87814,51.14993,GBR,United Kingdom,Wikidata coordinates (P625),5
+Q736,Ecuador,country,-78.188375,-1.259076,ECU,Ecuador,"Natural Earth country, label point",5
+Q874,Turkmenistan,country,60.0,39.0,TKM,Turkmenistan,Wikidata coordinates (P625),5
+gn:Brittany,Brittany,region,-1.67431,48.11109,FRA,France,hand list: placed at Rennes (GeoNames),5
+gn:Corsica,Corsica,region,8.73812,41.91886,FRA,France,hand list: placed at Ajaccio (GeoNames),5
+gn:Devon,Devon,region,-3.52751,50.7236,GBR,United Kingdom,hand list: placed at Exeter (GeoNames),5
+gn:Indiana,Indiana,region,-86.15804,39.76838,USA,United States of America,hand list: placed at Indianapolis (GeoNames),5
+gn:Kanagawa Prefecture,Kanagawa Prefecture,region,139.65,35.43333,JPN,Japan,hand list: placed at Yokohama (GeoNames),5
+gn:Minneapolis,Minneapolis,local,-93.26384,44.97997,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 5037649, population 410,939)",5
+gn:Mississippi,Mississippi,region,-90.18481,32.29876,USA,United States of America,hand list: placed at Jackson (GeoNames),5
+"gn:Orlando, Florida","Orlando, Florida",local,-81.37924,28.53834,USA,United States of America,hand list: placed at Orlando (GeoNames),5
+hand:Central Asia,Central Asia,broad,66.0,43.0,,,hand list: rough centre,5
+ne:FRA:Martinique,Martinique,region,2.552275,46.696113,FRA,France,hand list: placed at the Natural Earth label point of France,5
+Q1025,Mauritania,country,-9.740299,19.587062,MRT,Mauritania,"Natural Earth country, label point",4
+Q1041,Senegal,country,-14.778586,15.138125,SEN,Senegal,"Natural Earth country, label point",4
+Q1223,Washington,region,-120.5,47.5,USA,United States of America,Wikidata coordinates (P625),4
+Q131347,Oahu,region,-157.965,21.485,USA,United States of America,Wikidata coordinates (P625),4
+Q1384,New York,region,-75.0,43.0,USA,United States of America,Wikidata coordinates (P625),4
+Q177397,Area 51,region,-115.80833,37.23333,USA,United States of America,Wikidata coordinates (P625),4
+Q18097,Korea,broad,127.23333,38.31667,,,Wikidata coordinates (P625),4
+Q1861,Bangkok,local,100.51667,13.75,THA,Thailand,Wikidata coordinates (P625),4
+Q193638,Shibuya,region,139.69772,35.66367,JPN,Japan,Wikidata coordinates (P625),4
+Q244,Barbados,country,-59.568966,13.163709,BRB,Barbados,"Natural Earth country, label point",4
+Q2807,Madrid,local,-3.70333,40.41694,ESP,Spain,Wikidata coordinates (P625),4
+Q34006,Hollywood,local,-118.32667,34.09833,USA,United States of America,Wikidata coordinates (P625),4
+Q37,Lithuania,country,24.0,55.2,LTU,Lithuania,Wikidata coordinates (P625),4
+Q43708,Bermuda Triangle,broad,-71.0,25.0,,,Wikidata coordinates (P625),4
+Q774,Guatemala,country,-90.25,15.5,GTM,Guatemala,Wikidata coordinates (P625),4
+Q783,Honduras,country,-86.887604,14.794801,HND,Honduras,"Natural Earth country, label point",4
+Q819,Lao PDR,country,102.533912,19.431821,LAO,Laos,"Natural Earth country, label point",4
+gn:Baltimore,Baltimore,local,-76.61219,39.29038,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 4347778, population 585,708)",4
+gn:Cumbria,Cumbria,region,-2.9382,54.8951,GBR,United Kingdom,hand list: placed at Carlisle (GeoNames),4
+gn:Guam,Guam,region,144.74886,13.47567,GUM,Guam,hand list: placed at Hagåtña (GeoNames),4
+gn:Havana,Havana,local,-82.38304,23.13302,CUB,Cuba,hand list: placed at Havana (GeoNames),4
+gn:Lancashire,Lancashire,region,-2.70452,53.76282,GBR,United Kingdom,hand list: placed at Preston (GeoNames),4
+gn:Northern Ireland,Northern Ireland,region,-5.92541,54.59682,GBR,United Kingdom,hand list: placed at Belfast (GeoNames),4
+gn:Oxford,Oxford,local,-1.25596,51.75222,GBR,United Kingdom,hand list: placed at Oxford (GeoNames),4
+gn:Puerto Rico,Puerto Rico,region,-66.10572,18.46633,PRI,Puerto Rico,hand list: placed at San Juan (GeoNames),4
+gn:Rotterdam,Rotterdam,local,4.47917,51.9225,NLD,Netherlands,"GeoNames cities15000 exact name match (geonameid 2747891, population 868,135)",4
+gn:Yugoslavia,Yugoslavia,historical,20.46513,44.80401,SRB,Serbia,hand list: placed at Belgrade (GeoNames),4
+ne:DEU:Holy Roman Empire,Holy Roman Empire,historical,9.678348,50.961733,DEU,Germany,hand list: placed at the Natural Earth label point of Germany,4
+ne:MAC,Macao,country,113.556038,22.129735,MAC,Macao,"Natural Earth country, label point",4
+ne:MNG:Mongolia,Mongolia,historical,104.150405,45.997488,MNG,Mongolia,hand list: placed at the Natural Earth label point of Mongolia,4
+Q1037,Rwanda,country,30.0,-2.0,RWA,Rwanda,Wikidata coordinates (P625),3
+Q115,Ethiopia,country,39.0886,8.032795,ETH,Ethiopia,"Natural Earth country, label point",3
+Q1156,Mumbai,local,72.8775,19.07583,IND,India,Wikidata coordinates (P625),3
+Q12355425,South Pacific Ocean,broad,-130.0,-45.0,,,Wikidata coordinates (P625),3
+Q12560,Ottoman Empire,historical,29.0,41.0,TUR,Turkey,Wikidata coordinates (P625),3
+Q12603,Pacific Northwest,region,-120.32227,45.8288,USA,United States of America,Wikidata coordinates (P625),3
+Q179645,Shinjuku,region,139.70342,35.69389,JPN,Japan,Wikidata coordinates (P625),3
+Q23159,Dorset,region,-2.33333,50.83333,GBR,United Kingdom,Wikidata coordinates (P625),3
+Q23337,Salt Lake City,local,-111.88333,40.75,USA,United States of America,Wikidata coordinates (P625),3
+Q27468,Eastern Europe,broad,31.0,49.0,,,Wikidata coordinates (P625),3
+Q39760,Gaza Strip,region,34.4,31.45,PSX,Palestine,Wikidata coordinates (P625),3
+Q43473,Angkor Wat,region,103.86667,13.4125,KHM,Cambodia,Wikidata coordinates (P625),3
+Q49042,Southern United States,region,-89.5,33.9,USA,United States of America,Wikidata coordinates (P625),3
+Q574,Timor-Leste,country,125.75,-8.96667,TLS,Timor-Leste,Wikidata coordinates (P625),3
+Q6651815,Little Saint James,region,-64.82528,18.3,VIR,U.S. Virgin Is.,Wikidata coordinates (P625),3
+Q760,Saint Lucia,country,-60.980094,13.892371,LCA,Saint Lucia,"Natural Earth country, label point",3
+Q769,Grenada,country,-61.680461,12.113156,GRD,Grenada,"Natural Earth country, label point",3
+Q8673,Lagos,local,3.39361,6.45611,NGA,Nigeria,Wikidata coordinates (P625),3
+Q871285,Jackson,local,-110.76917,43.47528,USA,United States of America,Wikidata coordinates (P625),3
+Q953,Zambia,country,26.395298,-14.660804,ZMB,Zambia,"Natural Earth country, label point",3
+gn:Damascus,Damascus,local,36.29128,33.5102,SYR,Syria,hand list: placed at Damascus (GeoNames),3
+gn:Fukuoka,Fukuoka,local,130.41667,33.6,JPN,Japan,hand list: placed at Fukuoka (GeoNames),3
+gn:Glasgow,Glasgow,local,-4.25763,55.86515,GBR,United Kingdom,hand list: placed at Glasgow (GeoNames),3
+gn:Leicestershire,Leicestershire,region,-1.13169,52.6386,GBR,United Kingdom,hand list: placed at Leicester (GeoNames),3
+gn:Nagano (city),Nagano (city),local,138.18333,36.65,JPN,Japan,hand list: placed at Nagano (GeoNames),3
+gn:Newcastle upon Tyne,Newcastle upon Tyne,local,-1.61396,54.97328,GBR,United Kingdom,hand list: placed at Newcastle upon Tyne (GeoNames),3
+gn:Portsmouth,Portsmouth,local,-1.09125,50.79899,GBR,United Kingdom,hand list: placed at Portsmouth (GeoNames),3
+gn:Winchester,Winchester,local,-1.3187,51.06513,GBR,United Kingdom,hand list: placed at Winchester (GeoNames),3
+ne:ATG,Antigua and Barbuda,country,-61.790612,17.352249,ATG,Antigua and Barb.,"Natural Earth country, label point",3
+ne:CUW,Curaçao,country,-68.920578,12.145039,CUW,Curaçao,"Natural Earth country, label point",3
+ne:CYM,Cayman Islands,country,-81.24055,19.319862,CYM,Cayman Is.,"Natural Earth country, label point",3
+ne:FSM,Federated States of Micronesia,country,158.234019,6.887553,FSM,Micronesia,"Natural Earth country, label point",3
+ne:IRN:Sasanian Empire,Sasanian Empire,historical,54.931495,32.166225,IRN,Iran,hand list: placed at the Natural Earth label point of Iran,3
+ne:KOS,Kosovo,country,20.860719,42.593587,KOS,Kosovo,"Natural Earth country, label point",3
+Q1032,Niger,country,9.504356,17.446195,NER,Niger,"Natural Earth country, label point",2
+Q1050926,Chernobyl Exclusion Zone,region,30.005,51.3,UKR,Ukraine,Wikidata coordinates (P625),2
+Q1054861,Tsushima Province,region,129.335,34.41194,JPN,Japan,Wikidata coordinates (P625),2
+Q1055,Hamburg,local,10.0,53.55,DEU,Germany,Wikidata coordinates (P625),2
+Q117,Ghana,country,-1.036941,7.717639,GHA,Ghana,"Natural Earth country, label point",2
+Q11746,Wuhan,local,114.2975,30.595,CHN,China,Wikidata coordinates (P625),2
+Q12501,Great Wall of China,region,116.56444,40.43139,CHN,China,Wikidata coordinates (P625),2
+Q1273,Tuscany,region,11.2,43.45,ITA,Italy,Wikidata coordinates (P625),2
+Q128849,Nagano,local,138.19469,36.64867,JPN,Japan,Wikidata coordinates (P625),2
+Q163820,Silicon Valley,region,-122.0675,37.3775,USA,United States of America,Wikidata coordinates (P625),2
+Q16559,Austin,local,-97.73333,30.3,USA,United States of America,Wikidata coordinates (P625),2
+Q17042,Oakland,local,-122.25,37.8,USA,United States of America,Wikidata coordinates (P625),2
+Q1726,Munich,local,11.575,48.1375,DEU,Germany,Wikidata coordinates (P625),2
+Q1741,Vienna,local,16.3725,48.20833,AUT,Austria,Wikidata coordinates (P625),2
+Q1754,Stockholm,local,18.06861,59.32944,SWE,Sweden,Wikidata coordinates (P625),2
+Q18094,Honolulu,local,-157.85722,21.30472,USA,United States of America,Wikidata coordinates (P625),2
+Q18424,Queens,region,-73.82806,40.71361,USA,United States of America,Wikidata coordinates (P625),2
+Q187871,Kunlun Mountains,region,84.0,36.0,CHN,China,Wikidata coordinates (P625),2
+Q192017,Monument Valley,region,-110.1,36.98333,USA,United States of America,Wikidata coordinates (P625),2
+Q192517,Boulder,local,-105.29278,40.01944,USA,United States of America,Wikidata coordinates (P625),2
+Q217,Moldova,country,28.487904,47.434999,MDA,Moldova,"Natural Earth country, label point",2
+Q23086,North Yorkshire,region,-1.35,54.1,GBR,United Kingdom,Wikidata coordinates (P625),2
+Q2370198,Lakeside,local,-105.057,39.7833,USA,United States of America,Wikidata coordinates (P625),2
+Q238,San Marino,country,12.441206,43.933916,SMR,San Marino,"Natural Earth country, label point",2
+Q26887,Davenport,local,-90.59083,41.54306,USA,United States of America,Wikidata coordinates (P625),2
+Q270,Warsaw,local,21.01111,52.23,POL,Poland,Wikidata coordinates (P625),2
+Q34221,Niagara Falls,region,-79.071,43.08,CAN,Canada,Wikidata coordinates (P625),2
+Q34374,Crete,region,24.89333,35.30972,GRC,Greece,Wikidata coordinates (P625),2
+Q347,Liechtenstein,country,9.559439,47.111405,LIE,Liechtenstein,"Natural Earth country, label point",2
+Q39671,Stonehenge,region,-1.82611,51.17889,GBR,United Kingdom,Wikidata coordinates (P625),2
+Q45240,Monte Carlo,local,7.42524,43.73894,MCO,Monaco,Wikidata coordinates (P625),2
+Q47863,Midway Atoll,region,-177.35,28.2075,,,Wikidata coordinates (P625),2
+Q48175,Holy Land,region,35.22972,31.77833,PSX,Palestine,Wikidata coordinates (P625),2
+Q490,Milan,local,9.19,45.46694,ITA,Italy,Wikidata coordinates (P625),2
+Q52631,Ibiza,region,1.43,38.98,ESP,Spain,Wikidata coordinates (P625),2
+Q569073,Outback,region,130.0,-25.0,AUS,Australia,Wikidata coordinates (P625),2
+Q63227,Ximending,region,121.508,25.0426,TWN,Taiwan,Wikidata coordinates (P625),2
+Q663035,Lincoln,local,-71.30444,42.42583,USA,United States of America,Wikidata coordinates (P625),2
+Q70,Bern,local,7.44743,46.94798,CHE,Switzerland,Wikidata coordinates (P625),2
+Q754,Trinidad and Tobago,country,-60.9184,10.9989,TTO,Trinidad and Tobago,"Natural Earth country, label point",2
+Q76048,Congo Free State,historical,13.05667,-5.85472,COD,Dem. Rep. Congo,Wikidata coordinates (P625),2
+Q77,Uruguay,country,-56.0,-33.0,URY,Uruguay,Wikidata coordinates (P625),2
+Q771405,South Asia,broad,72.2,26.9,,,Wikidata coordinates (P625),2
+Q792,El Salvador,country,-88.890124,13.685371,SLV,El Salvador,"Natural Earth country, label point",2
+Q826,Maldives,country,73.51,4.18,MDV,Maldives,Wikidata coordinates (P625),2
+Q83813,Savannah,local,-81.10389,32.05083,USA,United States of America,Wikidata coordinates (P625),2
+Q842,Oman,country,57.336553,22.120427,OMN,Oman,"Natural Earth country, label point",2
+Q912,Mali,country,-2.038455,18.692713,MLI,Mali,"Natural Earth country, label point",2
+Q934,North Pole,region,0.0,90.0,,,Wikidata coordinates (P625),2
+Q9648,Falkland Islands,country,-59.22,-51.73,FLK,Falkland Is.,Wikidata coordinates (P625),2
+Q9679,Isle of Wight,region,-1.3,50.7,GBR,United Kingdom,Wikidata coordinates (P625),2
+gn:Baku,Baku,local,49.89201,40.37767,AZE,Azerbaijan,hand list: placed at Baku (GeoNames),2
+gn:Cheshire,Cheshire,region,-2.89189,53.1905,GBR,United Kingdom,hand list: placed at Chester (GeoNames),2
+gn:Chiba Prefecture,Chiba Prefecture,region,140.11667,35.6,JPN,Japan,hand list: placed at Chiba (GeoNames),2
+gn:Delaware,Delaware,region,-75.52437,39.15817,USA,United States of America,hand list: placed at Dover (GeoNames),2
+gn:East Sussex,East Sussex,region,0.0088,50.87398,GBR,United Kingdom,hand list: placed at Lewes (GeoNames),2
+gn:Hiroshima Prefecture,Hiroshima Prefecture,region,132.45,34.4,JPN,Japan,hand list: placed at Hiroshima (GeoNames),2
+gn:Lincolnshire,Lincolnshire,region,-0.53792,53.22683,GBR,United Kingdom,hand list: placed at Lincoln (GeoNames),2
+gn:Nagoya,Nagoya,local,136.90641,35.18147,JPN,Japan,hand list: placed at Nagoya (GeoNames),2
+gn:New Hampshire,New Hampshire,region,-122.03107,37.97798,USA,United States of America,hand list: placed at Concord (GeoNames),2
+gn:North Dakota,North Dakota,region,-100.78374,46.80833,USA,United States of America,hand list: placed at Bismarck (GeoNames),2
+gn:Nottinghamshire,Nottinghamshire,region,-1.15047,52.9536,GBR,United Kingdom,hand list: placed at Nottingham (GeoNames),2
+gn:Sapporo,Sapporo,local,141.35,43.06667,JPN,Japan,hand list: placed at Sapporo (GeoNames),2
+gn:Southampton,Southampton,local,-1.40428,50.90395,GBR,United Kingdom,hand list: placed at Southampton (GeoNames),2
+gn:Thirteen Colonies,Thirteen Colonies,historical,-75.16362,39.95238,USA,United States of America,hand list: placed at Philadelphia (GeoNames),2
+gn:Wiltshire,Wiltshire,region,-1.79569,51.06931,GBR,United Kingdom,hand list: placed at Salisbury (GeoNames),2
+gn:the Western United States,Western United States,region,-111.89105,40.76078,USA,United States of America,hand list: placed at Salt Lake City (GeoNames),2
+ne:COG,Republic of the Congo,country,15.9005,0.142331,COG,Congo,"Natural Earth country, label point",2
+ne:STP,São Tomé and Principe,country,7.021,0.9709,STP,São Tomé and Principe,"Natural Earth country, label point",2
+ne:VCT,Saint Vincent and the Grenadines,country,-61.3359,13.0879,VCT,St. Vin. and Gren.,"Natural Earth country, label point",2
+Q1000475,Sázava,local,14.89679,49.87171,CZE,Czechia,Wikidata coordinates (P625),1
+Q1009,Cameroon,country,12.473488,4.585041,CMR,Cameroon,"Natural Earth country, label point",1
+Q101341,Lillehammer,region,10.46743,61.11464,NOR,Norway,Wikidata coordinates (P625),1
+Q1014,Liberia,country,-9.460379,6.447177,LBR,Liberia,"Natural Earth country, label point",1
+Q101625,Marrakech,local,-7.98108,31.62947,MAR,Morocco,Wikidata coordinates (P625),1
+Q1022918,Kowloon Walled City,local,114.19028,22.33228,HKG,Hong Kong,Wikidata coordinates (P625),1
+Q10273256,Želejov,region,15.205,50.515,CZE,Czechia,Wikidata coordinates (P625),1
+Q1027830,Gotland,region,18.55,57.5,SWE,Sweden,Wikidata coordinates (P625),1
+Q1032553,Canal de Caen à la Mer,region,-0.35333,49.1825,FRA,France,Wikidata coordinates (P625),1
+Q1042,Seychelles,country,55.480175,-4.676659,SYC,Seychelles,"Natural Earth country, label point",1
+Q1044,Sierra Leone,country,-11.763677,8.617449,SLE,Sierra Leone,"Natural Earth country, label point",1
+Q104520,Pomerania,region,18.15312,54.29443,POL,Poland,Wikidata coordinates (P625),1
+Q106789,Värmland County,region,13.25,59.75,SWE,Sweden,Wikidata coordinates (P625),1
+Q106812430,ZPark,region,116.2856,40.047,CHN,China,Wikidata coordinates (P625),1
+Q10854336,Apolena,region,15.235,50.5131,CZE,Czechia,Wikidata coordinates (P625),1
+Q11217760,Bohouňovice I,region,15.1828,49.9753,CZE,Czechia,Wikidata coordinates (P625),1
+Q11259,Times Square,local,-73.98583,40.7575,USA,United States of America,Wikidata coordinates (P625),1
+Q11260,Broadway,region,-73.98207,40.77014,USA,United States of America,Wikidata coordinates (P625),1
+Q11355318,Misaki,region,139.62078,35.14417,JPN,Japan,Wikidata coordinates (P625),1
+Q11523886,Higashi-Nakano,region,139.68355,35.70625,JPN,Japan,Wikidata coordinates (P625),1
+Q11706304,Bylany,region,15.2353,49.9383,CZE,Czechia,Wikidata coordinates (P625),1
+Q11767,Mesopotamia,historical,43.5,33.7,IRQ,Iraq,Wikidata coordinates (P625),1
+Q1179,Aquitaine,region,0.0,44.6,FRA,France,Wikidata coordinates (P625),1
+Q11937871,Vraník,region,14.9194,49.8458,CZE,Czechia,Wikidata coordinates (P625),1
+Q12020459,Hořany,region,15.2353,49.9733,CZE,Czechia,Wikidata coordinates (P625),1
+Q12036499,Mezholezy,region,15.1925,49.9367,CZE,Czechia,Wikidata coordinates (P625),1
+Q12038883,Mrchojedy,region,14.9417,49.8661,CZE,Czechia,Wikidata coordinates (P625),1
+Q12040495,Nebakov Castle,region,15.1995,50.5023,CZE,Czechia,Wikidata coordinates (P625),1
+Q12042761,Opatovice,region,15.1942,49.9667,CZE,Czechia,Wikidata coordinates (P625),1
+Q12048315,Přítoky,region,15.2361,49.9503,CZE,Czechia,Wikidata coordinates (P625),1
+Q12058216,Tachov,region,15.2217,50.5183,CZE,Czechia,Wikidata coordinates (P625),1
+Q12058280,Talmberk,region,14.9553,49.8669,CZE,Czechia,Wikidata coordinates (P625),1
+Q1206012,German Reich,historical,13.375,52.52,DEU,Germany,Wikidata coordinates (P625),1
+Q1244206,Ancient Alexandria,region,29.90977,31.20144,EGY,Egypt,Wikidata coordinates (P625),1
+Q124539,Whitechapel,local,-0.06917,51.51639,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q126321,Eisenstadt,local,16.52327,47.84565,AUT,Austria,Wikidata coordinates (P625),1
+Q127530,Miami International Airport,region,-80.29055,25.79333,USA,United States of America,Wikidata coordinates (P625),1
+Q1288,Carpathians,region,25.5,47.0,ROU,Romania,Wikidata coordinates (P625),1
+Q129296,Santorini,local,25.4325,36.415,GRC,Greece,Wikidata coordinates (P625),1
+Q131354,Alcatraz Island,region,-122.42283,37.82672,USA,United States of America,Wikidata coordinates (P625),1
+Q133083,Gauteng,region,28.0,-26.0,ZAF,South Africa,Wikidata coordinates (P625),1
+Q13367,Forlì,local,12.04139,44.22278,ITA,Italy,Wikidata coordinates (P625),1
+Q134093,Kōchi Prefecture,region,133.53083,33.55944,JPN,Japan,Wikidata coordinates (P625),1
+Q13426199,Republic of China,historical,110.0,40.0,CHN,China,Wikidata coordinates (P625),1
+Q1353201,Canadian Rockies,region,-119.156,53.1106,CAN,Canada,Wikidata coordinates (P625),1
+Q13670,Syracuse,local,15.2875,37.06917,ITA,Italy,Wikidata coordinates (P625),1
+Q1467860,Romsdal,region,7.83333,62.66667,NOR,Norway,Wikidata coordinates (P625),1
+Q14688,Ingria,region,29.3,59.6333,RUS,Russia,Wikidata coordinates (P625),1
+Q15114,Zurich Airport,region,8.54805,47.45806,CHE,Switzerland,Wikidata coordinates (P625),1
+Q15174,Shenzhen,local,114.05444,22.54667,CHN,China,Wikidata coordinates (P625),1
+Q1530,Baghdad,local,44.36611,33.31528,IRQ,Iraq,Wikidata coordinates (P625),1
+Q154195,Kingdom of Bavaria,historical,11.56667,48.13333,DEU,Germany,Wikidata coordinates (P625),1
+Q1555938,Antarctic,broad,0.0,-90.0,,,Wikidata coordinates (P625),1
+Q155975,Kutná Hora,local,15.26823,49.94844,CZE,Czechia,Wikidata coordinates (P625),1
+Q159288,Santa Barbara,local,-119.71417,34.42583,USA,United States of America,Wikidata coordinates (P625),1
+Q1630884,French Alps,region,6.5,44.8,FRA,France,Wikidata coordinates (P625),1
+Q165366,Anne Frank House,region,4.88404,52.37515,NLD,Netherlands,Wikidata coordinates (P625),1
+Q16869,Constantinople,local,28.97602,41.01224,TUR,Turkey,Wikidata coordinates (P625),1
+Q16957,East Germany,country,12.389,52.052,DEU,Germany,Wikidata coordinates (P625),1
+Q169943,San Mateo,local,-122.31306,37.55417,USA,United States of America,Wikidata coordinates (P625),1
+Q17054,Martinique,country,-61.015,14.65,FRA,France,Wikidata coordinates (P625),1
+Q1711521,Nazca,local,-74.94361,-14.82889,PER,Peru,Wikidata coordinates (P625),1
+Q175582,Egyptian pyramids,region,31.12833,29.9725,EGY,Egypt,Wikidata coordinates (P625),1
+Q1774,Zanzibar Islands,region,39.3,-5.9,TZA,Tanzania,Wikidata coordinates (P625),1
+Q1780,Bratislava,local,17.10931,48.1517,SVK,Slovakia,Wikidata coordinates (P625),1
+Q1781,Budapest,local,19.04083,47.49833,HUN,Hungary,Wikidata coordinates (P625),1
+Q179815,Durham,local,-1.56667,54.78333,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q1807742,Samopše,local,14.92988,49.86151,CZE,Czechia,Wikidata coordinates (P625),1
+Q1813,Saint-Tropez,local,6.63861,43.26972,FRA,France,Wikidata coordinates (P625),1
+Q1827619,Stříbrná Skalice,local,14.84622,49.89773,CZE,Czechia,Wikidata coordinates (P625),1
+Q182935,Polyarny,local,33.45611,69.19833,RUS,Russia,Wikidata coordinates (P625),1
+Q18419,Brooklyn,region,-73.94972,40.65083,USA,United States of America,Wikidata coordinates (P625),1
+Q1849804,Terres de l'Ebre,region,0.51667,40.9281,ESP,Spain,Wikidata coordinates (P625),1
+Q18677875,Normandy,region,-0.35,49.18333,FRA,France,Wikidata coordinates (P625),1
+Q188489,Cape Breton Island,region,-60.77078,46.18673,CAN,Canada,Wikidata coordinates (P625),1
+Q1887287,Malešov,local,15.2244,49.91107,CZE,Czechia,Wikidata coordinates (P625),1
+Q1904,Ontario,region,-85.0,50.0,CAN,Canada,Wikidata coordinates (P625),1
+Q192666,Białowieża Forest,region,23.95,52.75,BLR,Belarus,Wikidata coordinates (P625),1
+Q1930,Ottawa,local,-75.695,45.42472,CAN,Canada,Wikidata coordinates (P625),1
+Q194057,Mount Rainier,region,-121.76028,46.85167,USA,United States of America,Wikidata coordinates (P625),1
+Q194263,Tatra Mountains,region,19.97389,49.20056,SVK,Slovakia,Wikidata coordinates (P625),1
+Q1947164,Suchdol,local,15.16657,49.95253,CZE,Czechia,Wikidata coordinates (P625),1
+Q19483,Hong Kong Island,region,114.195,22.255,HKG,Hong Kong,Wikidata coordinates (P625),1
+Q19660,Bucharest,local,26.09778,44.41336,ROU,Romania,Wikidata coordinates (P625),1
+Q19675,Louvre Museum,region,2.33583,48.86111,FRA,France,Wikidata coordinates (P625),1
+Q1972381,Orcas Island,region,-122.93833,48.65417,USA,United States of America,Wikidata coordinates (P625),1
+Q1973,British Columbia,region,-124.5,54.5,CAN,Canada,Wikidata coordinates (P625),1
+Q19760542,Talmberk Castle,region,14.95571,49.86719,CZE,Czechia,Wikidata coordinates (P625),1
+Q19770,Sichuan,region,103.0,30.0,CHN,China,Wikidata coordinates (P625),1
+Q201026,Kauaʻi,region,-159.4975,22.07,USA,United States of America,Wikidata coordinates (P625),1
+Q20119933,Cozumel Island,region,-86.91667,20.41667,MEX,Mexico,Wikidata coordinates (P625),1
+Q201633,Iwo Jima,region,141.32,24.78,,,Wikidata coordinates (P625),1
+Q202124,Issigeac,local,0.60722,44.72972,FRA,France,Wikidata coordinates (P625),1
+Q207311,Suzuka,local,136.58417,34.88197,JPN,Japan,Wikidata coordinates (P625),1
+Q207589,Val-d'Isère,local,6.97722,45.44972,FRA,France,Wikidata coordinates (P625),1
+Q2079395,Rockport,local,-70.62083,42.65555,USA,United States of America,Wikidata coordinates (P625),1
+Q208299,Arabian Desert,region,42.36805,18.26722,SAU,Saudi Arabia,Wikidata coordinates (P625),1
+Q2097183,Troskovice,local,15.22241,50.51164,CZE,Czechia,Wikidata coordinates (P625),1
+Q2100353,Podtrosecká údolí,region,15.20111,50.51445,CZE,Czechia,Wikidata coordinates (P625),1
+Q210628,Machida,local,139.43861,35.54667,JPN,Japan,Wikidata coordinates (P625),1
+Q211377,Leyte,region,124.9,10.8,PHL,Philippines,Wikidata coordinates (P625),1
+Q213154,Aberystwyth,local,-4.08167,52.41444,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q2132370,Rataje nad Sázavou,local,14.95678,49.84191,CZE,Czechia,Wikidata coordinates (P625),1
+Q215646,Edo,region,139.77444,35.68389,JPN,Japan,Wikidata coordinates (P625),1
+Q217432,Port Harcourt,local,7.01632,4.76547,NGA,Nigeria,Wikidata coordinates (P625),1
+Q2182648,Red Rocks Amphitheatre,region,-105.20583,39.66528,USA,United States of America,Wikidata coordinates (P625),1
+Q2184,Russian Soviet Federative Socialist Republic,historical,100.0,62.0,RUS,Russia,Wikidata coordinates (P625),1
+Q218768,Rabaul,local,152.16806,-4.19806,PNG,Papua New Guinea,Wikidata coordinates (P625),1
+Q223665,Angkor Thom,region,103.85968,13.4433,KHM,Cambodia,Wikidata coordinates (P625),1
+Q2250397,South Italy,region,15.89535,40.81011,ITA,Italy,Wikidata coordinates (P625),1
+Q2256,Birmingham,local,-1.9025,52.48,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q2309602,Úžice,local,14.97261,49.87227,CZE,Czechia,Wikidata coordinates (P625),1
+Q23103,Shropshire,region,-2.71667,52.61667,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q2334100,Białowieża,region,23.8525,52.70389,POL,Poland,Wikidata coordinates (P625),1
+Q23346,Sussex,region,-0.14137,50.9471,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q2337,Smolensk,local,32.04528,54.78278,RUS,Russia,Wikidata coordinates (P625),1
+Q235135,Sumida,region,139.8015,35.71069,JPN,Japan,Wikidata coordinates (P625),1
+Q23666,Great Britain,region,-2.41667,53.83333,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q2370287,Ledečko,local,14.94893,49.84988,CZE,Czechia,Wikidata coordinates (P625),1
+Q23792,Palestine,broad,35.14526,31.62532,,,Wikidata coordinates (P625),1
+Q241037,Numazu,local,138.86344,35.09558,JPN,Japan,Wikidata coordinates (P625),1
+Q243634,Bonin Islands,region,142.21805,26.99806,JPN,Japan,Wikidata coordinates (P625),1
+Q2446103,Sterling,local,-71.81639,41.70222,USA,United States of America,Wikidata coordinates (P625),1
+Q2459424,Grunta,local,15.25505,49.97417,CZE,Czechia,Wikidata coordinates (P625),1
+Q2466300,James Farley Post Office,region,-73.99518,40.75122,USA,United States of America,Wikidata coordinates (P625),1
+Q25173,Titanic,region,-49.94694,41.7325,,,Wikidata coordinates (P625),1
+Q251825,Hawke's Bay Region,region,176.81667,-39.41667,NZL,New Zealand,Wikidata coordinates (P625),1
+Q25220,Swiss Alps,region,8.5,46.5,CHE,Switzerland,Wikidata coordinates (P625),1
+Q2560190,Alston,local,-2.441,54.81,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q25893,Rutland,local,-72.9797,43.6089,USA,United States of America,Wikidata coordinates (P625),1
+Q26339,Jersey City,local,-74.06,40.71,USA,United States of America,Wikidata coordinates (P625),1
+Q2634,Naples,local,14.24861,40.83583,ITA,Italy,Wikidata coordinates (P625),1
+Q2666855,Mammoth Cave,region,-86.1,37.18333,USA,United States of America,Wikidata coordinates (P625),1
+Q268426,Kutná Hora District,region,15.26806,49.94833,CZE,Czechia,Wikidata coordinates (P625),1
+Q26955,Sierra Nevada,region,-3.31139,37.05333,ESP,Spain,Wikidata coordinates (P625),1
+Q2696541,Ratboř,local,15.1593,49.97814,CZE,Czechia,Wikidata coordinates (P625),1
+Q2696548,Miskovice,local,15.20478,49.94618,CZE,Czechia,Wikidata coordinates (P625),1
+Q27306,Kingdom of Prussia,historical,14.0,53.0,DEU,Germany,Wikidata coordinates (P625),1
+Q27381,North Africa,broad,9.68171,30.44074,,,Wikidata coordinates (P625),1
+Q27433,Central Africa,broad,21.0,2.0,,,Wikidata coordinates (P625),1
+Q27659273,Přibyslavice,region,14.85414,49.91425,CZE,Czechia,Wikidata coordinates (P625),1
+Q27870189,Semínský Dvůr,local,15.19471,50.50739,CZE,Czechia,Wikidata coordinates (P625),1
+Q280557,Homestead,local,-80.47756,25.46872,USA,United States of America,Wikidata coordinates (P625),1
+Q2945491,Woomera Immigration Reception and Processing Centre,region,136.8075,-31.18528,AUS,Australia,Wikidata coordinates (P625),1
+Q2946,Palace of Versailles,region,2.12028,48.80472,FRA,France,Wikidata coordinates (P625),1
+Q31487,Kraków,local,19.93722,50.06139,POL,Poland,Wikidata coordinates (P625),1
+Q332622,Rennes-le-Château,local,2.26361,42.92722,FRA,France,Wikidata coordinates (P625),1
+Q33312596,Watermill Dänemark,region,15.25221,49.92822,CZE,Czechia,Wikidata coordinates (P625),1
+Q33535336,Nazca Condor Geoglyph,region,-75.12632,-14.69727,PER,Peru,Wikidata coordinates (P625),1
+Q339226,Silverstone,local,-1.024,52.09,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q33946,Czechoslovakia,historical,14.41667,50.08333,CZE,Czechia,Wikidata coordinates (P625),1
+Q341327,Bohemian Paradise,region,15.17056,50.51972,CZE,Czechia,Wikidata coordinates (P625),1
+Q350134,North Atlantic Ocean,broad,-33.0,47.0,,,Wikidata coordinates (P625),1
+Q35525,White House,region,-77.03667,38.89778,USA,United States of America,Wikidata coordinates (P625),1
+Q357,Guantanamo Bay detention camp,region,-75.1,19.9025,CUB,Cuba,Wikidata coordinates (P625),1
+Q3630,Jakarta,local,106.82694,-6.17528,IDN,Indonesia,Wikidata coordinates (P625),1
+Q369547,Sázava Monastery,region,14.89806,49.87738,CZE,Czechia,Wikidata coordinates (P625),1
+Q37100,Auckland,local,174.76528,-36.84917,NZL,New Zealand,Wikidata coordinates (P625),1
+Q3769,French Guiana,country,-53.0,4.0,FRA,France,Wikidata coordinates (P625),1
+Q3787,Abuja,local,7.49139,9.05556,NGA,Nigeria,Wikidata coordinates (P625),1
+Q387047,Malibu,local,-118.695,34.035,USA,United States of America,Wikidata coordinates (P625),1
+Q390370,Windermere,region,-2.93611,54.35833,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q3908,Galicia,region,-7.9,42.8,ESP,Spain,Wikidata coordinates (P625),1
+Q39420,Sochi,local,39.72028,43.58528,RUS,Russia,Wikidata coordinates (P625),1
+Q4058447,Azores archipelago,region,-27.98333,38.6,PRT,Portugal,Wikidata coordinates (P625),1
+Q41604,Amiens,local,2.29778,49.89194,FRA,France,Wikidata coordinates (P625),1
+Q41819,Kansas City,local,-94.58333,39.05,USA,United States of America,Wikidata coordinates (P625),1
+Q42000,Tahiti,region,-149.46667,-17.66667,PYF,Fr. Polynesia,Wikidata coordinates (P625),1
+Q427600,Sekigahara,region,136.46694,35.3655,JPN,Japan,Wikidata coordinates (P625),1
+Q43332,Pompeii,region,14.48972,40.75056,ITA,Italy,Wikidata coordinates (P625),1
+Q43684,Henan,region,113.5,33.9,CHN,China,Wikidata coordinates (P625),1
+Q44237,Mendoza,local,-68.84444,-32.88972,ARG,Argentina,Wikidata coordinates (P625),1
+Q45141911,Čertovka,region,15.23942,49.9791,CZE,Czechia,Wikidata coordinates (P625),1
+Q46733,Darfur,region,25.0,13.0,SDN,Sudan,Wikidata coordinates (P625),1
+Q46913,Shanxi,region,112.56444,37.87333,CHN,China,Wikidata coordinates (P625),1
+Q47265,Palo Alto,local,-122.16,37.44444,USA,United States of America,Wikidata coordinates (P625),1
+Q47716,Charleston,local,-79.93194,32.78333,USA,United States of America,Wikidata coordinates (P625),1
+Q47974,Shaanxi,region,109.3,35.6,CHN,China,Wikidata coordinates (P625),1
+Q48214,Near East,broad,35.6,32.8,,,Wikidata coordinates (P625),1
+Q484296,Los Alamos County,region,-106.31,35.87,USA,United States of America,Wikidata coordinates (P625),1
+Q484678,Berkeley,local,-122.26806,37.87028,USA,United States of America,Wikidata coordinates (P625),1
+Q485186,Key West,local,-81.78361,24.55972,USA,United States of America,Wikidata coordinates (P625),1
+Q490584,Flint,local,-83.69333,43.01889,USA,United States of America,Wikidata coordinates (P625),1
+Q49145,New Haven,local,-72.925,41.30833,USA,United States of America,Wikidata coordinates (P625),1
+Q4918,Mediterranean Sea,broad,17.0,38.0,,,Wikidata coordinates (P625),1
+Q494914,Iki Island,region,129.71667,33.78333,JPN,Japan,Wikidata coordinates (P625),1
+Q49903231,Echo River,region,-86.11222,37.18028,USA,United States of America,Wikidata coordinates (P625),1
+Q50195,Imola,local,11.71472,44.35306,ITA,Italy,Wikidata coordinates (P625),1
+Q5042976,Carlton Corner,region,-76.8328,37.7303,USA,United States of America,Wikidata coordinates (P625),1
+Q506326,Franklin County,region,-70.38792,44.8792,USA,United States of America,Wikidata coordinates (P625),1
+Q508519,Trosky Castle,region,15.23083,50.51625,CZE,Czechia,Wikidata coordinates (P625),1
+Q5086,Berlin Wall,region,13.44111,52.50444,DEU,Germany,Wikidata coordinates (P625),1
+Q5112,Adelaide,local,138.6,-34.9275,AUS,Australia,Wikidata coordinates (P625),1
+Q513821,Sedlec Ossuary,region,15.28829,49.96196,CZE,Czechia,Wikidata coordinates (P625),1
+Q51679,Saipan,region,145.75,15.18333,MNP,N. Mariana Is.,Wikidata coordinates (P625),1
+Q523240,Concord,local,-71.34945,42.46028,USA,United States of America,Wikidata coordinates (P625),1
+Q541641,Chomo Lonzo,region,87.10806,27.93,CHN,China,Wikidata coordinates (P625),1
+Q5684,Babylon,local,44.42415,32.52291,IRQ,Iraq,Wikidata coordinates (P625),1
+Q5705,Catalonia,region,1.56667,41.85,ESP,Spain,Wikidata coordinates (P625),1
+Q5824,Tyumen Oblast,region,69.0,57.83333,RUS,Russia,Wikidata coordinates (P625),1
+Q600614,Okinawa,region,127.95,26.48333,JPN,Japan,Wikidata coordinates (P625),1
+Q6106,Portland,local,-122.67917,45.515,USA,United States of America,Wikidata coordinates (P625),1
+Q6252,Monza,local,9.27361,45.58361,ITA,Italy,Wikidata coordinates (P625),1
+Q626,Volga,region,47.8975,45.695,RUS,Russia,Wikidata coordinates (P625),1
+Q62651,Denmark-Norway,historical,12.525,55.67222,DNK,Denmark,Wikidata coordinates (P625),1
+Q628201,Coney Island,local,-73.9825,40.575,USA,United States of America,Wikidata coordinates (P625),1
+Q6343,Carthage,local,10.31294,36.84701,TUN,Tunisia,Wikidata coordinates (P625),1
+Q63798352,Northern Quebec,region,-74.41667,56.16667,CAN,Canada,Wikidata coordinates (P625),1
+Q6500954,Zaire,historical,15.4,-4.4,COD,Dem. Rep. Congo,Wikidata coordinates (P625),1
+Q6563,Krasnoyarsk Krai,region,91.66667,59.88333,RUS,Russia,Wikidata coordinates (P625),1
+Q658054,Louisiana,region,-100.0,40.0,USA,United States of America,Wikidata coordinates (P625),1
+Q658192,Vilnius University,region,25.28722,54.6825,LTU,Lithuania,Wikidata coordinates (P625),1
+Q660136,Falzarego Pass,region,12.00944,46.51889,ITA,Italy,Wikidata coordinates (P625),1
+Q676203,Machu Picchu,region,-72.54556,-13.16333,PER,Peru,Wikidata coordinates (P625),1
+Q676626,Trun,local,0.03306,48.84333,FRA,France,Wikidata coordinates (P625),1
+Q68097,Davos,region,9.83983,46.80906,CHE,Switzerland,Wikidata coordinates (P625),1
+Q694550,Gettysburg,local,-77.2322,39.8283,USA,United States of America,Wikidata coordinates (P625),1
+Q696242,Wang Jingwei regime,historical,118.76667,32.05,CHN,China,Wikidata coordinates (P625),1
+Q700754,inner German border,region,12.5,52.4,DEU,Germany,Wikidata coordinates (P625),1
+Q7074013,Oakland Hills,local,-122.201,37.8384,USA,United States of America,Wikidata coordinates (P625),1
+Q713619,Mount Yōtei,region,140.80639,42.82722,JPN,Japan,Wikidata coordinates (P625),1
+Q72,Zurich,local,8.54111,47.37444,CHE,Switzerland,Wikidata coordinates (P625),1
+Q733,Paraguay,country,-60.146394,-21.674509,PRY,Paraguay,"Natural Earth country, label point",1
+Q7350,Panama Canal,region,-79.75,9.12,PAN,Panama,Wikidata coordinates (P625),1
+Q7463928,Madagascar,region,47.06667,-19.33333,MDG,Madagascar,Wikidata coordinates (P625),1
+Q7534667,Sker House,region,-3.73715,51.5046,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q758260,Attu Island,region,172.90944,52.9025,USA,United States of America,Wikidata coordinates (P625),1
+Q764547,Stockholm archipelago,region,18.73333,59.38333,SWE,Sweden,Wikidata coordinates (P625),1
+Q79980,Varanasi,local,83.01278,25.31889,IND,India,Wikidata coordinates (P625),1
+Q804072,Baja California Desert,region,-113.6,27.74,MEX,Mexico,Wikidata coordinates (P625),1
+Q810196,Basingstoke,local,-1.0862,51.26283,GBR,United Kingdom,Wikidata coordinates (P625),1
+Q81490,Xylotymvou,region,33.7435,35.01627,CYP,Cyprus,Wikidata coordinates (P625),1
+Q81570,Ormideia,region,33.77721,34.99176,CYP,Cyprus,Wikidata coordinates (P625),1
+Q81788,Giza,local,31.2118,29.987,EGY,Egypt,Wikidata coordinates (P625),1
+Q83311,Persian Empire,historical,53.0,33.0,IRN,Iran,Wikidata coordinates (P625),1
+Q840487,Villers-Bocage,local,-0.65639,49.07889,FRA,France,Wikidata coordinates (P625),1
+Q845229,Santa Catalina Island,region,-118.41758,33.38336,USA,United States of America,Wikidata coordinates (P625),1
+Q859440,King George Island,region,-58.35,-62.03333,ATA,Antarctica,Wikidata coordinates (P625),1
+Q87,Alexandria,local,29.8925,31.1975,EGY,Egypt,Wikidata coordinates (P625),1
+Q8757,A Coruña,region,-8.39611,43.37111,ESP,Spain,Wikidata coordinates (P625),1
+Q883,Novosibirsk,local,82.91667,55.03333,RUS,Russia,Wikidata coordinates (P625),1
+Q91228,Monteriggioni,local,11.21804,43.36698,ITA,Italy,Wikidata coordinates (P625),1
+Q91413,San Gimignano,local,11.04322,43.46772,ITA,Italy,Wikidata coordinates (P625),1
+Q917,Bhutan,country,90.040294,27.536685,BTN,Bhutan,"Natural Earth country, label point",1
+Q9206745,Dhekelia Cantonment,region,33.7734,35.0174,CYP,Cyprus,Wikidata coordinates (P625),1
+Q921,Brunei Darussalam,country,114.551943,4.448298,BRN,Brunei,"Natural Earth country, label point",1
+Q926316,Kungsträdgården,region,18.07111,59.33194,SWE,Sweden,Wikidata coordinates (P625),1
+Q9270,Thimphu,local,89.63367,27.47135,BTN,Bhutan,Wikidata coordinates (P625),1
+Q954207,Central Park Zoo,region,-73.97167,40.76778,USA,United States of America,Wikidata coordinates (P625),1
+Q959,Vladivostok,local,131.88528,43.115,RUS,Russia,Wikidata coordinates (P625),1
+Q96161234,Věžický rybník,region,15.19044,50.51551,CZE,Czechia,Wikidata coordinates (P625),1
+Q962,Benin,country,2.352018,10.324775,BEN,Benin,"Natural Earth country, label point",1
+Q963,Botswana,country,24.179216,-22.102634,BWA,Botswana,"Natural Earth country, label point",1
+Q965,Burkina Faso,country,-1.36388,12.673048,BFA,Burkina Faso,"Natural Earth country, label point",1
+Q967,Burundi,country,29.917086,-3.332836,BDI,Burundi,"Natural Earth country, label point",1
+Q977059,Santa Fe,local,-95.1042,29.3806,USA,United States of America,Wikidata coordinates (P625),1
+Q98,Pacific Ocean,broad,-160.0,0.0,,,Wikidata coordinates (P625),1
+Q980,Bavaria,region,11.38556,49.07861,DEU,Germany,Wikidata coordinates (P625),1
+Q983524,Varginha,local,-45.43,-21.55083,BRA,Brazil,Wikidata coordinates (P625),1
+Q985,Baden-Württemberg,region,9.04111,48.53778,DEU,Germany,Wikidata coordinates (P625),1
+Q999030,Upper Hungary,region,19.0,49.0,SVK,Slovakia,Wikidata coordinates (P625),1
+gn:Alabama,Alabama,region,-86.29997,32.36681,USA,United States of America,hand list: placed at Montgomery (GeoNames),1
+gn:Bristol,Bristol,local,-2.59665,51.45523,GBR,United Kingdom,hand list: placed at Bristol (GeoNames),1
+gn:Calgary,Calgary,local,-114.08529,51.05011,CAN,Canada,hand list: placed at Calgary (GeoNames),1
+gn:Cambridge,Cambridge,local,0.11667,52.2,GBR,United Kingdom,hand list: placed at Cambridge (GeoNames),1
+gn:Caracas,Caracas,local,-66.87919,10.48801,VEN,Venezuela,hand list: placed at Caracas (GeoNames),1
+gn:Cincinnati,Cincinnati,local,-84.51439,39.12711,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 4508722, population 311,097)",1
+gn:Cleveland,Cleveland,local,-81.69541,41.4995,USA,United States of America,"GeoNames cities15000 exact name match (geonameid 5150529, population 365,379)",1
+gn:Gloucester,Gloucester,local,-2.2431,51.86568,GBR,United Kingdom,hand list: placed at Gloucester (GeoNames),1
+gn:Gloucestershire,Gloucestershire,region,-2.2431,51.86568,GBR,United Kingdom,hand list: placed at Gloucester (GeoNames),1
+gn:Guernsey,Guernsey,region,-2.53527,49.45981,GGY,Guernsey,hand list: placed at Saint Peter Port (GeoNames),1
+gn:Hyōgo Prefecture,Hyōgo Prefecture,region,135.183,34.6913,JPN,Japan,hand list: placed at Kobe (GeoNames),1
+gn:Karachi,Karachi,local,67.0104,24.8608,PAK,Pakistan,hand list: placed at Karachi (GeoNames),1
+gn:Kolkata,Kolkata,local,88.36304,22.56263,IND,India,hand list: placed at Kolkata (GeoNames),1
+gn:Miyagi Prefecture,Miyagi Prefecture,region,140.86667,38.26667,JPN,Japan,hand list: placed at Sendai (GeoNames),1
+gn:Norfolk,Norfolk,region,1.29834,52.62783,GBR,United Kingdom,hand list: placed at Norwich (GeoNames),1
+gn:Plymouth,Plymouth,local,-4.14305,50.37153,GBR,United Kingdom,hand list: placed at Plymouth (GeoNames),1
+gn:Salisbury,Salisbury,local,-1.79569,51.06931,GBR,United Kingdom,hand list: placed at Salisbury (GeoNames),1
+gn:Sikh Empire,Sikh Empire,historical,74.35071,31.558,PAK,Pakistan,hand list: placed at Lahore (GeoNames),1
+gn:York,York,local,-1.08271,53.95763,GBR,United Kingdom,hand list: placed at York (GeoNames),1
+gn:the United States Virgin Islands,United States Virgin Islands,region,-64.9307,18.3419,VIR,U.S. Virgin Is.,hand list: placed at Charlotte Amalie (GeoNames),1
+hand:Central America,Central America,broad,-86.0,14.0,,,hand list: rough centre,1
+ne:CPV,Republic of Cabo Verde,country,-23.639434,15.074761,CPV,Cabo Verde,"Natural Earth country, label point",1
+ne:FRA:France,France,historical,2.552275,46.696113,FRA,France,hand list: placed at the Natural Earth label point of France,1
+ne:FRA:Guadeloupe,Guadeloupe,region,2.552275,46.696113,FRA,France,hand list: placed at the Natural Earth label point of France,1
+ne:GNQ,Equatorial Guinea,country,8.9902,2.333,GNQ,Eq. Guinea,"Natural Earth country, label point",1
+ne:KNA,Saint Kitts and Nevis,country,-62.757975,17.336558,KNA,St. Kitts and Nevis,"Natural Earth country, label point",1
+ne:NLD:Saba,Saba,region,5.61144,52.422211,NLD,Netherlands,hand list: placed at the Natural Earth label point of Netherlands,1
+ne:NLD:Sint Eustatius,Sint Eustatius,region,5.61144,52.422211,NLD,Netherlands,hand list: placed at the Natural Earth label point of Netherlands,1
+Q179876,Kingdom of England,historical,-1.31667,52.06667,GBR,United Kingdom,Wikidata coordinates (P625),0
+Q183464,Livonia,broad,25.96716,57.86223,,,Wikidata coordinates (P625),0
+Q27231,East Asia,broad,102.84778,47.21028,,,Wikidata coordinates (P625),0
+Q28227,Maghreb,broad,5.0,30.0,,,Wikidata coordinates (P625),0
+Q42585,Kingdom of Bohemia,historical,14.42139,50.0875,CZE,Czechia,Wikidata coordinates (P625),0
+Q495735,Finland-Russia border,broad,26.33555,59.99444,,,Wikidata coordinates (P625),0
+Q5401,Eurasia,broad,80.0,50.0,,,Wikidata coordinates (P625),0
+Q5451,Himalayas,broad,84.0,29.0,,,Wikidata coordinates (P625),0
+Q5484,Caspian Sea,broad,50.5,42.0,,,Wikidata coordinates (P625),0
+Q97,Atlantic Ocean,broad,-30.0,0.0,,,Wikidata coordinates (P625),0

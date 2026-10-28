@@ -1,0 +1,3060 @@
+{
+ "meta": {
+  "retrieved": "28 October 2026",
+  "wikidata_games": 189453,
+  "wikidata_games_enwiki": 31653,
+  "games_total": 6691,
+  "games_earth": 6198,
+  "games_space": 595,
+  "games_earth_and_space": 102,
+  "share_of_wikidata": 0.035317466601215076,
+  "earth_by_source": {
+   "wikipedia": 2780,
+   "both": 2610,
+   "wikidata": 808
+  },
+  "links_used": 15721,
+  "links_dc_sport": 202,
+  "links_set_aside": 1897,
+  "links_used_by_source": {
+   "wikipedia": 11188,
+   "both": 3057,
+   "wikidata": 1476
+  },
+  "places": 724,
+  "places_dots": 508,
+  "places_cities": 204,
+  "countries_set": 186,
+  "countries_made": 72,
+  "wd_fictional_places": 688,
+  "wd_fictional_links": 1148,
+  "wd_fictional_top": [
+   {
+    "label": "Paradise",
+    "games": 21
+   },
+   {
+    "label": "Sevastopol Station",
+    "games": 17
+   },
+   {
+    "label": "SimNation",
+    "games": 15
+   },
+   {
+    "label": "Black Mesa Research Facility",
+    "games": 15
+   },
+   {
+    "label": "Kanto",
+    "games": 14
+   },
+   {
+    "label": "Earth",
+    "games": 12
+   },
+   {
+    "label": "Playtime Co.",
+    "games": 11
+   },
+   {
+    "label": "Pandora",
+    "games": 8
+   }
+  ],
+  "wp_categories": 823,
+  "wp_categories_place": 475,
+  "wp_categories_era": 274,
+  "wp_categories_space": 7,
+  "wp_categories_other": 64,
+  "wp_unplaced": [
+   {
+    "place_text": "Easter Island",
+    "games": 11
+   },
+   {
+    "place_text": "Ascension Island",
+    "games": 3
+   },
+   {
+    "place_text": "Northumberland",
+    "games": 1
+   }
+  ],
+  "with_year": 6354,
+  "year_min": 1969,
+  "year_max": 2028,
+  "earth_with_enwiki": 5825,
+  "games_broad_only": 398
+ },
+ "made_cov": {
+  "known": 5687,
+  "share": 0.9175540496934494,
+  "hq": 4470,
+  "dev_country": 230,
+  "origin": 987,
+  "unknown": 511
+ },
+ "top_cities": [
+  {
+   "name": "New York City",
+   "games": 529,
+   "country": "United States of America"
+  },
+  {
+   "name": "London",
+   "games": 288,
+   "country": "United Kingdom"
+  },
+  {
+   "name": "Tokyo",
+   "games": 276,
+   "country": "Japan"
+  },
+  {
+   "name": "Los Angeles",
+   "games": 197,
+   "country": "United States of America"
+  },
+  {
+   "name": "Paris",
+   "games": 158,
+   "country": "France"
+  },
+  {
+   "name": "San Francisco",
+   "games": 158,
+   "country": "United States of America"
+  },
+  {
+   "name": "Chicago",
+   "games": 91,
+   "country": "United States of America"
+  },
+  {
+   "name": "Washington, D.C.",
+   "games": 83,
+   "country": "United States of America"
+  },
+  {
+   "name": "Miami",
+   "games": 79,
+   "country": "United States of America"
+  },
+  {
+   "name": "Barcelona",
+   "games": 67,
+   "country": "Spain"
+  },
+  {
+   "name": "Berlin",
+   "games": 58,
+   "country": "Germany"
+  },
+  {
+   "name": "Montreal",
+   "games": 58,
+   "country": "Canada"
+  },
+  {
+   "name": "Shanghai",
+   "games": 57,
+   "country": "China"
+  },
+  {
+   "name": "Moscow",
+   "games": 54,
+   "country": "Russia"
+  },
+  {
+   "name": "São Paulo",
+   "games": 52,
+   "country": "Brazil"
+  },
+  {
+   "name": "Rome",
+   "games": 48,
+   "country": "Italy"
+  },
+  {
+   "name": "Indianapolis",
+   "games": 45,
+   "country": "United States of America"
+  },
+  {
+   "name": "Seattle",
+   "games": 44,
+   "country": "United States of America"
+  },
+  {
+   "name": "Las Vegas",
+   "games": 39,
+   "country": "United States of America"
+  },
+  {
+   "name": "New Orleans",
+   "games": 39,
+   "country": "United States of America"
+  }
+ ],
+ "top_places": [
+  {
+   "name": "New York City",
+   "games": 529
+  },
+  {
+   "name": "London",
+   "games": 288
+  },
+  {
+   "name": "Tokyo",
+   "games": 276
+  },
+  {
+   "name": "England",
+   "games": 271
+  },
+  {
+   "name": "California",
+   "games": 236
+  },
+  {
+   "name": "Los Angeles",
+   "games": 197
+  },
+  {
+   "name": "San Francisco",
+   "games": 158
+  },
+  {
+   "name": "Paris",
+   "games": 158
+  },
+  {
+   "name": "Nevada",
+   "games": 125
+  },
+  {
+   "name": "Scotland",
+   "games": 116
+  },
+  {
+   "name": "Texas",
+   "games": 100
+  },
+  {
+   "name": "Arizona",
+   "games": 99
+  },
+  {
+   "name": "Las Vegas Valley",
+   "games": 95
+  },
+  {
+   "name": "Chicago",
+   "games": 91
+  },
+  {
+   "name": "Washington, D.C.",
+   "games": 83
+  },
+  {
+   "name": "Miami",
+   "games": 79
+  },
+  {
+   "name": "Hawaii",
+   "games": 75
+  },
+  {
+   "name": "Colorado",
+   "games": 75
+  },
+  {
+   "name": "Alaska",
+   "games": 72
+  },
+  {
+   "name": "Barcelona",
+   "games": 67
+  }
+ ],
+ "top_set_countries": [
+  {
+   "name": "United States of America",
+   "games": 2636,
+   "share": 0.42529848338173604
+  },
+  {
+   "name": "Japan",
+   "games": 1179,
+   "share": 0.19022265246853823
+  },
+  {
+   "name": "United Kingdom",
+   "games": 904,
+   "share": 0.14585350112939657
+  },
+  {
+   "name": "France",
+   "games": 594,
+   "share": 0.09583736689254599
+  },
+  {
+   "name": "Italy",
+   "games": 511,
+   "share": 0.0824459503065505
+  },
+  {
+   "name": "Russia",
+   "games": 462,
+   "share": 0.07454017424975799
+  },
+  {
+   "name": "Germany",
+   "games": 453,
+   "share": 0.07308809293320426
+  },
+  {
+   "name": "China",
+   "games": 391,
+   "share": 0.06308486608583413
+  },
+  {
+   "name": "Australia",
+   "games": 333,
+   "share": 0.0537270087124879
+  },
+  {
+   "name": "Egypt",
+   "games": 309,
+   "share": 0.04985479186834463
+  },
+  {
+   "name": "Canada",
+   "games": 287,
+   "share": 0.046305259761213295
+  },
+  {
+   "name": "Spain",
+   "games": 265,
+   "share": 0.04275572765408196
+  },
+  {
+   "name": "Mexico",
+   "games": 241,
+   "share": 0.03888351080993869
+  },
+  {
+   "name": "Brazil",
+   "games": 225,
+   "share": 0.03630203291384317
+  },
+  {
+   "name": "Greece",
+   "games": 177,
+   "share": 0.028557599225556632
+  },
+  {
+   "name": "India",
+   "games": 128,
+   "share": 0.020651823168764117
+  },
+  {
+   "name": "Belgium",
+   "games": 125,
+   "share": 0.02016779606324621
+  },
+  {
+   "name": "Monaco",
+   "games": 120,
+   "share": 0.01936108422071636
+  },
+  {
+   "name": "Hong Kong",
+   "games": 113,
+   "share": 0.01823168764117457
+  },
+  {
+   "name": "Netherlands",
+   "games": 112,
+   "share": 0.0180703452726686
+  }
+ ],
+ "top_made_countries": [
+  {
+   "name": "United States of America",
+   "games": 1817,
+   "share": 0.3195006154387199
+  },
+  {
+   "name": "Japan",
+   "games": 1361,
+   "share": 0.23931774221909619
+  },
+  {
+   "name": "United Kingdom",
+   "games": 738,
+   "share": 0.12976965007912783
+  },
+  {
+   "name": "France",
+   "games": 305,
+   "share": 0.05363108844733603
+  },
+  {
+   "name": "Canada",
+   "games": 286,
+   "share": 0.05029013539651837
+  },
+  {
+   "name": "Sweden",
+   "games": 128,
+   "share": 0.022507473184455777
+  },
+  {
+   "name": "Australia",
+   "games": 123,
+   "share": 0.021628275013187974
+  },
+  {
+   "name": "Germany",
+   "games": 107,
+   "share": 0.018814840865131
+  },
+  {
+   "name": "Poland",
+   "games": 95,
+   "share": 0.01670476525408827
+  },
+  {
+   "name": "Russia",
+   "games": 76,
+   "share": 0.013363812203270617
+  },
+  {
+   "name": "Italy",
+   "games": 63,
+   "share": 0.011077896957974327
+  },
+  {
+   "name": "Spain",
+   "games": 56,
+   "share": 0.009847019518199402
+  },
+  {
+   "name": "Ukraine",
+   "games": 51,
+   "share": 0.008967821346931599
+  },
+  {
+   "name": "Czechia",
+   "games": 45,
+   "share": 0.007912783541410234
+  },
+  {
+   "name": "China",
+   "games": 44,
+   "share": 0.007736943907156673
+  },
+  {
+   "name": "Netherlands",
+   "games": 31,
+   "share": 0.0054510286618603835
+  },
+  {
+   "name": "Hungary",
+   "games": 28,
+   "share": 0.004923509759099701
+  },
+  {
+   "name": "Finland",
+   "games": 28,
+   "share": 0.004923509759099701
+  },
+  {
+   "name": "Denmark",
+   "games": 28,
+   "share": 0.004923509759099701
+  },
+  {
+   "name": "Romania",
+   "games": 22,
+   "share": 0.0038684719535783366
+  }
+ ],
+ "top_made_towns": [
+  {
+   "name": "Tokyo",
+   "country": "Japan",
+   "games": 750
+  },
+  {
+   "name": "Osaka",
+   "country": "Japan",
+   "games": 205
+  },
+  {
+   "name": "Paris",
+   "country": "France",
+   "games": 182
+  },
+  {
+   "name": "Seattle",
+   "country": "United States of America",
+   "games": 159
+  },
+  {
+   "name": "Vancouver",
+   "country": "Canada",
+   "games": 109
+  },
+  {
+   "name": "Montréal",
+   "country": "Canada",
+   "games": 92
+  },
+  {
+   "name": "London",
+   "country": "United Kingdom",
+   "games": 81
+  },
+  {
+   "name": "San Mateo",
+   "country": "United States of America",
+   "games": 78
+  },
+  {
+   "name": "Los Angeles",
+   "country": "United States of America",
+   "games": 71
+  },
+  {
+   "name": "San Francisco",
+   "country": "United States of America",
+   "games": 69
+  },
+  {
+   "name": "Bellevue",
+   "country": "United States of America",
+   "games": 64
+  },
+  {
+   "name": "Coventry",
+   "country": "United Kingdom",
+   "games": 63
+  },
+  {
+   "name": "Inglewood",
+   "country": "United States of America",
+   "games": 62
+  },
+  {
+   "name": "Stockholm",
+   "country": "Sweden",
+   "games": 61
+  },
+  {
+   "name": "Melbourne",
+   "country": "Australia",
+   "games": 50
+  }
+ ],
+ "top_studios": [
+  {
+   "name": "Capcom",
+   "games": 117
+  },
+  {
+   "name": "Konami",
+   "games": 101
+  },
+  {
+   "name": "EA Vancouver",
+   "games": 51
+  },
+  {
+   "name": "Gameloft",
+   "games": 46
+  },
+  {
+   "name": "Codemasters",
+   "games": 44
+  },
+  {
+   "name": "Electronic Arts",
+   "games": 38
+  },
+  {
+   "name": "Namco",
+   "games": 38
+  },
+  {
+   "name": "SNK",
+   "games": 38
+  },
+  {
+   "name": "Her Interactive",
+   "games": 36
+  },
+  {
+   "name": "EA Orlando",
+   "games": 30
+  },
+  {
+   "name": "MicroProse",
+   "games": 28
+  },
+  {
+   "name": "Telltale Games",
+   "games": 27
+  },
+  {
+   "name": "Milestone S.r.l.",
+   "games": 26
+  },
+  {
+   "name": "GrandMA Studios",
+   "games": 23
+  },
+  {
+   "name": "Danger Close Games",
+   "games": 22
+  }
+ ],
+ "flows_top": [
+  {
+   "made": "Japan",
+   "set": "United States of America",
+   "games": 467
+  },
+  {
+   "made": "United Kingdom",
+   "set": "United States of America",
+   "games": 358
+  },
+  {
+   "made": "United States of America",
+   "set": "United Kingdom",
+   "games": 222
+  },
+  {
+   "made": "United States of America",
+   "set": "Russia",
+   "games": 153
+  },
+  {
+   "made": "Canada",
+   "set": "United States of America",
+   "games": 151
+  },
+  {
+   "made": "United States of America",
+   "set": "Japan",
+   "games": 139
+  },
+  {
+   "made": "United States of America",
+   "set": "France",
+   "games": 138
+  },
+  {
+   "made": "Japan",
+   "set": "United Kingdom",
+   "games": 132
+  },
+  {
+   "made": "Japan",
+   "set": "China",
+   "games": 128
+  },
+  {
+   "made": "United States of America",
+   "set": "Germany",
+   "games": 121
+  },
+  {
+   "made": "United States of America",
+   "set": "Egypt",
+   "games": 117
+  },
+  {
+   "made": "United States of America",
+   "set": "Italy",
+   "games": 117
+  },
+  {
+   "made": "France",
+   "set": "United States of America",
+   "games": 115
+  },
+  {
+   "made": "United Kingdom",
+   "set": "Japan",
+   "games": 112
+  },
+  {
+   "made": "United Kingdom",
+   "set": "France",
+   "games": 103
+  },
+  {
+   "made": "United Kingdom",
+   "set": "Italy",
+   "games": 103
+  },
+  {
+   "made": "Japan",
+   "set": "France",
+   "games": 91
+  },
+  {
+   "made": "United Kingdom",
+   "set": "Australia",
+   "games": 89
+  },
+  {
+   "made": "Japan",
+   "set": "Italy",
+   "games": 89
+  },
+  {
+   "made": "United Kingdom",
+   "set": "Germany",
+   "games": 87
+  }
+ ],
+ "flows_home_top": [
+  {
+   "made": "United States of America",
+   "set": "United States of America",
+   "games": 1064
+  },
+  {
+   "made": "Japan",
+   "set": "Japan",
+   "games": 719
+  },
+  {
+   "made": "United Kingdom",
+   "set": "United Kingdom",
+   "games": 262
+  },
+  {
+   "made": "France",
+   "set": "France",
+   "games": 81
+  },
+  {
+   "made": "Canada",
+   "set": "Canada",
+   "games": 62
+  },
+  {
+   "made": "Australia",
+   "set": "Australia",
+   "games": 43
+  },
+  {
+   "made": "Italy",
+   "set": "Italy",
+   "games": 35
+  },
+  {
+   "made": "Russia",
+   "set": "Russia",
+   "games": 28
+  },
+  {
+   "made": "Sweden",
+   "set": "Sweden",
+   "games": 26
+  },
+  {
+   "made": "China",
+   "set": "China",
+   "games": 25
+  }
+ ],
+ "n_games_with_both_ends": 5316,
+ "home_share": [
+  {
+   "country": "United States of America",
+   "games": 1693,
+   "home": 1064,
+   "share_home": 0.6284701712935618,
+   "top_abroad": [
+    "United Kingdom",
+    "Russia",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Italy",
+   "games": 60,
+   "home": 35,
+   "share_home": 0.5833333333333334,
+   "top_abroad": [
+    "United Kingdom",
+    "United States of America",
+    "France"
+   ]
+  },
+  {
+   "country": "China",
+   "games": 43,
+   "home": 25,
+   "share_home": 0.5813953488372093,
+   "top_abroad": [
+    "Japan",
+    "United States of America",
+    "France"
+   ]
+  },
+  {
+   "country": "Japan",
+   "games": 1309,
+   "home": 719,
+   "share_home": 0.5492742551566081,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "China"
+   ]
+  },
+  {
+   "country": "Russia",
+   "games": 66,
+   "home": 28,
+   "share_home": 0.42424242424242425,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Egypt"
+   ]
+  },
+  {
+   "country": "Australia",
+   "games": 114,
+   "home": 43,
+   "share_home": 0.37719298245614036,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "United Kingdom",
+   "games": 697,
+   "home": 262,
+   "share_home": 0.37589670014347204,
+   "top_abroad": [
+    "United States of America",
+    "Japan",
+    "Italy"
+   ]
+  },
+  {
+   "country": "France",
+   "games": 279,
+   "home": 81,
+   "share_home": 0.2903225806451613,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Italy"
+   ]
+  },
+  {
+   "country": "Germany",
+   "games": 87,
+   "home": 25,
+   "share_home": 0.28735632183908044,
+   "top_abroad": [
+    "United States of America",
+    "Italy",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Ukraine",
+   "games": 42,
+   "home": 11,
+   "share_home": 0.2619047619047619,
+   "top_abroad": [
+    "United Kingdom",
+    "Russia",
+    "United States of America"
+   ]
+  },
+  {
+   "country": "Poland",
+   "games": 86,
+   "home": 22,
+   "share_home": 0.2558139534883721,
+   "top_abroad": [
+    "United States of America",
+    "Russia",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Canada",
+   "games": 273,
+   "home": 62,
+   "share_home": 0.2271062271062271,
+   "top_abroad": [
+    "United States of America",
+    "France",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Czechia",
+   "games": 41,
+   "home": 9,
+   "share_home": 0.21951219512195122,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Russia"
+   ]
+  },
+  {
+   "country": "Sweden",
+   "games": 119,
+   "home": 26,
+   "share_home": 0.2184873949579832,
+   "top_abroad": [
+    "United States of America",
+    "France",
+    "Russia"
+   ]
+  },
+  {
+   "country": "Spain",
+   "games": 51,
+   "home": 10,
+   "share_home": 0.19607843137254902,
+   "top_abroad": [
+    "United States of America",
+    "France",
+    "Italy"
+   ]
+  }
+ ],
+ "set_made_locally": [
+  {
+   "country": "Antarctica",
+   "games": 84,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Argentina",
+   "games": 63,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "France",
+    "United Kingdom",
+    "Canada"
+   ]
+  },
+  {
+   "country": "Belgium",
+   "games": 122,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Egypt",
+   "games": 295,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Iraq",
+   "games": 76,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United States of America",
+    "Canada",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Monaco",
+   "games": 118,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United Kingdom",
+    "Japan",
+    "United States of America"
+   ]
+  },
+  {
+   "country": "Thailand",
+   "games": 61,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "Sweden"
+   ]
+  },
+  {
+   "country": "Mexico",
+   "games": 235,
+   "made_at_home": 2,
+   "share_local": 0.00851063829787234,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Hong Kong",
+   "games": 107,
+   "made_at_home": 1,
+   "share_local": 0.009345794392523364,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Switzerland",
+   "games": 84,
+   "made_at_home": 1,
+   "share_local": 0.011904761904761904,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Malaysia",
+   "games": 67,
+   "made_at_home": 1,
+   "share_local": 0.014925373134328358,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "Italy"
+   ]
+  },
+  {
+   "country": "Vietnam",
+   "games": 65,
+   "made_at_home": 1,
+   "share_local": 0.015384615384615385,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Greece",
+   "games": 170,
+   "made_at_home": 3,
+   "share_local": 0.01764705882352941,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "South Africa",
+   "games": 70,
+   "made_at_home": 2,
+   "share_local": 0.02857142857142857,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Austria",
+   "games": 104,
+   "made_at_home": 3,
+   "share_local": 0.028846153846153848,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "France"
+   ]
+  },
+  {
+   "country": "Turkey",
+   "games": 85,
+   "made_at_home": 3,
+   "share_local": 0.03529411764705882,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "France"
+   ]
+  },
+  {
+   "country": "Portugal",
+   "games": 80,
+   "made_at_home": 3,
+   "share_local": 0.0375,
+   "top_makers": [
+    "United Kingdom",
+    "Japan",
+    "France"
+   ]
+  },
+  {
+   "country": "Hungary",
+   "games": 79,
+   "made_at_home": 3,
+   "share_local": 0.0379746835443038,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Spain",
+   "games": 255,
+   "made_at_home": 10,
+   "share_local": 0.0392156862745098,
+   "top_makers": [
+    "United Kingdom",
+    "Japan",
+    "United States of America"
+   ]
+  },
+  {
+   "country": "Brazil",
+   "games": 217,
+   "made_at_home": 10,
+   "share_local": 0.04608294930875576,
+   "top_makers": [
+    "Japan",
+    "United Kingdom",
+    "United States of America"
+   ]
+  },
+  {
+   "country": "Netherlands",
+   "games": 107,
+   "made_at_home": 5,
+   "share_local": 0.04672897196261682,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Norway",
+   "games": 83,
+   "made_at_home": 4,
+   "share_local": 0.04819277108433735,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "India",
+   "games": 123,
+   "made_at_home": 6,
+   "share_local": 0.04878048780487805,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Germany",
+   "games": 433,
+   "made_at_home": 25,
+   "share_local": 0.057736720554272515,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "South Korea",
+   "games": 68,
+   "made_at_home": 4,
+   "share_local": 0.058823529411764705,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Russia",
+   "games": 438,
+   "made_at_home": 28,
+   "share_local": 0.0639269406392694,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "China",
+   "games": 366,
+   "made_at_home": 25,
+   "share_local": 0.06830601092896176,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "United Kingdom"
+   ]
+  },
+  {
+   "country": "Italy",
+   "games": 488,
+   "made_at_home": 35,
+   "share_local": 0.07172131147540983,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Czechia",
+   "games": 92,
+   "made_at_home": 9,
+   "share_local": 0.09782608695652174,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Italy"
+   ]
+  },
+  {
+   "country": "Finland",
+   "games": 69,
+   "made_at_home": 8,
+   "share_local": 0.11594202898550725,
+   "top_makers": [
+    "United Kingdom",
+    "France",
+    "Italy"
+   ]
+  },
+  {
+   "country": "Australia",
+   "games": 315,
+   "made_at_home": 43,
+   "share_local": 0.1365079365079365,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "Japan"
+   ]
+  },
+  {
+   "country": "France",
+   "games": 573,
+   "made_at_home": 81,
+   "share_local": 0.14136125654450263,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Ukraine",
+   "games": 64,
+   "made_at_home": 11,
+   "share_local": 0.171875,
+   "top_makers": [
+    "United States of America",
+    "France",
+    "Sweden"
+   ]
+  },
+  {
+   "country": "Canada",
+   "games": 272,
+   "made_at_home": 62,
+   "share_local": 0.22794117647058823,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  {
+   "country": "Sweden",
+   "games": 93,
+   "made_at_home": 26,
+   "share_local": 0.27956989247311825,
+   "top_makers": [
+    "United Kingdom",
+    "France",
+    "United States of America"
+   ]
+  },
+  {
+   "country": "United Kingdom",
+   "games": 856,
+   "made_at_home": 262,
+   "share_local": 0.3060747663551402,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "France"
+   ]
+  },
+  {
+   "country": "Poland",
+   "games": 68,
+   "made_at_home": 22,
+   "share_local": 0.3235294117647059,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "Germany"
+   ]
+  },
+  {
+   "country": "United States of America",
+   "games": 2481,
+   "made_at_home": 1064,
+   "share_local": 0.42885933091495365,
+   "top_makers": [
+    "Japan",
+    "United Kingdom",
+    "Canada"
+   ]
+  },
+  {
+   "country": "Japan",
+   "games": 1115,
+   "made_at_home": 719,
+   "share_local": 0.6448430493273543,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "France"
+   ]
+  }
+ ],
+ "matrix": {
+  "makers": [
+   "United States of America",
+   "Japan",
+   "United Kingdom",
+   "France",
+   "Canada",
+   "Sweden"
+  ],
+  "sets": [
+   "United States of America",
+   "Japan",
+   "United Kingdom",
+   "France",
+   "Italy",
+   "Russia",
+   "Germany",
+   "China",
+   "Egypt"
+  ],
+  "n": [
+   [
+    1064,
+    139,
+    222,
+    138,
+    117,
+    153,
+    121,
+    77,
+    117
+   ],
+   [
+    467,
+    719,
+    132,
+    91,
+    89,
+    79,
+    79,
+    128,
+    59
+   ],
+   [
+    358,
+    112,
+    262,
+    103,
+    103,
+    48,
+    87,
+    64,
+    44
+   ],
+   [
+    115,
+    32,
+    40,
+    81,
+    35,
+    22,
+    26,
+    16,
+    12
+   ],
+   [
+    151,
+    17,
+    34,
+    35,
+    26,
+    18,
+    17,
+    14,
+    5
+   ],
+   [
+    53,
+    10,
+    16,
+    23,
+    16,
+    18,
+    18,
+    10,
+    9
+   ]
+  ]
+ },
+ "us_share_by_maker": {
+  "Japan": 0.3567608861726509,
+  "United Kingdom": 0.5136298421807748,
+  "France": 0.4121863799283154,
+  "Canada": 0.5531135531135531,
+  "United States of America": 0.6284701712935618,
+  "Germany": 0.2988505747126437,
+  "Sweden": 0.44537815126050423
+ },
+ "by_decade": {
+  "1970": {
+   "games": 7,
+   "top_cities": [
+    [
+     "Indianapolis",
+     1
+    ],
+    [
+     "Monte Carlo",
+     1
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     4
+    ],
+    [
+     "Egypt",
+     1
+    ],
+    [
+     "Italy",
+     1
+    ],
+    [
+     "Monaco",
+     1
+    ]
+   ],
+   "us_share": 0.5714285714285714,
+   "space": 4
+  },
+  "1980": {
+   "games": 567,
+   "top_cities": [
+    [
+     "New York City",
+     40
+    ],
+    [
+     "London",
+     21
+    ],
+    [
+     "Los Angeles",
+     15
+    ],
+    [
+     "San Francisco",
+     14
+    ],
+    [
+     "East Berlin",
+     12
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     224
+    ],
+    [
+     "Japan",
+     83
+    ],
+    [
+     "United Kingdom",
+     60
+    ],
+    [
+     "Egypt",
+     41
+    ],
+    [
+     "Germany",
+     40
+    ]
+   ],
+   "us_share": 0.3950617283950617,
+   "space": 93
+  },
+  "1990": {
+   "games": 1368,
+   "top_cities": [
+    [
+     "New York City",
+     125
+    ],
+    [
+     "Los Angeles",
+     58
+    ],
+    [
+     "London",
+     54
+    ],
+    [
+     "San Francisco",
+     47
+    ],
+    [
+     "Tokyo",
+     45
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     631
+    ],
+    [
+     "Japan",
+     304
+    ],
+    [
+     "United Kingdom",
+     178
+    ],
+    [
+     "France",
+     114
+    ],
+    [
+     "Italy",
+     105
+    ]
+   ],
+   "us_share": 0.4612573099415205,
+   "space": 123
+  },
+  "2000": {
+   "games": 1821,
+   "top_cities": [
+    [
+     "New York City",
+     193
+    ],
+    [
+     "London",
+     91
+    ],
+    [
+     "Tokyo",
+     90
+    ],
+    [
+     "Paris",
+     70
+    ],
+    [
+     "Los Angeles",
+     64
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     836
+    ],
+    [
+     "Japan",
+     333
+    ],
+    [
+     "United Kingdom",
+     281
+    ],
+    [
+     "France",
+     219
+    ],
+    [
+     "Italy",
+     189
+    ]
+   ],
+   "us_share": 0.45908841295991215,
+   "space": 107
+  },
+  "2010": {
+   "games": 1465,
+   "top_cities": [
+    [
+     "New York City",
+     116
+    ],
+    [
+     "London",
+     90
+    ],
+    [
+     "Tokyo",
+     88
+    ],
+    [
+     "Paris",
+     42
+    ],
+    [
+     "Los Angeles",
+     40
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     596
+    ],
+    [
+     "Japan",
+     274
+    ],
+    [
+     "United Kingdom",
+     271
+    ],
+    [
+     "France",
+     163
+    ],
+    [
+     "Italy",
+     131
+    ]
+   ],
+   "us_share": 0.4068259385665529,
+   "space": 144
+  },
+  "2020": {
+   "games": 668,
+   "top_cities": [
+    [
+     "New York City",
+     38
+    ],
+    [
+     "Tokyo",
+     32
+    ],
+    [
+     "London",
+     23
+    ],
+    [
+     "Los Angeles",
+     13
+    ],
+    [
+     "Barcelona",
+     12
+    ]
+   ],
+   "top_countries": [
+    [
+     "United States of America",
+     236
+    ],
+    [
+     "Japan",
+     132
+    ],
+    [
+     "United Kingdom",
+     89
+    ],
+    [
+     "France",
+     59
+    ],
+    [
+     "Italy",
+     52
+    ]
+   ],
+   "us_share": 0.3532934131736527,
+   "space": 84
+  }
+ },
+ "earth_no_year": 301,
+ "series": {
+  "Moscow and the Soviet Union": {
+   "1970": 0,
+   "1980": 31,
+   "1990": 44,
+   "2000": 68,
+   "2010": 45,
+   "2020": 12
+  },
+  "Los Angeles": {
+   "1970": 0,
+   "1980": 15,
+   "1990": 58,
+   "2000": 64,
+   "2010": 40,
+   "2020": 13
+  },
+  "New York City": {
+   "1970": 0,
+   "1980": 40,
+   "1990": 125,
+   "2000": 193,
+   "2010": 116,
+   "2020": 40
+  },
+  "Tokyo": {
+   "1970": 0,
+   "1980": 10,
+   "1990": 45,
+   "2000": 90,
+   "2010": 90,
+   "2020": 35
+  },
+  "London": {
+   "1970": 0,
+   "1980": 21,
+   "1990": 54,
+   "2000": 91,
+   "2010": 90,
+   "2020": 23
+  },
+  "Egypt": {
+   "1970": 1,
+   "1980": 41,
+   "1990": 92,
+   "2000": 95,
+   "2010": 49,
+   "2020": 21
+  }
+ },
+ "share_series": {
+  "Moscow and the Soviet Union": {
+   "1970": 0.0,
+   "1980": 0.054673721340388004,
+   "1990": 0.03216374269005848,
+   "2000": 0.037342119714442616,
+   "2010": 0.030716723549488054,
+   "2020": 0.017964071856287425
+  },
+  "Los Angeles": {
+   "1970": 0.0,
+   "1980": 0.026455026455026454,
+   "1990": 0.04239766081871345,
+   "2000": 0.03514552443712246,
+   "2010": 0.027303754266211604,
+   "2020": 0.019461077844311378
+  },
+  "New York City": {
+   "1970": 0.0,
+   "1980": 0.07054673721340388,
+   "1990": 0.09137426900584796,
+   "2000": 0.10598572213069742,
+   "2010": 0.07918088737201365,
+   "2020": 0.059880239520958084
+  },
+  "Tokyo": {
+   "1970": 0.0,
+   "1980": 0.01763668430335097,
+   "1990": 0.03289473684210526,
+   "2000": 0.04942339373970346,
+   "2010": 0.06143344709897611,
+   "2020": 0.05239520958083832
+  },
+  "London": {
+   "1970": 0.0,
+   "1980": 0.037037037037037035,
+   "1990": 0.039473684210526314,
+   "2000": 0.049972542559033495,
+   "2010": 0.06143344709897611,
+   "2020": 0.0344311377245509
+  },
+  "Egypt": {
+   "1970": 0.14285714285714285,
+   "1980": 0.07231040564373897,
+   "1990": 0.06725146198830409,
+   "2000": 0.05216913783635365,
+   "2010": 0.033447098976109216,
+   "2020": 0.03143712574850299
+  }
+ },
+ "era": {
+  "games": 2986,
+  "ww2": 93,
+  "ww1": 26,
+  "cold_war": 444,
+  "future_2027": 735,
+  "before_1500": 153,
+  "year_1944": 35,
+  "cold_war_top_countries": [
+   [
+    "United States of America",
+    166
+   ],
+   [
+    "United Kingdom",
+    47
+   ],
+   [
+    "Russia",
+    45
+   ],
+   [
+    "Japan",
+    43
+   ],
+   [
+    "Germany",
+    24
+   ]
+  ],
+  "year_top": [
+   [
+    1998,
+    69
+   ],
+   [
+    1999,
+    69
+   ],
+   [
+    2012,
+    54
+   ],
+   [
+    1996,
+    50
+   ],
+   [
+    2015,
+    49
+   ],
+   [
+    2008,
+    48
+   ]
+  ]
+ },
+ "era_bins": [
+  {
+   "label": "Before 500",
+   "from": -100000,
+   "to": 499,
+   "games": 38
+  },
+  {
+   "label": "500 to 1499",
+   "from": 500,
+   "to": 1499,
+   "games": 118
+  },
+  {
+   "label": "1500 to 1799",
+   "from": 1500,
+   "to": 1799,
+   "games": 167
+  },
+  {
+   "label": "1800 to 1913",
+   "from": 1800,
+   "to": 1913,
+   "games": 256
+  },
+  {
+   "label": "1914 to 1945",
+   "from": 1914,
+   "to": 1945,
+   "games": 307
+  },
+  {
+   "label": "1946 to 1991",
+   "from": 1946,
+   "to": 1991,
+   "games": 540
+  },
+  {
+   "label": "1992 to 2026",
+   "from": 1992,
+   "to": 2026,
+   "games": 1241
+  },
+  {
+   "label": "2027 and later",
+   "from": 2027,
+   "to": 100000,
+   "games": 819
+  }
+ ],
+ "uk": {
+  "set": 904,
+  "set_share": 0.14585350112939657,
+  "top_places": [
+   [
+    "London",
+    288
+   ],
+   [
+    "England",
+    271
+   ],
+   [
+    "Scotland",
+    116
+   ],
+   [
+    "Wales",
+    28
+   ],
+   [
+    "Kent",
+    12
+   ],
+   [
+    "Surrey",
+    11
+   ],
+   [
+    "Blackpool",
+    8
+   ],
+   [
+    "Northamptonshire",
+    8
+   ],
+   [
+    "Yorkshire",
+    7
+   ],
+   [
+    "Hampshire",
+    7
+   ]
+  ],
+  "made": 738,
+  "made_towns": [
+   [
+    "London",
+    81
+   ],
+   [
+    "Coventry",
+    63
+   ],
+   [
+    "Derby",
+    37
+   ],
+   [
+    "Manchester",
+    33
+   ],
+   [
+    "Liverpool",
+    30
+   ],
+   [
+    "Woking",
+    29
+   ],
+   [
+    "Newcastle upon Tyne",
+    26
+   ],
+   [
+    "Cambridge",
+    24
+   ]
+  ],
+  "studios": [
+   [
+    "Codemasters",
+    44
+   ],
+   [
+    "Core Design",
+    18
+   ],
+   [
+    "Eurocom",
+    18
+   ],
+   [
+    "Rebellion Developments",
+    18
+   ],
+   [
+    "Traveller's Tales",
+    18
+   ],
+   [
+    "Acclaim Studios London",
+    14
+   ],
+   [
+    "SCE Studio Liverpool",
+    12
+   ],
+   [
+    "Rare Ltd.",
+    12
+   ]
+  ],
+  "made_set_where": [
+   [
+    "United States of America",
+    358
+   ],
+   [
+    "United Kingdom",
+    262
+   ],
+   [
+    "Japan",
+    112
+   ],
+   [
+    "France",
+    103
+   ],
+   [
+    "Italy",
+    103
+   ],
+   [
+    "Australia",
+    89
+   ],
+   [
+    "Germany",
+    87
+   ],
+   [
+    "Spain",
+    81
+   ]
+  ],
+  "made_home_share": 0.37589670014347204,
+  "set_made_by": [
+   [
+    "United Kingdom",
+    262
+   ],
+   [
+    "United States of America",
+    222
+   ],
+   [
+    "Japan",
+    132
+   ],
+   [
+    "France",
+    40
+   ],
+   [
+    "Canada",
+    34
+   ],
+   [
+    "Italy",
+    29
+   ]
+  ],
+  "set_made_at_home_share": 0.3060747663551402,
+  "nations": {
+   "England": 297,
+   "Scotland": 116,
+   "Wales": 28,
+   "Northern Ireland": 4
+  }
+ },
+ "space": {
+  "games": 595,
+  "by_body": {
+   "Outer space": 400,
+   "Moon": 119,
+   "Mars": 85,
+   "Titan": 16,
+   "Venus": 5,
+   "Jupiter's moons": 2,
+   "Mercury": 1,
+   "Sun": 1
+  },
+  "moon_by_decade": {
+   "1970": 2,
+   "1980": 9,
+   "1990": 30,
+   "2000": 32,
+   "2010": 33,
+   "2020": 9
+  },
+  "mars_by_decade": {
+   "1970": 0,
+   "1980": 6,
+   "1990": 20,
+   "2000": 21,
+   "2010": 22,
+   "2020": 11
+  },
+  "moon_first": [
+   {
+    "title": "Lunar",
+    "year": 1969
+   },
+   {
+    "title": "Lunar Rescue",
+    "year": 1979
+   },
+   {
+    "title": "Lunar Lander",
+    "year": 1979
+   }
+  ],
+  "mars_first": [
+   {
+    "title": "Caverns of Mars",
+    "year": 1981
+   },
+   {
+    "title": "Mars Cars",
+    "year": 1982
+   },
+   {
+    "title": "Toobin'",
+    "year": 1988
+   }
+  ],
+  "small_bodies": [
+   {
+    "body_group": "Jupiter's moons",
+    "bodies": "Io",
+    "title": "Dropzone",
+    "year": 1984
+   },
+   {
+    "body_group": "Jupiter's moons",
+    "bodies": "Callisto",
+    "title": "The Callisto Protocol",
+    "year": 2022
+   },
+   {
+    "body_group": "Mercury",
+    "bodies": "Mercury",
+    "title": "MECHANICA: A Ballad of the Rabbit and Mercury",
+    "year": 2020
+   },
+   {
+    "body_group": "Sun",
+    "bodies": "Sun",
+    "title": "Birth of the Federation",
+    "year": 1999
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Titan Empire",
+    "year": 1983
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Mines of Titan",
+    "year": 1989
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Flashback",
+    "year": 1992
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Descent",
+    "year": 1995
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Hardwar",
+    "year": 1998
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "The Journeyman Project 3: Legacy of Time",
+    "year": 1998
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Starsiege",
+    "year": 1999
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Dead Space Ignition",
+    "year": 2010
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Dead Space 2",
+    "year": 2011
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Dead Space",
+    "year": 2011
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Flashback",
+    "year": 2013
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Call of Duty: Infinite Warfare",
+    "year": 2016
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Overload",
+    "year": 2018
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Industries of Titan",
+    "year": 2021
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "Flashback 2",
+    "year": 2023
+   },
+   {
+    "body_group": "Titan",
+    "bodies": "Titan",
+    "title": "POD 2",
+    "year": null
+   },
+   {
+    "body_group": "Venus",
+    "bodies": "Venus",
+    "title": "Big Red Racing",
+    "year": 1996
+   },
+   {
+    "body_group": "Venus",
+    "bodies": "Venus",
+    "title": "Starsiege",
+    "year": 1999
+   },
+   {
+    "body_group": "Venus",
+    "bodies": "Venus",
+    "title": "Moero! Nekketsu Rhythm Damashii Osu! Tatakae! Ouendan 2",
+    "year": 2007
+   },
+   {
+    "body_group": "Venus",
+    "bodies": "Venus",
+    "title": "Destiny",
+    "year": 2014
+   },
+   {
+    "body_group": "Venus",
+    "bodies": "Venus",
+    "title": "Wolfenstein II: The New Colossus",
+    "year": 2017
+   }
+  ],
+  "by_source": {
+   "wikipedia": 490,
+   "both": 98,
+   "wikidata": 41
+  },
+  "moon_vs_mars": 1.4
+ },
+ "spot": {
+  "egypt": {
+   "country": "Egypt",
+   "games": 295,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  "monaco": {
+   "country": "Monaco",
+   "games": 118,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United Kingdom",
+    "Japan",
+    "United States of America"
+   ]
+  },
+  "belgium": {
+   "country": "Belgium",
+   "games": 122,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United Kingdom",
+    "United States of America",
+    "Japan"
+   ]
+  },
+  "mexico": {
+   "country": "Mexico",
+   "games": 235,
+   "made_at_home": 2,
+   "share_local": 0.00851063829787234,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  "japan": {
+   "country": "Japan",
+   "games": 1115,
+   "made_at_home": 719,
+   "share_local": 0.6448430493273543,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "France"
+   ]
+  },
+  "uk": {
+   "country": "United Kingdom",
+   "games": 856,
+   "made_at_home": 262,
+   "share_local": 0.3060747663551402,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "France"
+   ]
+  },
+  "usa": {
+   "country": "United States of America",
+   "games": 2481,
+   "made_at_home": 1064,
+   "share_local": 0.42885933091495365,
+   "top_makers": [
+    "Japan",
+    "United Kingdom",
+    "Canada"
+   ]
+  },
+  "russia": {
+   "country": "Russia",
+   "games": 438,
+   "made_at_home": 28,
+   "share_local": 0.0639269406392694,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  "italy": {
+   "country": "Italy",
+   "games": 488,
+   "made_at_home": 35,
+   "share_local": 0.07172131147540983,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  "germany": {
+   "country": "Germany",
+   "games": 433,
+   "made_at_home": 25,
+   "share_local": 0.057736720554272515,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  "china": {
+   "country": "China",
+   "games": 366,
+   "made_at_home": 25,
+   "share_local": 0.06830601092896176,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "United Kingdom"
+   ]
+  },
+  "france": {
+   "country": "France",
+   "games": 573,
+   "made_at_home": 81,
+   "share_local": 0.14136125654450263,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  "canada": {
+   "country": "Canada",
+   "games": 272,
+   "made_at_home": 62,
+   "share_local": 0.22794117647058823,
+   "top_makers": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  },
+  "greece": {
+   "country": "Greece",
+   "games": 170,
+   "made_at_home": 3,
+   "share_local": 0.01764705882352941,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  },
+  "hk": {
+   "country": "Hong Kong",
+   "games": 107,
+   "made_at_home": 1,
+   "share_local": 0.009345794392523364,
+   "top_makers": [
+    "Japan",
+    "United States of America",
+    "United Kingdom"
+   ]
+  },
+  "antarctica": {
+   "country": "Antarctica",
+   "games": 84,
+   "made_at_home": 0,
+   "share_local": 0.0,
+   "top_makers": [
+    "United States of America",
+    "Japan",
+    "United Kingdom"
+   ]
+  }
+ },
+ "home": {
+  "usa": {
+   "country": "United States of America",
+   "games": 1693,
+   "home": 1064,
+   "share_home": 0.6284701712935618,
+   "top_abroad": [
+    "United Kingdom",
+    "Russia",
+    "Japan"
+   ]
+  },
+  "japan": {
+   "country": "Japan",
+   "games": 1309,
+   "home": 719,
+   "share_home": 0.5492742551566081,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "China"
+   ]
+  },
+  "uk": {
+   "country": "United Kingdom",
+   "games": 697,
+   "home": 262,
+   "share_home": 0.37589670014347204,
+   "top_abroad": [
+    "United States of America",
+    "Japan",
+    "Italy"
+   ]
+  },
+  "france": {
+   "country": "France",
+   "games": 279,
+   "home": 81,
+   "share_home": 0.2903225806451613,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Italy"
+   ]
+  },
+  "canada": {
+   "country": "Canada",
+   "games": 273,
+   "home": 62,
+   "share_home": 0.2271062271062271,
+   "top_abroad": [
+    "United States of America",
+    "France",
+    "United Kingdom"
+   ]
+  },
+  "sweden": {
+   "country": "Sweden",
+   "games": 119,
+   "home": 26,
+   "share_home": 0.2184873949579832,
+   "top_abroad": [
+    "United States of America",
+    "France",
+    "Russia"
+   ]
+  },
+  "germany": {
+   "country": "Germany",
+   "games": 87,
+   "home": 25,
+   "share_home": 0.28735632183908044,
+   "top_abroad": [
+    "United States of America",
+    "Italy",
+    "United Kingdom"
+   ]
+  },
+  "poland": {
+   "country": "Poland",
+   "games": 86,
+   "home": 22,
+   "share_home": 0.2558139534883721,
+   "top_abroad": [
+    "United States of America",
+    "Russia",
+    "Japan"
+   ]
+  },
+  "australia": {
+   "country": "Australia",
+   "games": 114,
+   "home": 43,
+   "share_home": 0.37719298245614036,
+   "top_abroad": [
+    "United States of America",
+    "United Kingdom",
+    "Japan"
+   ]
+  }
+ },
+ "set_count": {
+  "United States of America": 2636,
+  "Japan": 1179,
+  "United Kingdom": 904,
+  "France": 594,
+  "Italy": 511,
+  "Russia": 462,
+  "Germany": 453,
+  "China": 391,
+  "Australia": 333,
+  "Egypt": 309,
+  "Canada": 287,
+  "Spain": 265,
+  "Mexico": 241,
+  "Brazil": 225,
+  "Greece": 177,
+  "India": 128,
+  "Belgium": 125,
+  "Monaco": 120,
+  "Hong Kong": 113,
+  "Netherlands": 112,
+  "Austria": 105,
+  "Sweden": 97,
+  "Czechia": 95,
+  "Norway": 88,
+  "Turkey": 87,
+  "Antarctica": 87,
+  "Switzerland": 87,
+  "Portugal": 84,
+  "Iraq": 83,
+  "Hungary": 81,
+  "Finland": 75,
+  "South Africa": 74,
+  "Poland": 73,
+  "South Korea": 73,
+  "Vietnam": 69,
+  "Ukraine": 69,
+  "Malaysia": 67,
+  "Argentina": 64,
+  "Thailand": 62,
+  "New Zealand": 62,
+  "United Arab Emirates": 61,
+  "Ireland": 58,
+  "Iran": 56,
+  "Cuba": 55,
+  "Singapore": 54,
+  "Libya": 52,
+  "Peru": 50,
+  "Romania": 49,
+  "Saudi Arabia": 48,
+  "Colombia": 43,
+  "Afghanistan": 42,
+  "Philippines": 42,
+  "Kazakhstan": 39,
+  "Kenya": 39,
+  "Costa Rica": 38,
+  "Indonesia": 37,
+  "Morocco": 35,
+  "Panama": 33,
+  "North Korea": 32,
+  "Chile": 32,
+  "Solomon Is.": 31,
+  "Iceland": 30,
+  "Qatar": 30,
+  "Jamaica": 29,
+  "Nepal": 29,
+  "Tunisia": 28,
+  "Syria": 28,
+  "Bahrain": 26,
+  "Azerbaijan": 26,
+  "Tanzania": 25,
+  "Croatia": 22,
+  "Pakistan": 22,
+  "Israel": 21,
+  "Denmark": 21,
+  "Venezuela": 21,
+  "Myanmar": 21,
+  "Cambodia": 19,
+  "Serbia": 18,
+  "Greenland": 17,
+  "Taiwan": 16,
+  "Algeria": 16,
+  "Somalia": 15,
+  "Papua New Guinea": 15,
+  "Mongolia": 14,
+  "Bosnia and Herz.": 14,
+  "Luxembourg": 14,
+  "Angola": 13,
+  "Cyprus": 13,
+  "Nigeria": 13,
+  "Dem. Rep. Congo": 13,
+  "Palestine": 13,
+  "Kuwait": 12,
+  "Slovakia": 12,
+  "Lebanon": 12,
+  "Bahamas": 12,
+  "Estonia": 12,
+  "Madagascar": 11,
+  "Kiribati": 11,
+  "Bulgaria": 11,
+  "Haiti": 11,
+  "Georgia": 11,
+  "Bolivia": 11,
+  "N. Mariana Is.": 10,
+  "Sri Lanka": 10,
+  "Bermuda": 10,
+  "Jordan": 9,
+  "Bangladesh": 9,
+  "Fr. Polynesia": 9,
+  "Namibia": 9,
+  "Latvia": 9,
+  "Malta": 9,
+  "Sudan": 9,
+  "Kyrgyzstan": 9,
+  "Albania": 8,
+  "Nicaragua": 8,
+  "Yemen": 8,
+  "Fiji": 8,
+  "Uzbekistan": 8,
+  "Belarus": 8,
+  "Palau": 7,
+  "Tajikistan": 7,
+  "Uganda": 7,
+  "Marshall Is.": 7,
+  "Vatican": 6,
+  "Chad": 6,
+  "Belize": 6,
+  "Dominican Rep.": 6,
+  "Zimbabwe": 6,
+  "Isle of Man": 6,
+  "Mozambique": 6,
+  "Slovenia": 6,
+  "Ecuador": 5,
+  "Turkmenistan": 5,
+  "Montenegro": 5,
+  "Lithuania": 5,
+  "U.S. Virgin Is.": 4,
+  "Guatemala": 4,
+  "Mauritania": 4,
+  "Barbados": 4,
+  "Senegal": 4,
+  "Laos": 4,
+  "Honduras": 4,
+  "Macao": 4,
+  "Guam": 4,
+  "Puerto Rico": 4,
+  "Zambia": 3,
+  "Grenada": 3,
+  "Kosovo": 3,
+  "Micronesia": 3,
+  "Timor-Leste": 3,
+  "Curaçao": 3,
+  "Cayman Is.": 3,
+  "Ethiopia": 3,
+  "Antigua and Barb.": 3,
+  "Rwanda": 3,
+  "Saint Lucia": 3,
+  "Maldives": 2,
+  "Niger": 2,
+  "St. Vin. and Gren.": 2,
+  "Trinidad and Tobago": 2,
+  "Oman": 2,
+  "San Marino": 2,
+  "Bhutan": 2,
+  "Falkland Is.": 2,
+  "El Salvador": 2,
+  "Congo": 2,
+  "Mali": 2,
+  "Liechtenstein": 2,
+  "Ghana": 2,
+  "Moldova": 2,
+  "Uruguay": 2,
+  "São Tomé and Principe": 2,
+  "Burundi": 1,
+  "Cabo Verde": 1,
+  "Cameroon": 1,
+  "Benin": 1,
+  "Botswana": 1,
+  "Brunei": 1,
+  "Eq. Guinea": 1,
+  "Burkina Faso": 1,
+  "Liberia": 1,
+  "Guernsey": 1,
+  "Sierra Leone": 1,
+  "Seychelles": 1,
+  "Paraguay": 1,
+  "St. Kitts and Nevis": 1
+ },
+ "made_count": {
+  "United States of America": 1817,
+  "Japan": 1361,
+  "United Kingdom": 738,
+  "France": 305,
+  "Canada": 286,
+  "Sweden": 128,
+  "Australia": 123,
+  "Germany": 107,
+  "Poland": 95,
+  "Russia": 76,
+  "Italy": 63,
+  "Spain": 56,
+  "Ukraine": 51,
+  "Czechia": 45,
+  "China": 44,
+  "Netherlands": 31,
+  "Hungary": 28,
+  "Finland": 28,
+  "Denmark": 28,
+  "Romania": 22,
+  "Slovakia": 21,
+  "Brazil": 18,
+  "Ireland": 16,
+  "New Zealand": 14,
+  "Bulgaria": 13,
+  "Taiwan": 12,
+  "Croatia": 12,
+  "Norway": 12,
+  "Austria": 12,
+  "South Korea": 11,
+  "Serbia": 10,
+  "India": 8,
+  "Turkey": 8,
+  "Singapore": 8,
+  "Indonesia": 7,
+  "Malta": 6,
+  "Portugal": 5,
+  "Switzerland": 4,
+  "Slovenia": 4,
+  "Chile": 4,
+  "South Africa": 4,
+  "Israel": 3,
+  "Philippines": 3,
+  "Belarus": 3,
+  "Greece": 3,
+  "Hong Kong": 2,
+  "Bangladesh": 2,
+  "Saudi Arabia": 2,
+  "Iran": 2,
+  "Malaysia": 2,
+  "Cayman Is.": 2,
+  "Colombia": 2,
+  "Mexico": 2,
+  "Argentina": 1,
+  "Armenia": 1,
+  "Belgium": 1,
+  "Lebanon": 1,
+  "Lithuania": 1,
+  "Estonia": 1,
+  "Egypt": 1,
+  "Cyprus": 1,
+  "Kazakhstan": 1,
+  "Pakistan": 1,
+  "Peru": 1,
+  "Nigeria": 1,
+  "North Korea": 1,
+  "N. Cyprus": 1,
+  "Morocco": 1,
+  "Sri Lanka": 1,
+  "Venezuela": 1,
+  "Vietnam": 1
+ },
+ "city": {
+  "New York City": 529,
+  "London": 288,
+  "Tokyo": 276,
+  "Los Angeles": 197,
+  "Paris": 158,
+  "San Francisco": 158,
+  "Chicago": 91,
+  "Washington, D.C.": 83,
+  "Miami": 79,
+  "Barcelona": 67,
+  "Berlin": 58,
+  "Montreal": 58,
+  "Shanghai": 57,
+  "Moscow": 54,
+  "São Paulo": 52,
+  "Rome": 48,
+  "Indianapolis": 45,
+  "Seattle": 44,
+  "Las Vegas": 39,
+  "New Orleans": 39
+ },
+ "place": {
+  "New York City": 529,
+  "London": 288,
+  "Tokyo": 276,
+  "England": 271,
+  "California": 236,
+  "Los Angeles": 197,
+  "San Francisco": 158,
+  "Paris": 158,
+  "Nevada": 125,
+  "Scotland": 116,
+  "Texas": 100,
+  "Arizona": 99,
+  "Las Vegas Valley": 95,
+  "Chicago": 91,
+  "Washington, D.C.": 83,
+  "Miami": 79,
+  "Hawaii": 75,
+  "Colorado": 75,
+  "Alaska": 72,
+  "Barcelona": 67,
+  "Florida": 63,
+  "Berlin": 58,
+  "Montreal": 58,
+  "Shanghai": 57,
+  "Moscow": 54,
+  "São Paulo": 52,
+  "Siberia": 51,
+  "Rome": 48,
+  "New Jersey": 46,
+  "New York (state)": 46,
+  "New Mexico": 45,
+  "Indianapolis": 45,
+  "Seattle": 44,
+  "Utah": 44,
+  "Georgia (U.S. state)": 42,
+  "Virginia": 41,
+  "Maryland": 40,
+  "Louisiana": 40,
+  "Washington (state)": 39,
+  "American frontier": 39,
+  "Las Vegas": 39,
+  "New Orleans": 39,
+  "Venice": 38,
+  "Detroit": 33,
+  "Pennsylvania": 31,
+  "Massachusetts": 31,
+  "Wisconsin": 30,
+  "Wales": 28,
+  "Kyoto": 28,
+  "Oregon": 27,
+  "Dubai": 27,
+  "Boston": 27,
+  "East Berlin": 26,
+  "Osaka": 24,
+  "Seoul": 22,
+  "North Carolina": 21,
+  "Sicily": 19,
+  "Montana": 19,
+  "Istanbul": 19,
+  "Okinawa Prefecture": 19,
+  "Maine": 18,
+  "Transylvania": 18,
+  "Philadelphia": 18,
+  "San Diego": 18,
+  "Michigan": 18,
+  "Yokohama": 18,
+  "Saint Petersburg": 17,
+  "Tibet": 17,
+  "Tennessee": 17,
+  "New England": 17,
+  "Wyoming": 17,
+  "Ohio": 16,
+  "Vancouver": 16,
+  "Kansas": 15,
+  "Sydney": 14,
+  "Toronto": 14,
+  "Prague": 14,
+  "South Dakota": 13,
+  "Illinois": 13,
+  "Kent": 12
+ },
+ "flow": {
+  "Japan>United States of America": 467,
+  "United Kingdom>United States of America": 358,
+  "United States of America>United Kingdom": 222,
+  "United States of America>Russia": 153,
+  "Canada>United States of America": 151,
+  "United States of America>Japan": 139,
+  "United States of America>France": 138,
+  "Japan>United Kingdom": 132,
+  "Japan>China": 128,
+  "United States of America>Germany": 121,
+  "United States of America>Egypt": 117,
+  "United States of America>Italy": 117,
+  "France>United States of America": 115,
+  "United Kingdom>Japan": 112,
+  "United Kingdom>France": 103,
+  "United Kingdom>Italy": 103,
+  "Japan>France": 91,
+  "United Kingdom>Australia": 89,
+  "Japan>Italy": 89,
+  "United Kingdom>Germany": 87,
+  "United States of America>United States of America": 1064,
+  "Japan>Japan": 719,
+  "United Kingdom>United Kingdom": 262,
+  "France>France": 81,
+  "Canada>Canada": 62,
+  "Australia>Australia": 43,
+  "Italy>Italy": 35,
+  "Russia>Russia": 28,
+  "Sweden>Sweden": 26,
+  "China>China": 25
+ },
+ "trend": {
+  "us_share_1990": 0.4612573099415205,
+  "us_share_2020": 0.3532934131736527,
+  "us_share_2000": 0.45908841295991215,
+  "us_share_2010": 0.4068259385665529,
+  "tokyo_1990": 0.03289473684210526,
+  "tokyo_2010": 0.06143344709897611,
+  "la_1990": 0.04239766081871345,
+  "la_2010": 0.027303754266211604,
+  "moscow_2000": 68,
+  "moscow_1980": 0.054673721340388004,
+  "moscow_2020": 0.017964071856287425,
+  "egypt_1980": 0.07231040564373897,
+  "egypt_1990": 0.06725146198830409,
+  "egypt_2010": 0.033447098976109216
+ },
+ "checks": {
+  "nyc_top": true,
+  "japan_to_us_top_flow": true,
+  "f1_median_places": 19.0,
+  "f1_games": 22
+ }
+}

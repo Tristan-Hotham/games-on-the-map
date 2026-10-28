@@ -1,0 +1,630 @@
+game_qid,body_group,bodies,source
+Q5308500,Jupiter's moons,Io,wikidata
+Q104172915,Jupiter's moons,Callisto,wikidata
+Q144559,Mars,Mars,both
+Q203310,Mars,Mars,wikipedia
+Q210275,Mars,Mars,both
+Q286205,Mars,Mars,both
+Q513867,Mars,Mars,both
+Q537071,Mars,Mars,both
+Q572500,Mars,Mars,wikipedia
+Q753511,Mars,Mars,both
+Q811025,Mars,Mars,both
+Q838642,Mars,Mars,both
+Q893412,Mars,Mars,both
+Q1051875,Mars,Mars,both
+Q1068025,Mars,Mars,both
+Q1071278,Mars,Mars,wikidata
+Q1128513,Mars,Mars,both
+Q1151827,Mars,Mars,both
+Q1200546,Mars,Mars,both
+Q1276884,Mars,Mars,both
+Q1327035,Mars,Mars,both
+Q1990991,Mars,Mars,wikipedia
+Q2135987,Mars,Mars,both
+Q2255487,Mars,Mars,both
+Q2305323,Mars,Mars,both
+Q2312016,Mars,Mars,wikipedia
+Q2361677,Mars,Mars,wikipedia
+Q2450704,Mars,Mars,wikipedia
+Q2487830,Mars,Mars,both
+Q2528180,Mars,Mars,wikipedia
+Q2531533,Mars,Mars,wikipedia
+Q2560167,Mars,Mars,both
+Q2601418,Mars,Mars,wikipedia
+Q2628712,Mars,Mars,wikipedia
+Q2733002,Mars,Mars,wikipedia
+Q3005559,Mars,Mars,wikipedia
+Q3028480,Mars,Mars,wikipedia
+Q3036896,Mars,Mars,both
+Q3080135,Mars,Mars,both
+Q3085756,Mars,Mars,both
+Q3161507,Mars,Mars,both
+Q3862744,Mars,Mars,both
+Q4035233,Mars,Mars,both
+Q4906178,Mars,Mars,both
+Q6773079,Mars,Mars,both
+Q6773111,Mars,Mars,wikipedia
+Q6773164,Mars,Mars,both
+Q6773165,Mars,Mars,both
+Q7201121,Mars,Mars,wikipedia
+Q7277910,Mars,Mars,both
+Q7304129,Mars,Mars,wikipedia
+Q7602433,Mars,Mars,both
+Q7880089,Mars,Mars,both
+Q7961161,Mars,Mars,both
+Q11328537,Mars,Mars,both
+Q16267527,Mars,Mars,wikidata
+Q16267665,Mars,Mars,both
+Q16743193,Mars,Mars,both
+Q17354915,Mars,Mars,wikipedia
+Q20992360,Mars,Mars,both
+Q21027964,Mars,Mars,both
+Q22682093,Mars,Mars,both
+Q23253765,Mars,Mars,both
+Q23978200,Mars,Mars,both
+Q24808194,Mars,Mars,both
+Q25218470,Mars,Mars,both
+Q28451892,Mars,Mars,both
+Q29045915,Mars,Mars,wikidata
+Q30015130,Mars,Mars,both
+Q30590859,Mars,Mars,both
+Q30639185,Mars,Mars,both
+Q48767929,Mars,Mars,both
+Q51931730,Mars,Mars,wikipedia
+Q55662649,Mars,Mars,both
+Q93875174,Mars,Mars,both
+Q102638021,Mars,Mars,wikipedia
+Q102643789,Mars,Mars,wikipedia
+Q107303968,Mars,Mars,wikidata
+Q107317063,Mars,Mars,wikipedia
+Q108859368,Mars,Mars,wikipedia
+Q111271265,Mars,Mars,wikipedia
+Q112704855,Mars,Mars,wikipedia
+Q113958261,Mars,Mars,wikipedia
+Q122822226,Mars,Mars,wikipedia
+Q124452141,Mars,Mars,wikidata
+Q125954391,Mars,Mars,wikidata
+Q137734788,Mars,Mars,wikidata
+Q111903867,Mercury,Mercury,wikidata
+Q27107,Moon,Moon,wikipedia
+Q207986,Moon,Moon,wikipedia
+Q210275,Moon,Moon,wikipedia
+Q275960,Moon,Moon,wikipedia
+Q279446,Moon,Moon,wikidata
+Q287276,Moon,Moon,wikipedia
+Q500586,Moon,Moon,both
+Q582662,Moon,Moon,wikipedia
+Q596392,Moon,Moon,wikipedia
+Q618121,Moon,Moon,wikipedia
+Q723083,Moon,Moon,wikipedia
+Q728061,Moon,Moon,both
+Q732943,Moon,Moon,wikipedia
+Q751268,Moon,Moon,wikipedia
+Q811025,Moon,Moon,wikipedia
+Q911226,Moon,Moon,both
+Q933328,Moon,Moon,wikipedia
+Q933967,Moon,Moon,wikipedia
+Q948387,Moon,Moon,wikipedia
+Q1058736,Moon,Moon,wikipedia
+Q1075255,Moon,Moon,wikidata
+Q1128513,Moon,Moon,wikipedia
+Q1130980,Moon,Moon,wikipedia
+Q1145665,Moon,Moon,wikipedia
+Q1166169,Moon,Moon,both
+Q1186437,Moon,Moon,wikipedia
+Q1200546,Moon,Moon,both
+Q1665781,Moon,Moon,both
+Q1991615,Moon,Moon,wikidata
+Q1992025,Moon,Moon,wikidata
+Q2002669,Moon,Moon,wikipedia
+Q2014743,Moon,Moon,wikipedia
+Q2071785,Moon,Moon,both
+Q2311359,Moon,Moon,wikipedia
+Q2402072,Moon,Moon,both
+Q2443162,Moon,Moon,wikipedia
+Q2467881,Moon,Moon,wikipedia
+Q2471373,Moon,Moon,wikipedia
+Q2590391,Moon,Moon,both
+Q2604090,Moon,Moon,wikidata
+Q2756046,Moon,Moon,wikipedia
+Q2789389,Moon,Moon,wikipedia
+Q3024607,Moon,Moon,wikipedia
+Q3148872,Moon,Moon,wikidata
+Q3282732,Moon,Moon,both
+Q3303623,Moon,Moon,both
+Q3323544,Moon,Moon,both
+Q3418569,Moon,Moon,wikipedia
+Q3494295,Moon,Moon,wikipedia
+Q3529233,Moon,Moon,both
+Q3546915,Moon,Moon,wikipedia
+Q3891642,Moon,Moon,both
+Q4021195,Moon,Moon,wikipedia
+Q4047343,Moon,Moon,both
+Q4839183,Moon,Moon,both
+Q4906178,Moon,Moon,wikipedia
+Q5223409,Moon,Moon,wikidata
+Q5245334,Moon,Moon,both
+Q5327224,Moon,Moon,both
+Q5327292,Moon,Moon,both
+Q5884557,Moon,Moon,wikipedia
+Q5931905,Moon,Moon,both
+Q6703677,Moon,Moon,wikidata
+Q6703707,Moon,Moon,wikipedia
+Q6907428,Moon,Moon,wikipedia
+Q6907539,Moon,Moon,both
+Q6907651,Moon,Moon,both
+Q6907653,Moon,Moon,both
+Q7302042,Moon,Moon,both
+Q7602433,Moon,Moon,wikipedia
+Q7712517,Moon,Moon,wikipedia
+Q7730332,Moon,Moon,both
+Q8041467,Moon,Moon,wikipedia
+Q11125803,Moon,Moon,both
+Q11516247,Moon,Moon,both
+Q12956031,Moon,Moon,wikipedia
+Q13233429,Moon,Moon,both
+Q14916183,Moon,Moon,wikipedia
+Q14948014,Moon,Moon,wikidata
+Q15260509,Moon,Moon,both
+Q16258902,Moon,Moon,wikipedia
+Q16267100,Moon,Moon,both
+Q16267357,Moon,Moon,wikidata
+Q17007953,Moon,Moon,wikipedia
+Q18515944,Moon,Moon,wikipedia
+Q18536859,Moon,Moon,wikipedia
+Q18643731,Moon,Moon,wikipedia
+Q19789342,Moon,Moon,wikipedia
+Q19868125,Moon,Moon,both
+Q19891042,Moon,Moon,wikidata
+Q20054565,Moon,Moon,wikipedia
+Q20119919,Moon,Moon,wikipedia
+Q20144161,Moon,Moon,both
+Q20992360,Moon,Moon,wikipedia
+Q22682093,Moon,Moon,wikipedia
+Q23978200,Moon,Moon,wikipedia
+Q24877461,Moon,Moon,wikidata
+Q24902678,Moon,Moon,wikidata
+Q28028502,Moon,Moon,wikipedia
+Q28234671,Moon,Moon,both
+Q30276412,Moon,Moon,wikipedia
+Q39546705,Moon,Moon,wikipedia
+Q54932961,Moon,Moon,wikipedia
+Q55936714,Moon,Moon,wikidata
+Q65238269,Moon,Moon,wikipedia
+Q75678806,Moon,Moon,wikipedia
+Q96240015,Moon,Moon,wikipedia
+Q97354780,Moon,Moon,wikipedia
+Q98168943,Moon,Moon,wikipedia
+Q106767005,Moon,Moon,wikipedia
+Q108525421,Moon,Moon,wikipedia
+Q108578775,Moon,Moon,wikipedia
+Q112655889,Moon,Moon,wikipedia
+Q112704771,Moon,Moon,wikipedia
+Q115024151,Moon,Moon,wikipedia
+Q123153800,Moon,Moon,wikidata
+Q135341132,Moon,Moon,wikipedia
+Q135920881,Moon,Moon,wikidata
+Q137363533,Moon,Moon,wikipedia
+Q54854,Outer space,outer space,wikipedia
+Q55815,Outer space,outer space,wikipedia
+Q144550,Outer space,outer space,wikipedia
+Q151614,Outer space,outer space,wikipedia
+Q170489,Outer space,outer space,wikipedia
+Q245284,Outer space,outer space,wikipedia
+Q275960,Outer space,Milky Way,wikidata
+Q281110,Outer space,outer space,wikipedia
+Q282008,Outer space,spacecraft,wikipedia
+Q326798,Outer space,outer space,wikipedia
+Q379807,Outer space,outer space,wikipedia
+Q391468,Outer space,outer space,wikipedia
+Q486351,Outer space,outer space,wikipedia
+Q517640,Outer space,outer space,wikipedia
+Q528128,Outer space,outer space,wikipedia
+Q546623,Outer space,outer space,wikipedia
+Q577926,Outer space,outer space,wikipedia
+Q605032,Outer space,outer space,wikipedia
+Q674213,Outer space,outer space,wikipedia
+Q725057,Outer space,Milky Way; outer space,both
+Q727139,Outer space,outer space,wikipedia
+Q729074,Outer space,outer space; spacecraft,wikipedia
+Q753511,Outer space,Milky Way; outer space,both
+Q795399,Outer space,outer space; spacecraft,wikipedia
+Q806330,Outer space,outer space,wikipedia
+Q842431,Outer space,spacecraft,wikipedia
+Q854487,Outer space,outer space,wikipedia
+Q890065,Outer space,outer space,wikipedia
+Q909130,Outer space,outer space,wikipedia
+Q911802,Outer space,outer space,wikipedia
+Q917503,Outer space,Solar System,wikidata
+Q936968,Outer space,outer space,wikipedia
+Q937066,Outer space,outer space,wikipedia
+Q1050712,Outer space,outer space,wikipedia
+Q1051809,Outer space,outer space,wikipedia
+Q1052386,Outer space,spacecraft,wikipedia
+Q1052488,Outer space,outer space,wikipedia
+Q1058736,Outer space,outer space,wikipedia
+Q1065955,Outer space,spacecraft,wikipedia
+Q1066035,Outer space,outer space,wikipedia
+Q1068025,Outer space,outer space,wikipedia
+Q1070984,Outer space,outer space,wikipedia
+Q1143512,Outer space,outer space,wikipedia
+Q1145665,Outer space,outer space,wikipedia
+Q1151634,Outer space,outer space; spacecraft,wikipedia
+Q1186437,Outer space,outer space,wikipedia
+Q1188898,Outer space,outer space,wikipedia
+Q1194133,Outer space,outer space,wikipedia
+Q1194825,Outer space,outer space,wikipedia
+Q1203511,Outer space,outer space,wikipedia
+Q1324646,Outer space,outer space,wikipedia
+Q1366821,Outer space,outer space,wikipedia
+Q1371495,Outer space,outer space; spacecraft,wikipedia
+Q1471545,Outer space,outer space,wikipedia
+Q1535818,Outer space,spacecraft,wikipedia
+Q1538485,Outer space,outer space,wikipedia
+Q1688483,Outer space,outer space,wikipedia
+Q1755259,Outer space,spacecraft,wikipedia
+Q1765733,Outer space,outer space,wikipedia
+Q1810472,Outer space,outer space; spacecraft,wikipedia
+Q1946683,Outer space,outer space,wikipedia
+Q1967427,Outer space,outer space,wikipedia
+Q1971610,Outer space,outer space,wikipedia
+Q1982071,Outer space,outer space,wikipedia
+Q2012171,Outer space,outer space,wikipedia
+Q2014874,Outer space,outer space,wikipedia
+Q2034630,Outer space,outer space,wikipedia
+Q2078681,Outer space,outer space,wikipedia
+Q2089035,Outer space,outer space,wikipedia
+Q2154888,Outer space,outer space,wikipedia
+Q2160091,Outer space,outer space,wikidata
+Q2194815,Outer space,outer space,wikipedia
+Q2196555,Outer space,outer space,wikipedia
+Q2290448,Outer space,outer space,wikipedia
+Q2311673,Outer space,outer space,wikipedia
+Q2360769,Outer space,outer space,wikipedia
+Q2396271,Outer space,outer space,wikipedia
+Q2402072,Outer space,outer space,wikipedia
+Q2438580,Outer space,spacecraft,wikipedia
+Q2441079,Outer space,outer space,wikipedia
+Q2452420,Outer space,outer space; spacecraft,wikipedia
+Q2467881,Outer space,outer space,wikipedia
+Q2471454,Outer space,outer space,wikipedia
+Q2478949,Outer space,outer space; spacecraft,wikipedia
+Q2501859,Outer space,outer space,wikipedia
+Q2530073,Outer space,spacecraft,wikipedia
+Q2587632,Outer space,outer space,wikipedia
+Q2608796,Outer space,outer space,wikipedia
+Q2619957,Outer space,spacecraft,wikipedia
+Q2627452,Outer space,outer space,wikipedia
+Q2632387,Outer space,outer space; spacecraft,wikipedia
+Q2648118,Outer space,outer space,wikipedia
+Q2656776,Outer space,universe,wikidata
+Q2660370,Outer space,outer space,wikipedia
+Q2661073,Outer space,outer space,wikidata
+Q2711767,Outer space,spacecraft,wikipedia
+Q2772947,Outer space,outer space,wikipedia
+Q2836855,Outer space,spacecraft,wikipedia
+Q2846891,Outer space,outer space,wikipedia
+Q2861677,Outer space,outer space,wikipedia
+Q2869880,Outer space,outer space,wikipedia
+Q3046924,Outer space,outer space,wikipedia
+Q3182559,Outer space,outer space,wikipedia
+Q3280555,Outer space,outer space,wikipedia
+Q3311840,Outer space,outer space,wikipedia
+Q3357828,Outer space,outer space,wikipedia
+Q3407951,Outer space,outer space,wikipedia
+Q3478656,Outer space,spacecraft,wikipedia
+Q3491601,Outer space,outer space,wikipedia
+Q3496959,Outer space,outer space,wikipedia
+Q3522112,Outer space,outer space; spacecraft,wikipedia
+Q3611745,Outer space,spacecraft,wikipedia
+Q3611748,Outer space,spacecraft,wikipedia
+Q3611755,Outer space,spacecraft,wikipedia
+Q3663284,Outer space,outer space,wikipedia
+Q3705179,Outer space,outer space,wikipedia
+Q3781111,Outer space,outer space,wikipedia
+Q3943319,Outer space,outer space,wikipedia
+Q3965792,Outer space,outer space; spacecraft,wikipedia
+Q4034500,Outer space,outer space,wikipedia
+Q4037091,Outer space,spacecraft,wikipedia
+Q4037095,Outer space,spacecraft,wikipedia
+Q4044306,Outer space,outer space,wikipedia
+Q4044365,Outer space,spacecraft,wikipedia
+Q4047343,Outer space,outer space,wikipedia
+Q4049350,Outer space,outer space,wikipedia
+Q4376728,Outer space,spacecraft,wikipedia
+Q4726411,Outer space,spacecraft,wikipedia
+Q4726412,Outer space,spacecraft,wikipedia
+Q4734987,Outer space,outer space,wikipedia
+Q4736305,Outer space,spacecraft,wikipedia
+Q4791626,Outer space,outer space,wikipedia
+Q4928508,Outer space,outer space,wikipedia
+Q5099353,Outer space,spacecraft,wikipedia
+Q5130099,Outer space,outer space,wikipedia
+Q5174042,Outer space,outer space,wikipedia
+Q5174063,Outer space,outer space,wikipedia
+Q5174068,Outer space,spacecraft,wikipedia
+Q5192208,Outer space,outer space,wikipedia
+Q5256308,Outer space,outer space,wikipedia
+Q5287429,Outer space,spacecraft,wikipedia
+Q5361853,Outer space,outer space,wikipedia
+Q5402741,Outer space,outer space,wikipedia
+Q5461994,Outer space,outer space,wikipedia
+Q5517806,Outer space,outer space,wikipedia
+Q5527133,Outer space,outer space,wikipedia
+Q5530671,Outer space,outer space,wikipedia
+Q5532833,Outer space,outer space,wikipedia
+Q6072838,Outer space,outer space,wikipedia
+Q6223902,Outer space,Milky Way,wikidata
+Q6311058,Outer space,outer space,wikipedia
+Q6348445,Outer space,outer space,wikipedia
+Q6545406,Outer space,outer space; spacecraft,wikipedia
+Q6929138,Outer space,spacecraft,wikipedia
+Q6943684,Outer space,outer space,wikipedia
+Q7089992,Outer space,outer space,wikipedia
+Q7130741,Outer space,spacecraft,wikipedia
+Q7201121,Outer space,outer space,wikipedia
+Q7249325,Outer space,outer space,wikipedia
+Q7446622,Outer space,outer space,wikipedia
+Q7524416,Outer space,outer space,wikipedia
+Q7557033,Outer space,outer space,wikipedia
+Q7572210,Outer space,outer space; spacecraft,wikipedia
+Q7572249,Outer space,outer space,wikipedia
+Q7572266,Outer space,outer space,wikipedia
+Q7572459,Outer space,outer space,wikipedia
+Q7600539,Outer space,outer space,wikipedia
+Q7600684,Outer space,outer space,wikipedia
+Q7600854,Outer space,outer space,wikipedia
+Q7600875,Outer space,outer space,wikipedia
+Q7653879,Outer space,outer space,wikipedia
+Q7670477,Outer space,outer space,wikipedia
+Q7969348,Outer space,outer space,wikipedia
+Q7993388,Outer space,outer space,wikipedia
+Q10272842,Outer space,outer space,wikipedia
+Q10328213,Outer space,outer space,wikipedia
+Q10494995,Outer space,Milky Way,wikidata
+Q10658385,Outer space,Milky Way,wikidata
+Q11231423,Outer space,outer space,wikipedia
+Q11279423,Outer space,outer space,wikipedia
+Q11346351,Outer space,outer space,wikipedia
+Q12037700,Outer space,outer space,wikipedia
+Q12147068,Outer space,outer space,wikipedia
+Q13427428,Outer space,spacecraft,wikipedia
+Q14916183,Outer space,outer space,wikipedia
+Q14948428,Outer space,Solar System,wikidata
+Q15036805,Outer space,outer space,wikipedia
+Q15613717,Outer space,spacecraft,wikipedia
+Q15623895,Outer space,spacecraft,wikipedia
+Q15715947,Outer space,outer space,wikipedia
+Q15743989,Outer space,outer space,wikipedia
+Q15934711,Outer space,outer space,wikipedia
+Q16259142,Outer space,outer space,wikipedia
+Q16259275,Outer space,outer space,wikipedia
+Q16259302,Outer space,outer space,wikipedia
+Q16266997,Outer space,outer space,wikipedia
+Q16267345,Outer space,outer space,wikipedia
+Q16267355,Outer space,outer space,wikipedia
+Q16267761,Outer space,outer space,wikipedia
+Q16267814,Outer space,outer space,wikipedia
+Q16655495,Outer space,outer space,wikipedia
+Q16743218,Outer space,outer space,wikipedia
+Q16743231,Outer space,outer space,wikipedia
+Q17213168,Outer space,outer space,wikipedia
+Q17510806,Outer space,spacecraft,wikipedia
+Q17633120,Outer space,outer space,wikipedia
+Q18154195,Outer space,spacecraft,wikipedia
+Q18215912,Outer space,outer space,wikipedia
+Q18693102,Outer space,outer space; spacecraft,wikipedia
+Q18754123,Outer space,outer space,wikipedia
+Q19631660,Outer space,outer space,wikipedia
+Q19745045,Outer space,outer space; spacecraft,wikipedia
+Q20054565,Outer space,outer space,wikipedia
+Q20651107,Outer space,outer space; spacecraft,wikipedia
+Q20707458,Outer space,outer space,wikipedia
+Q20967701,Outer space,outer space; spacecraft,wikipedia
+Q21036727,Outer space,outer space,wikidata
+Q21043345,Outer space,outer space,wikipedia
+Q21427315,Outer space,spacecraft,wikipedia
+Q24031920,Outer space,outer space,wikipedia
+Q24170563,Outer space,spacecraft,wikipedia
+Q24877461,Outer space,outer space; spacecraft,wikipedia
+Q25389393,Outer space,outer space,wikipedia
+Q25436730,Outer space,outer space,wikipedia
+Q26716013,Outer space,outer space; spacecraft,wikipedia
+Q26963091,Outer space,spacecraft,wikipedia
+Q27058678,Outer space,outer space,wikipedia
+Q27890265,Outer space,outer space,wikipedia
+Q28127171,Outer space,outer space,wikipedia
+Q28324882,Outer space,outer space,wikipedia
+Q28452069,Outer space,outer space; spacecraft,wikipedia
+Q28859293,Outer space,outer space,wikipedia
+Q29344636,Outer space,outer space,wikidata
+Q29564202,Outer space,outer space,wikipedia
+Q29564250,Outer space,outer space,wikipedia
+Q29831780,Outer space,outer space,wikipedia
+Q29888262,Outer space,outer space,wikipedia
+Q29951580,Outer space,outer space,wikipedia
+Q30325222,Outer space,outer space,wikipedia
+Q30601215,Outer space,outer space,wikipedia
+Q30749509,Outer space,outer space,wikipedia
+Q32020202,Outer space,outer space,wikipedia
+Q33256940,Outer space,outer space; spacecraft,wikipedia
+Q39058311,Outer space,outer space,wikipedia
+Q42317357,Outer space,outer space,wikipedia
+Q42868132,Outer space,outer space,wikipedia
+Q47011247,Outer space,outer space,wikipedia
+Q47088845,Outer space,outer space,wikipedia
+Q48814960,Outer space,outer space,wikipedia
+Q51955138,Outer space,outer space; spacecraft,wikipedia
+Q54621488,Outer space,outer space,wikipedia
+Q55286432,Outer space,outer space,wikipedia
+Q55299563,Outer space,outer space,wikipedia
+Q55608560,Outer space,outer space,wikipedia
+Q55612385,Outer space,outer space,wikipedia
+Q55629382,Outer space,outer space,wikipedia
+Q55662649,Outer space,outer space,wikipedia
+Q55845265,Outer space,outer space,wikipedia
+Q56276940,Outer space,outer space,wikipedia
+Q57450502,Outer space,outer space,wikipedia
+Q58886422,Outer space,Solar System; spacecraft,wikipedia
+Q60982500,Outer space,outer space; spacecraft,wikipedia
+Q61588902,Outer space,outer space; spacecraft,wikipedia
+Q61812501,Outer space,outer space; spacecraft,wikipedia
+Q62604270,Outer space,outer space; spacecraft,wikipedia
+Q62743323,Outer space,spacecraft,wikipedia
+Q63049614,Outer space,outer space,wikipedia
+Q63226016,Outer space,outer space,wikipedia
+Q65040643,Outer space,outer space,wikipedia
+Q65080618,Outer space,outer space,wikipedia
+Q65080963,Outer space,outer space,wikipedia
+Q65117492,Outer space,outer space,wikipedia
+Q66425330,Outer space,outer space,wikipedia
+Q66486310,Outer space,outer space,wikipedia
+Q66605135,Outer space,outer space,wikipedia
+Q66893431,Outer space,outer space,wikipedia
+Q68198904,Outer space,outer space; spacecraft,wikipedia
+Q68210163,Outer space,outer space; spacecraft,wikipedia
+Q68352829,Outer space,spacecraft,wikipedia
+Q77435070,Outer space,outer space; spacecraft,wikipedia
+Q84951130,Outer space,outer space,wikipedia
+Q85766160,Outer space,outer space,wikipedia
+Q85813451,Outer space,spacecraft,wikipedia
+Q93731001,Outer space,outer space,wikipedia
+Q95470160,Outer space,outer space; spacecraft,wikipedia
+Q96033519,Outer space,outer space,wikipedia
+Q96240947,Outer space,outer space,wikipedia
+Q96312725,Outer space,outer space,wikipedia
+Q96390742,Outer space,outer space; spacecraft,wikipedia
+Q96406433,Outer space,outer space,wikipedia
+Q96417649,Outer space,outer space; spacecraft,wikipedia
+Q96440143,Outer space,outer space,wikipedia
+Q97171216,Outer space,outer space,wikipedia
+Q97193091,Outer space,outer space,wikipedia
+Q97275263,Outer space,outer space,wikipedia
+Q97275361,Outer space,outer space,wikipedia
+Q97275463,Outer space,outer space,wikipedia
+Q97275692,Outer space,outer space,wikipedia
+Q97355521,Outer space,outer space,wikipedia
+Q97356932,Outer space,outer space,wikipedia
+Q97356947,Outer space,outer space,wikipedia
+Q97356963,Outer space,outer space,wikipedia
+Q97627906,Outer space,outer space,wikipedia
+Q97671619,Outer space,outer space; spacecraft,wikipedia
+Q97860793,Outer space,outer space,wikipedia
+Q97959632,Outer space,outer space,wikipedia
+Q98523437,Outer space,outer space,wikipedia
+Q98646477,Outer space,outer space; spacecraft,wikipedia
+Q101422854,Outer space,outer space,wikipedia
+Q102313872,Outer space,outer space,wikipedia
+Q102348888,Outer space,outer space,wikipedia
+Q104161602,Outer space,outer space,wikipedia
+Q104172915,Outer space,outer space,wikipedia
+Q104178170,Outer space,outer space,wikipedia
+Q104670541,Outer space,outer space,wikipedia
+Q104671103,Outer space,outer space,wikipedia
+Q104720759,Outer space,outer space,wikipedia
+Q104882972,Outer space,outer space,wikipedia
+Q105637148,Outer space,outer space,wikipedia
+Q105642663,Outer space,outer space,wikipedia
+Q105730657,Outer space,outer space,wikipedia
+Q106624394,Outer space,spacecraft,wikipedia
+Q106967650,Outer space,outer space,wikipedia
+Q106974888,Outer space,outer space,wikipedia
+Q106994700,Outer space,outer space,wikipedia
+Q107070132,Outer space,outer space,wikipedia
+Q107129485,Outer space,outer space,wikipedia
+Q107216876,Outer space,outer space; spacecraft,wikipedia
+Q107616212,Outer space,outer space; spacecraft,wikipedia
+Q107629973,Outer space,outer space,wikipedia
+Q107817244,Outer space,outer space,wikipedia
+Q107980235,Outer space,outer space,wikipedia
+Q108001928,Outer space,outer space,wikipedia
+Q108379245,Outer space,outer space,wikipedia
+Q108455893,Outer space,outer space,wikipedia
+Q108536674,Outer space,outer space,wikipedia
+Q108607230,Outer space,outer space,wikipedia
+Q109302040,Outer space,outer space,wikipedia
+Q109358628,Outer space,outer space,wikipedia
+Q109667418,Outer space,outer space,wikipedia
+Q109828410,Outer space,outer space,wikipedia
+Q110028385,Outer space,outer space; spacecraft,wikipedia
+Q110920737,Outer space,universe,wikidata
+Q111926668,Outer space,spacecraft,wikipedia
+Q112706566,Outer space,outer space,wikipedia
+Q112967967,Outer space,outer space,wikipedia
+Q113139160,Outer space,outer space,wikipedia
+Q113288816,Outer space,outer space,wikipedia
+Q113586054,Outer space,outer space,wikipedia
+Q113622732,Outer space,spacecraft,wikipedia
+Q113648986,Outer space,outer space,wikipedia
+Q115109215,Outer space,outer space,wikipedia
+Q115477515,Outer space,outer space,wikipedia
+Q115600986,Outer space,spacecraft,wikipedia
+Q115641623,Outer space,spacecraft,wikipedia
+Q118645589,Outer space,outer space,wikipedia
+Q118698046,Outer space,outer space,wikipedia
+Q119832068,Outer space,outer space,wikipedia
+Q120416168,Outer space,outer space,wikidata
+Q121009572,Outer space,outer space; spacecraft,wikipedia
+Q122189973,Outer space,outer space,wikipedia
+Q122234859,Outer space,outer space,wikipedia
+Q122366554,Outer space,outer space,wikipedia
+Q122825870,Outer space,outer space,wikipedia
+Q123047493,Outer space,outer space,wikipedia
+Q123404035,Outer space,outer space,wikipedia
+Q123859947,Outer space,spacecraft,wikipedia
+Q123975105,Outer space,outer space,wikipedia
+Q124064320,Outer space,outer space,wikipedia
+Q125271095,Outer space,outer space,wikipedia
+Q125589358,Outer space,universe,wikidata
+Q125604845,Outer space,spacecraft,wikipedia
+Q126034796,Outer space,outer space,wikipedia
+Q126199700,Outer space,outer space,wikipedia
+Q126477559,Outer space,outer space,wikipedia
+Q126723380,Outer space,spacecraft,wikipedia
+Q126811515,Outer space,outer space,wikipedia
+Q129641427,Outer space,outer space,wikipedia
+Q130312270,Outer space,outer space; spacecraft,wikipedia
+Q130383013,Outer space,outer space; spacecraft,wikipedia
+Q131619812,Outer space,outer space,wikipedia
+Q132258586,Outer space,outer space,wikipedia
+Q132735844,Outer space,outer space; spacecraft,wikipedia
+Q133226198,Outer space,outer space,wikipedia
+Q133573763,Outer space,spacecraft,wikipedia
+Q133878743,Outer space,outer space; spacecraft,wikipedia
+Q133878770,Outer space,Solar System; spacecraft,wikipedia
+Q134204792,Outer space,outer space,wikipedia
+Q134716591,Outer space,outer space,wikipedia
+Q134723443,Outer space,spacecraft,wikipedia
+Q134732696,Outer space,spacecraft,wikipedia
+Q135702286,Outer space,outer space,wikipedia
+Q135819088,Outer space,outer space,wikipedia
+Q137010532,Outer space,outer space,wikipedia
+Q137363789,Outer space,outer space,wikipedia
+Q138006319,Outer space,outer space,wikipedia
+Q139940258,Outer space,outer space,wikipedia
+Q140073993,Outer space,outer space; spacecraft,wikipedia
+Q141132189,Outer space,spacecraft,wikipedia
+Q141633700,Outer space,outer space,wikipedia
+Q1474668,Sun,Sun,wikidata
+Q842431,Titan,Titan,both
+Q1001925,Titan,Titan,wikipedia
+Q1200546,Titan,Titan,both
+Q1929655,Titan,Titan,both
+Q2423587,Titan,Titan,both
+Q4037091,Titan,Titan,wikipedia
+Q4037095,Titan,Titan,both
+Q6864535,Titan,Titan,both
+Q7119916,Titan,Titan,both
+Q7602433,Titan,Titan,both
+Q7809745,Titan,Titan,both
+Q16267660,Titan,Titan,wikipedia
+Q23978200,Titan,Titan,wikipedia
+Q28452165,Titan,Titan,both
+Q62393502,Titan,Titan,wikipedia
+Q121409367,Titan,Titan,wikipedia
+Q210275,Venus,Venus,wikipedia
+Q1149927,Venus,Venus,wikipedia
+Q4906178,Venus,Venus,both
+Q7602433,Venus,Venus,wikipedia
+Q30276412,Venus,Venus,wikipedia
