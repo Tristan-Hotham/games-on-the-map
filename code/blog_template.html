@@ -1,0 +1,162 @@
+<!-- wp:paragraph -->
+<p><em>Games love real places. I mapped {{meta.games_total|int}} video games tied to somewhere real: where each one is set, where the studio that made it is based, and the {{space.games|int}} that leave Earth altogether. New York wins, Japan to America is the busiest route, and the Moon beats Mars.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/games-on-the-map/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23735822">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Someone asked me for a world map of every game ever made that is set in a real place: where it was made, and where it was set. Oh, and a separate category for space, please. Nobody keeps a list of every game ever, so I could not quite do that. But two open sources come close enough to be interesting. Wikidata records a "narrative location" for some games, and English Wikipedia sorts thousands of game articles into categories like "Video games set in Tokyo".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Put together, they tie {{meta.games_earth|int}} games to a real place on Earth and {{meta.games_space|int}} to somewhere real in space. That is only {{meta.share_of_wikidata|pct1}} of the {{meta.wikidata_games|int}} video games in Wikidata, and it leans towards famous games from North America, Europe and Japan. So read everything below as "among games that someone has written up". Within that, the pattern is very clear.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">New York, and then everyone else</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_map.png|World map with red circles where games are set and blue circles where their developers are based. The biggest red circles are New York, London, Tokyo and Los Angeles; blue circles cluster in the United States, Japan and western Europe.|Red: where games are set (cities, regions and landmarks). Blue: where the developer has its headquarters. Circles are sized by the number of games.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>New York City is the setting for {{city.New York City|int}} games, nearly twice as many as London ({{city.London|int}}) or Tokyo ({{city.Tokyo|int}}). Los Angeles ({{city.Los Angeles|int}}), Paris and San Francisco ({{city.Paris|int}} each) come next. If you have played games for any length of time, you have probably been to all of them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_cities.png|Bar chart of the fifteen most used cities: New York City {{city.New York City|int}}, London {{city.London|int}}, Tokyo {{city.Tokyo|int}}, Los Angeles {{city.Los Angeles|int}}, Paris and San Francisco {{city.Paris|int}} each, then Chicago, Washington, Miami, Barcelona and others.|}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Washington, D.C. very nearly fooled me. In the raw data it came third, until I looked at the games: about two hundred American football, hockey and baseball games, Madden after Madden, all tagged with Washington as their only "narrative location" in Wikidata. No Wikipedia category agreed with any of them, and nobody would call Washington the setting of NHL 97. It looks like a bulk error, so I set those links aside. With them gone Washington has {{city.Washington, D.C.|int}} games, a respectable eighth.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>By country, the United States is a setting for {{top_set_countries.0.share|pct}} of all the Earth-bound games. Japan and the United Kingdom follow, then France, Italy, Russia, Germany and China. Egypt, with {{set_count.Egypt|int}} games of pyramids and tombs, is the most used setting in Africa or the Middle East.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Made in three countries</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For {{made_cov.share|pct}} of the games I could also say where they were made, mostly from the coordinates of the developer's headquarters. Making is even more concentrated than setting. The United States made {{made_count.United States of America|int}}, Japan {{made_count.Japan|int}} and the United Kingdom {{made_count.United Kingdom|int}}: between them {{made_share3|pct}} of the games with a known maker. France and Canada are next, and nobody else passes 150.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Draw a line from each studio to each setting and the busiest route crosses the Pacific: {{flow.Japan>United States of America|int}} games made in Japan are set in the United States. British studios sent {{flow.United Kingdom>United States of America|int}} games to America, and American studios sent {{flow.United States of America>United Kingdom|int}} back. Then comes the United States to Russia ({{flow.United States of America>Russia|int}}, counting the Soviet Union), the Cold War still doing good business.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_flows.png|World map with purple arcs from the country where games were made to the country where they are set. The thickest arc runs from Japan to the United States, with heavy arcs between the United States and the United Kingdom.|The forty busiest routes from studio country to setting country. Thicker, darker lines carry more games.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Who stays at home</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>American studios set {{home.usa.share_home|pct}} of their placed games at home, and Japanese studios {{home.japan.share_home|pct}}. Almost everyone else looks abroad, and above all to America. British studios set {{home.uk.share_home|pct}} of their games at home, French {{home.france.share_home|pct}}, Canadian {{home.canada.share_home|pct}} and Swedish {{home.sweden.share_home|pct}}. British studios have set more games in the United States ({{flow.United Kingdom>United States of America|int}}) than in Britain ({{flow.United Kingdom>United Kingdom|int}}).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_home.png|Bar chart of the share of each country's games set at home: United States {{home.usa.share_home|pct}}, Japan {{home.japan.share_home|pct}}, United Kingdom {{home.uk.share_home|pct}}, France {{home.france.share_home|pct}}, Canada {{home.canada.share_home|pct}}, Sweden {{home.sweden.share_home|pct}}, among others.|Share of each country's placed games set at home, for countries with at least 40 games whose maker is known. Italy and China score high on small numbers.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Turn it round and the picture is starker. Of the {{spot.egypt.games|int}} games set in Egypt whose maker I could place, not one was made in Egypt. Monaco has {{spot.monaco.games|int}} games, nearly all Formula One, and none made there. Mexico made {{spot.mexico.made_at_home|int}} of the {{spot.mexico.games|int}} games set in it. Even Italy, Germany, Russia and China made less than a tenth of the games set in them. For most of the world, games are something that happens to your country, made by somebody else.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>For most of the world, games are set there and made somewhere else.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Fashions change</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The American setting is slowly loosening its grip: {{trend.us_share_1990|pct}} of placed games released in the 1990s were set at least partly in the United States, {{trend.us_share_2020|pct}} of those released so far this decade. Tokyo's share nearly doubled between the 1990s and the 2010s. Los Angeles peaked in the 1990s. Egypt has faded steadily since the 1980s, and Moscow and the Soviet Union were at their most popular in the 1980s, while the Cold War was still on.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_trend.png|Line chart of the share of each decade's games set in New York City, Tokyo, London, Los Angeles, Moscow and the Soviet Union, and Egypt, from the 1980s to the 2020s. New York peaks in the 2000s; Tokyo rises; Egypt and Moscow fall.|Share of each release decade's placed games set in six places.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Britain</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{uk.set|int}} games are set somewhere in the United Kingdom. London has {{place.London|int}} of them, Scotland {{place.Scotland|int}} and Wales just {{place.Wales|int}}. British studios made {{uk.made|int}} placed games, and their studio towns are a tour of the English games industry: London, the Coventry area (home of Codemasters' racing games), Derby (Core Design, of Tomb Raider, and Eurocom), Manchester and Liverpool.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_uk.png|Two bar charts. Left: British places used as settings, led by London, England and Scotland. Right: where British-made games are set, led by the United States, then the United Kingdom, Japan, France and Italy.|Left: British settings. Right: where British-made games are set.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">And beyond</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{space.games|int}} games are set somewhere real off Earth. Most are just in "outer space", but among actual worlds the Moon beats Mars, {{space.by_body.Moon|int}} games to {{space.by_body.Mars|int}}. Saturn's moon Titan has {{space.by_body.Titan|int}}, Venus {{space.by_body.Venus|int}}, Jupiter's moons two (Io and Callisto), and the Sun and Mercury one each. Nothing in either source is tagged with the International Space Station. The interactive version has a little spinning globe for each world, with its games listed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_space.png|Left: bar chart of games set in space by body: outer space {{space.by_body.Outer space|int}}, Moon {{space.by_body.Moon|int}}, Mars {{space.by_body.Mars|int}}, Titan {{space.by_body.Titan|int}}, Venus {{space.by_body.Venus|int}}. Right: Moon and Mars games by release decade, with the Moon ahead in most decades.|Games set in space, by body, and the Moon against Mars by release decade.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I took every video game in Wikidata ({{meta.wikidata_games|int}} items) with its narrative locations, developers and country of origin, and every "set in" category under English Wikipedia's "Video games by setting". Category names were sorted into real places, dates, places in space and kinds of place (castles, hotels), and the real places were matched offline to Wikidata places, Natural Earth countries, GeoNames towns and a short hand list. Fictional places such as Raccoon City and Black Mesa are left out. Where a game is set in a city and also its country, I count the city. "Where made" is the developer's headquarters as recorded today, or its country, or the game's country of origin.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The limits matter. Most games have no setting recorded anywhere; sports games add a lot of links (a Formula One game is filed under most of that season's countries); headquarters move; and English Wikipedia's interests shape the whole map. Every link, its source and every link I set aside are in the published data, so you can check or extend them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/games-on-the-map/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23735822">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/games-on-the-map">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Games, places and developers: <a href="https://www.wikidata.org">Wikidata</a> (CC0), queried through <a href="https://qlever.cs.uni-freiburg.de">QLever</a> on {{meta.retrieved}}.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Settings: <a href="https://en.wikipedia.org/wiki/Category:Video_games_by_setting">English Wikipedia, Category:Video games by setting</a>, English Wikipedia contributors (CC BY-SA 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Countries: <a href="https://www.naturalearthdata.com">Natural Earth</a> (public domain). Towns: <a href="https://www.geonames.org">GeoNames</a> cities15000 (CC BY 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Paper, data and code: <a href="https://doi.org/10.5281/zenodo.23735822">Zenodo</a> and <a href="https://github.com/Tristan-Hotham/games-on-the-map">GitHub</a>. Text, figures and data CC BY-SA 4.0; code MIT.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

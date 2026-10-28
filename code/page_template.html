@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Games on the Map</title>
+<meta name="description" content="A world map of {{meta.games_total|int}} video games tied to real places: where each is set, where the studio that made it is based, and the games set on the Moon, Mars and beyond.">
+<meta property="og:title" content="Where games are set, and where they are made">
+<meta property="og:description" content="{{meta.games_earth|int}} games set in real places on Earth and {{meta.games_space|int}} in space, from Wikidata and English Wikipedia. New York leads; Japan to the United States is the busiest route from studio to setting.">
+<meta property="og:image" content="https://maps.tristanhotham.com/games-on-the-map/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/games-on-the-map/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Warm paper; coral for "where set", deep teal for "where made", plum for the journeys between them, indigo for space. */
+:root{
+  --bg:#F6F1E7; --panel:#ECE5D8; --fg:#1F1B24; --muted:#675F6B; --rule:#DDD3C3; --card:#FCF9F3; --border:#CBC0AE;
+  --set:#CF3F35; --made:#156B87; --flow:#7B3F8C; --space:#2F2F7A; --sea:#E4E9EA; --land:#F8F4EC; --line:#5B5560;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#17151B; --panel:#211E26; --fg:#EFEAE4; --muted:#A8A0AC; --rule:#36313C; --card:#1F1C24; --border:#4A4350;
+  --set:#F0705F; --made:#4FB3D1; --flow:#C58AD6; --space:#A9A8F0; --sea:#1B2127; --land:#2A2730; --line:#CFC8D2; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17151B; --panel:#211E26; --fg:#EFEAE4; --muted:#A8A0AC; --rule:#36313C; --card:#1F1C24; --border:#4A4350;
+  --set:#F0705F; --made:#4FB3D1; --flow:#C58AD6; --space:#A9A8F0; --sea:#1B2127; --land:#2A2730; --line:#CFC8D2; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:700px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1180px,calc(100vw - 32px));margin-left:calc((100% - min(1180px,100vw - 32px))/2)}
+a{color:inherit;text-decoration-color:var(--set);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--fg);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(38px,9vw,76px)/.94 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .s{color:var(--set)} h1 .m{color:var(--made)}
+.mark{width:clamp(70px,15vw,120px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:50ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.06 var(--display);letter-spacing:-.01em;margin:56px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--set);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 21px/1.25 var(--display);margin:30px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 70px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--set)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(22px,4.4vw,32px)/1 var(--display);letter-spacing:-.01em}
+.stats b.s{color:var(--set)} .stats b.m{color:var(--made)} .stats b.f{color:var(--flow)} .stats b.x{color:var(--space)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.5 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:290px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.ctl-l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid var(--set);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.seg .btn i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0}
+select{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 6px;min-height:36px;max-width:100%}
+.searchbox{position:relative;flex:1 1 240px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 11px;min-height:40px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:340px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px;align-items:start}
+@media (max-width:920px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.side{background:var(--card);border:1px solid var(--border);padding:12px 12px 10px;font:400 13px/1.45 var(--mono);min-width:0}
+.side h4{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.side h4:first-child{margin-top:2px}
+.mapbox{position:relative}
+#lmap{height:620px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:600px){#lmap{height:460px}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:500 13px/1.4 var(--mono);color:var(--muted);background:color-mix(in srgb,var(--panel) 80%,transparent);z-index:900;pointer-events:none}
+.lyrBtn{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:240px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono)}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%;min-height:26px}
+.lyrPanel .sub{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px;margin-top:3px}
+.lyrPanel .sub span{flex:0 0 58px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.town{font:500 11px/1 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.town i{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--fg);margin-right:4px;vertical-align:1px}
+.town.r3{font-weight:600;font-size:12px}
+.town.r0,.town.r1{font-weight:400;font-size:10.5px}
+.sat .town{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000}
+.sat .town i{background:#fff}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px}
+.leaflet-tooltip{font:400 12px/1.4 var(--mono);background:var(--fg);color:var(--bg);border:0;border-radius:3px;box-shadow:none}
+.leaflet-tooltip:before{display:none}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin:8px 0}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.ramp{height:10px;border:1px solid var(--rule);margin:4px 0 2px}
+.rampl{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}
+#card{min-height:120px}
+#card .big{font:800 24px/1.12 var(--display);margin:4px 0 2px;text-wrap:balance}
+#card .sub{color:var(--muted);font-size:12px;margin:0 0 8px}
+#card ol{margin:6px 0;padding:0;list-style:none;max-height:330px;overflow:auto}
+#card li{padding:5px 0;border-bottom:1px solid var(--rule);cursor:pointer}
+#card li:hover{background:var(--panel)}
+#card li span{color:var(--muted)}
+#card .back{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.chip{display:inline-block;font:500 11px/1 var(--mono);padding:4px 6px;border-radius:999px;border:1px solid var(--border);margin:0 4px 4px 0}
+.chip.s{border-color:var(--set);color:var(--set)} .chip.m{border-color:var(--made);color:var(--made)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--set);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{color:var(--muted);display:block}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+.planets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px auto;max-width:860px}
+@media (max-width:520px){.planets{gap:8px}.planet{padding:8px 6px 6px}.planet b{font-size:15px}.planet .n{font-size:21px}.planet .sub{display:none}}
+.planet{background:var(--card);border:1px solid var(--border);padding:10px 10px 8px;cursor:pointer;text-align:left;font:400 12px/1.4 var(--mono);color:var(--fg);display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+.planet[aria-pressed="true"]{outline:2px solid var(--space);outline-offset:-2px}
+.planet canvas{display:block;width:100%;height:auto;aspect-ratio:1;margin-bottom:6px}
+.planet b{font:700 18px/1.15 var(--display);display:block}
+.planet .n{font:900 26px/1 var(--display);color:var(--space)}
+.planet .n span{font:400 12px var(--mono);color:var(--muted)}
+#spaceList{columns:2 260px;column-gap:22px;font:400 13px/1.35 var(--mono);margin:8px 0;padding:0;list-style:none}
+#spaceList li{break-inside:avoid;padding:4px 0;border-bottom:1px solid var(--rule)}
+#spaceList li span{color:var(--muted)}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--set);border-color:var(--set);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Video games</span><span>World and beyond, releases 1969 to 2028</span></div>
+<header class="hero">
+  <h1>Where games are <span class="s">set</span>, and where they are <span class="m">made</span></h1>
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M60 4a56 56 0 0 1 0 112M60 4a56 56 0 0 0 0 112M8 44h104M8 76h104" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".45"/><path d="M28 78 Q58 18 92 46" fill="none" stroke="var(--flow)" stroke-width="3.5" stroke-linecap="round"/><circle cx="28" cy="78" r="8" fill="var(--made)"/><circle cx="92" cy="46" r="8" fill="var(--set)"/></svg>
+  <p class="dek">Games love real places. New York has been invaded, flooded and rebuilt more times than anyone can count, and more games have been set on the Moon than on Mars. I mapped every video game that Wikidata or English Wikipedia ties to a real place: where each one is set, and where the studio that made it is based. Click a city to see its games, join the dots from studio to setting, or leave Earth altogether.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Wikidata (CC0); English Wikipedia categories (CC BY-SA 4.0); Natural Earth; GeoNames</div>
+
+<div class="stats">
+  <div><b>{{meta.games_total|int}}</b><span>games tied to a real place, out of {{meta.wikidata_games|int}} in Wikidata</span></div>
+  <div><b class="s">{{city.New York City|int}}</b><span>set in New York City, more than any other place</span></div>
+  <div><b class="f">{{flow.Japan>United States of America|int}}</b><span>made in Japan and set in the United States, the busiest route</span></div>
+  <div><b class="x">{{space.by_body.Moon|int}} : {{space.by_body.Mars|int}}</b><span>games on the Moon against games on Mars</span></div>
+</div>
+
+<p class="lede">When a studio picks a real place for a game, where does it choose, and how far is that from home? Ask anyone who plays and you will hear New York, Tokyo, London and Los Angeles. The data agree, but they also show something less obvious: the world's settings are chosen by a handful of countries. Most of the games here were made in the United States, Japan or the United Kingdom, and much of the rest of the world appears mainly as a place to visit.</p>
+<p>I could not map "every game ever". Nobody keeps that list. What I could map is every game that has an entry in Wikidata with a real narrative location, or an English Wikipedia article sorted into a "video games set in" category: {{meta.games_earth|int}} games set on Earth and {{meta.games_space|int}} set in space ({{meta.games_earth_and_space|int}} are in both). That is {{meta.share_of_wikidata|pct1}} of the {{meta.wikidata_games|int}} video games in Wikidata, and it leans hard towards famous, Western and Japanese games. Read every number on this page as "among games that someone has written up", not "among all games".</p>
+
+<h2 class="bleed"><span class="n">01 · The map</span>Where they are set, where they are made</h2>
+<div class="bleed">
+<div class="controls" role="group" aria-label="What to show">
+  <span class="ctl-l">Show</span>
+  <div class="seg" id="modeSeg"><button class="btn" data-m="set" aria-pressed="true"><i style="background:var(--set)"></i>Where set</button><button class="btn" data-m="made"><i style="background:var(--made)"></i>Where made</button><button class="btn" data-m="both">Both</button><button class="btn" data-m="flow"><i style="background:var(--flow)"></i>Made to set</button></div>
+</div>
+<div class="controls">
+  <label class="ctl-l" for="decSel">Released</label>
+  <select id="decSel"><option value="">any year</option><option value="1970">1969 to 1979</option><option value="1980">1980s</option><option value="1990">1990s</option><option value="2000">2000s</option><option value="2010">2010s</option><option value="2020">2020s</option></select>
+  <label class="ctl-l" for="eraSel">Set in the period</label>
+  <select id="eraSel"><option value="">any period</option></select>
+  <label class="ctl-l" for="srcSel">Source</label>
+  <select id="srcSel"><option value="">both sources</option><option value="1">Wikidata</option><option value="2">Wikipedia</option><option value="3">both agree</option></select>
+</div>
+<div class="controls"><div class="searchbox"><input type="search" id="q" placeholder="Search a place, studio or game, e.g. Kyoto, Rockstar, Shenmue" autocomplete="off" aria-label="Search a place, studio or game" aria-autocomplete="list" aria-controls="sug"><ul class="suggest" id="sug" role="listbox"></ul></div></div>
+<div class="mapgrid">
+  <div class="mapbox"><div id="lmap" role="application" aria-label="World map of where video games are set and made"></div><div class="loading" id="loading">Loading the games…</div></div>
+  <div class="side">
+    <h4>Key</h4>
+    <div id="legend"></div>
+    <h4 id="cardH">Pick a place</h4>
+    <div id="card"><p class="sub">Click a dot or a country, or search above. Dots are sized by the number of games; countries are shaded by every game set (or made) anywhere inside them.</p></div>
+  </div>
+</div>
+<p class="src" id="mapNote"></p>
+</div>
+
+<h2><span class="n">02 · Settings</span>New York, London, Tokyo, Los Angeles</h2>
+<p>New York City is the most used real setting by a distance: {{city.New York City|int}} games, nearly twice as many as London ({{city.London|int}}) or Tokyo ({{city.Tokyo|int}}). Los Angeles ({{city.Los Angeles|int}}), Paris ({{city.Paris|int}}) and San Francisco ({{city.San Francisco|int}}) come next, then Chicago ({{city.Chicago|int}}) and Washington, D.C. ({{city.Washington, D.C.|int}}). Washington would sit third if I had taken Wikidata at its word: about two hundred American league sports games (Madden, NHL, baseball) carry it as their only "narrative location", which looks like an error, and no Wikipedia category agrees, so I set those links aside.</p>
+<div class="figure"><p class="fig-h">The most used real cities</p><p class="fig-sub">Games set in each city (Wikidata and Wikipedia combined, each game counted once per city)</p><div class="chart" id="cCities"></div></div>
+<p>By country, the United States is the setting for {{top_set_countries.0.games|int}} games, {{top_set_countries.0.share|pct}} of all the Earth-bound games here. Japan follows with {{set_count.Japan|int}} and the United Kingdom with {{set_count.United Kingdom|int}}, then France, Italy, Russia (counting the Soviet Union), Germany and China. Egypt, with {{set_count.Egypt|int}}, is the most used setting in Africa or the Middle East: pyramids and tombs are almost a genre of their own.</p>
+
+<h2><span class="n">03 · Studios</span>Made in three countries, set everywhere</h2>
+<p>For {{made_cov.known|int}} of the Earth-set games ({{made_cov.share|pct}}) I could say where they were made: {{made_cov.hq|int}} from the coordinates of the developer's headquarters, {{made_cov.dev_country|int}} from the developer's country and {{made_cov.origin|int}} from the game's country of origin. The United States made {{made_count.United States of America|int}} of them, Japan {{made_count.Japan|int}} and the United Kingdom {{made_count.United Kingdom|int}}. France ({{made_count.France|int}}) and Canada ({{made_count.Canada|int}}) are next; no other country passes 150.</p>
+<div class="figure"><p class="fig-h">Where set against where made</p><p class="fig-sub">Games set in each country (left) and made in it (right), the 14 biggest</p><div class="chart" id="cButterfly"></div></div>
+<p>Put the two maps together and the routes appear. The busiest route from studio to setting crosses the Pacific: {{flow.Japan>United States of America|int}} games made in Japan are set in the United States. British studios sent {{flow.United Kingdom>United States of America|int}} games to America, and American studios sent {{flow.United States of America>United Kingdom|int}} to Britain. The fourth busiest route runs from the United States to Russia ({{flow.United States of America>Russia|int}} games, counting the Soviet Union), and Canada's studios set {{flow.Canada>United States of America|int}} games across their southern border.</p>
+<div class="figure"><p class="fig-h">From studio to setting</p><p class="fig-sub">Games made in each country (rows) and set in each country (columns); circles sized by games</p><div class="chart" id="cMatrix"></div></div>
+
+<h3>Who stays at home?</h3>
+<p>American studios set {{home.usa.share_home|pct}} of their placed games at home, Japanese studios {{home.japan.share_home|pct}}. Everyone else mostly looks abroad: {{home.uk.share_home|pct}} for British studios, {{home.france.share_home|pct}} for French, {{home.canada.share_home|pct}} for Canadian and {{home.sweden.share_home|pct}} for Swedish. British studios set more games in the United States ({{flow.United Kingdom>United States of America|int}}) than in Britain ({{flow.United Kingdom>United Kingdom|int}}).</p>
+<div class="figure"><p class="fig-h">Share of each country's games set at home</p><p class="fig-sub">Countries with at least 40 placed games whose maker is known; a game set in several countries counts as home if any of them is home</p><div class="chart" id="cHome"></div></div>
+<p>The reverse is starker. Of the {{spot.egypt.games|int}} games set in Egypt whose maker I could place, none were made in Egypt. Monaco has {{spot.monaco.games|int}} games, almost all of them Formula One, and none made there. Mexico ({{spot.mexico.made_at_home|int}} of {{spot.mexico.games|int}} made at home), Greece and Hong Kong are the same story. Even Italy, Germany, Russia and China, which all have games industries, made under a tenth of the games set in them. Only Japan ({{spot.japan.share_local|pct}}) and the United States ({{spot.usa.share_local|pct}}) make a large share of the games set in them; the United Kingdom ({{spot.uk.share_local|pct}}) and Poland follow at a distance.</p>
+<div class="figure"><p class="fig-h">Set there, made elsewhere</p><p class="fig-sub">Countries with at least 60 placed games whose maker is known: the share made in the country itself</p><div class="tablewrap"><table class="t" id="tSetters"></table></div></div>
+
+<h2><span class="n">04 · Over time</span>The American setting loosens its grip</h2>
+<p>Settings follow fashions. Of the games released in the 1990s, {{trend.us_share_1990|pct}} were set at least partly in the United States; in the 2010s {{trend.us_share_2010|pct}}, and so far in the 2020s {{trend.us_share_2020|pct}}. Tokyo's share nearly doubled, from {{trend.tokyo_1990|pct1}} of 1990s games to {{trend.tokyo_2010|pct1}} of 2010s games, while Los Angeles peaked in the 1990s at {{trend.la_1990|pct1}}. Egypt has faded steadily, from {{trend.egypt_1980|pct1}} of 1980s games to {{trend.egypt_2010|pct1}} in the 2010s. Moscow and the Soviet Union were most popular while the Cold War was still on: {{trend.moscow_1980|pct1}} of 1980s games, against {{trend.moscow_2020|pct1}} so far this decade.</p>
+<div class="figure"><p class="fig-h">Share of each decade's games set in a place</p><p class="fig-sub">By release decade; a game counts for a place if it is set there at all. 1969 to 1979 left out (only {{by_decade.1970.games|int}} placed games)</p><div class="chart" id="cTrend"></div></div>
+<p>Wikipedia also sorts games by the period they are set in, which gives {{era.games|int}} games a setting date. {{era.cold_war|int}} are set between 1947 and 1991, {{era.ww2|int}} in a year of the Second World War and {{era_bins.7.games|int}} in 2027 or later. You can filter the map by these periods above.</p>
+<div class="figure"><p class="fig-h">When games are set</p><p class="fig-sub">Games whose Wikipedia categories give a year, decade or century, by period (a game can fall in more than one)</p><div class="chart" id="cEra"></div></div>
+
+<h2><span class="n">05 · Britain</span>Set in London, made all over England</h2>
+<p>{{uk.set|int}} games are set somewhere in the United Kingdom, {{uk.set_share|pct}} of the Earth-bound total. London takes {{place.London|int}}, England as a whole {{place.England|int}} and Scotland {{place.Scotland|int}}, far more than Wales ({{place.Wales|int}}). Below that the counties appear in ones and twos, mostly because Wikipedia has a category for them. Of the British settings whose maker is known, {{uk.set_made_at_home_share|pct}} were made in Britain; American studios made {{flow.United States of America>United Kingdom|int}} and Japanese studios {{flow.Japan>United Kingdom|int}}.</p>
+<p>British studios made {{uk.made|int}} placed games. The busiest studio towns, judging by the nearest large town to each developer's headquarters, are London ({{uk.made_towns.0.1|int}}), the Coventry area ({{uk.made_towns.1.1|int}}, home of Codemasters' racing games), Derby ({{uk.made_towns.2.1|int}}, Core Design's Tomb Raider), Manchester and Liverpool. Codemasters alone accounts for {{uk.studios.0.1|int}}.</p>
+<div class="figure"><p class="fig-h">Britain on both sides</p><p class="fig-sub">Left: British places used as settings. Right: where British-made games are set</p><div class="chart" id="cUK"></div></div>
+
+<h2 class="bleed"><span class="n">06 · Space</span>The Moon beats Mars</h2>
+<div class="bleed">
+<p style="max-width:700px;margin-inline:auto">{{space.games|int}} games are set somewhere off Earth that is real. Most of them are simply in "outer space" ({{space.by_body.Outer space|int}}, including games set on spacecraft and in the Solar System at large). Of the real bodies, the Moon leads with {{space.by_body.Moon|int}} games against {{space.by_body.Mars|int}} for Mars. Saturn's moon Titan has {{space.by_body.Titan|int}}, Venus {{space.by_body.Venus|int}}, Jupiter's moons {{space.by_body.Jupiter's moons|int}} (Io and Callisto), and the Sun and Mercury one each. No game in either source is tagged with the International Space Station. Click a world to list its games.</p>
+<div class="planets" id="planets"></div>
+<p class="fig-h" id="spaceH" style="max-width:700px;margin-inline:auto"></p>
+<ul id="spaceList" style="max-width:900px;margin-inline:auto"></ul>
+<div style="max-width:700px;margin-inline:auto"><div class="figure"><p class="fig-h">The Moon and Mars, by release decade</p><p class="fig-sub">Games set on each, by the decade of first release</p><div class="chart" id="cSpace"></div></div></div>
+</div>
+
+<h2><span class="n">07 · Checking</span>What is in, and what is missing</h2>
+<p>Two sources, built in different ways. Wikidata records a "narrative location" for some games; English Wikipedia sorts articles into categories such as "Video games set in Tokyo". They overlap less than you might expect: {{meta.earth_by_source.both|int}} of the Earth-set games are placed by both, {{meta.earth_by_source.wikipedia|int}} only by Wikipedia and {{meta.earth_by_source.wikidata|int}} only by Wikidata. Wikipedia's categories carry most of the weight, so the map mostly shows what English-language editors have chosen to categorise.</p>
+<div class="note">
+<h3>Method and caveats</h3>
+<p><b>Games.</b> Wikidata items that are an instance of video game or one of its subclasses ({{meta.wikidata_games|int}} items, retrieved through QLever on {{meta.retrieved}}). Release year is the earliest publication date. Wikipedia articles are matched to Wikidata through their sitelinks; only articles that are video games in Wikidata are kept.</p>
+<p><b>Where set.</b> Wikidata narrative location (P840), kept when the place has coordinates on Earth or is a real body or region of space; {{meta.wd_fictional_places|int}} narrative locations (fictional places such as Raccoon City and Black Mesa, and abstract ones) are left out. Wikipedia: the {{meta.wp_categories|int}} categories under "Video games by setting" whose names say "set in" or "set on". Each name is classified: {{meta.wp_categories_place|int}} name a real place, {{meta.wp_categories_era|int}} a date, {{meta.wp_categories_space|int}} somewhere in space, and {{meta.wp_categories_other|int}} a kind of place (castles, hotels, the future). Places are geocoded offline: the category's Wikidata topic, then a Wikidata place with the same name, then a Natural Earth country, then a short hand list (US states at their capitals, English counties at their county towns, Japanese prefectures at their main city, historical states at their capital or core), then GeoNames. Three names could not be placed (Easter Island, Ascension Island, Northumberland). Every place records where its location came from.</p>
+<p><b>Most specific place.</b> If a game is set in a city and also in that city's country, the country link is set aside so the game is not counted twice; continents and oceans are set aside when anything finer exists. These and the Washington links make {{meta.links_set_aside|int}} set-aside links, all kept in the data with the reason. Historical states are mapped to the modern country that contains their point (the Soviet Union to Russia, the Roman Empire to Italy). {{meta.games_broad_only|int}} games are placed only at a continent or ocean level and appear in counts but not as dots.</p>
+<p><b>Where made.</b> For each game, the developer with known headquarters coordinates (the one with the most games if there are several); else the developer's country; else the game's country of origin. Headquarters are where the company is now, not necessarily where it was when it made the game, and big publishers' internal studios are often recorded at the parent's address. Studio towns are the largest GeoNames town within 15 km of the headquarters point. For {{made_cov.unknown|int}} Earth-set games neither source gives a maker's location.</p>
+<p><b>Not covered.</b> This is not every game ever made: most of the {{meta.wikidata_games|int}} games in Wikidata have no setting recorded, and many games have no Wikidata item at all. Coverage is far better for well-known games from North America, Europe and Japan, and for English-language Wikipedia's interests (sport, war and history games are richly categorised). Sports games add many links: the {{checks.f1_games|int}} yearly Formula One games and managers in the data (F1 2000 onwards) are each filed under a median of {{checks.f1_median_places|int}} places from that season's calendar. I set aside {{meta.links_dc_sport|int}} Wikidata links that tie league sports games to Washington, D.C. (see section 02). Fictional cities that stand in for real ones (Liberty City for New York, Vice City for Miami) are not counted as the real city.</p>
+</div>
+
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23735822">Read the paper</a><a href="https://github.com/Tristan-Hotham/games-on-the-map">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/28/games-on-the-map/">Blog post</a></div>
+
+<details><summary>Sources and licences</summary>
+<p class="src">Games, places, developers and countries: Wikidata (CC0), queried through QLever (University of Freiburg) on {{meta.retrieved}}. Settings: English Wikipedia, category tree under "Category:Video games by setting" (category names and page titles), English Wikipedia contributors, CC BY-SA 4.0. Country outlines: Natural Earth 1:50m admin 0 (public domain). Towns and some place locations: GeoNames cities15000 (CC BY 4.0). Hill shading: computed from AWS Terrain Tiles (Mapzen terrarium; sources include SRTM, GMTED and ETOPO1). Optional base maps and satellite tiles: Tiles © Esri (Esri, HERE, Garmin, USGS, NGA, Maxar, Earthstar Geographics, © OpenStreetMap contributors, and the GIS user community).</p>
+</details>
+
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Where games are set, and where they are made. https://doi.org/10.5281/zenodo.23735822</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Text, figures and derived data: CC BY-SA 4.0 (because the Wikipedia category data are CC BY-SA). Code: MIT. Other studies: <a href="https://maps.tristanhotham.com/sun-and-rain/">Sun and rain</a>, <a href="https://maps.tristanhotham.com/sea-level/">Sea level</a>, <a href="https://blog.tristanhotham.com/">all posts</a>.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+"use strict";
+const R = /*RESULTS*/;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pct = x => Math.round(x * 100) + "%";
+const isDark = () => document.documentElement.dataset.theme === "dark" || (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+const tip = $("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+const redraws = [];
+function resp(box, render) { let last = 0; const go = force => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); go(); redraws.push(() => go(true)); }
+const SVGNS = "http://www.w3.org/2000/svg";
+function svg(w, h) { const s = document.createElementNS(SVGNS, "svg"); s.setAttribute("viewBox", `0 0 ${w} ${h}`); s.setAttribute("role", "img"); return s; }
+function el(p, tag, a, txt) { const e = document.createElementNS(SVGNS, tag); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; p.appendChild(e); return e; }
+(function () { const k = "gm_theme"; let t = null; try { t = localStorage.getItem(k); } catch (e) {} if (t) document.documentElement.dataset.theme = t;
+  $("theme").onclick = () => { const d = isDark() ? "light" : "dark"; document.documentElement.dataset.theme = d; try { localStorage.setItem(k, d); } catch (e) {} redraws.forEach(f => f()); if (window.mapRestyle) mapRestyle(); }; })();
+const short = n => ({ "United States of America": "United States", "United Kingdom": "United Kingdom" }[n] || n);
+
+/* ===== charts ===== */
+function hbars(box, rows, colour, opt = {}) {
+  resp(box, (W, narrow) => {
+    const lw = narrow ? 128 : 170, rh = 24, H = rows.length * rh + 8, max = Math.max(...rows.map(r => r[1]));
+    const s = svg(W, H);
+    rows.forEach((r, i) => {
+      const y = i * rh + 4, w = (W - lw - 50) * r[1] / max;
+      el(s, "text", { x: lw - 8, y: y + 15, "text-anchor": "end", class: "lab" }, r[0]);
+      el(s, "rect", { x: lw, y: y + 3, width: Math.max(1, w), height: rh - 8, fill: colour, rx: 1 });
+      el(s, "text", { x: lw + w + 6, y: y + 15, class: "lab m" }, opt.pct ? pct(r[1]) : fmt(r[1]));
+    });
+    box.appendChild(s);
+  });
+}
+function butterfly(box) {
+  const set = Object.fromEntries(R.top_set_countries.map(r => [r.name, r.games])), made = Object.fromEntries(R.top_made_countries.map(r => [r.name, r.games]));
+  const names = [...new Set([...R.top_set_countries.slice(0, 10).map(r => r.name), ...R.top_made_countries.slice(0, 8).map(r => r.name)])]
+    .sort((a, b) => ((set[b] || 0) + (made[b] || 0)) - ((set[a] || 0) + (made[a] || 0))).slice(0, 14);
+  resp(box, (W, narrow) => {
+    const mid = W / 2, gap = narrow ? 104 : 140, rh = 24, H = names.length * rh + 34, max = Math.max(...names.map(n => Math.max(set[n] || 0, made[n] || 0)));
+    const half = mid - gap / 2 - 44, s = svg(W, H);
+    el(s, "text", { x: mid - gap / 2, y: 12, "text-anchor": "end", class: "lab b", fill: css("--set") }, "set here").style.fill = css("--set");
+    el(s, "text", { x: mid + gap / 2, y: 12, class: "lab b" }, "made here").style.fill = css("--made");
+    names.forEach((n, i) => {
+      const y = 24 + i * rh, a = set[n] || 0, b = made[n] || 0;
+      el(s, "text", { x: mid, y: y + 15, "text-anchor": "middle", class: "lab" }, short(n).replace("United States", "USA").replace("United Kingdom", "UK"));
+      const wa = half * a / max, wb = half * b / max;
+      el(s, "rect", { x: mid - gap / 2 - wa, y: y + 4, width: Math.max(1, wa), height: rh - 9, fill: css("--set") });
+      el(s, "rect", { x: mid + gap / 2, y: y + 4, width: Math.max(1, wb), height: rh - 9, fill: css("--made") });
+      el(s, "text", { x: mid - gap / 2 - wa - 5, y: y + 15, "text-anchor": "end", class: "lab m s" }, fmt(a));
+      el(s, "text", { x: mid + gap / 2 + wb + 5, y: y + 15, class: "lab m s" }, fmt(b));
+    });
+    box.appendChild(s);
+  });
+}
+function matrix(box) {
+  const makers = R.matrix.makers, sets = R.matrix.sets, N = R.matrix.n;
+  const ab = n => ({ "United States of America": "USA", "United Kingdom": "UK" }[n] || n);
+  resp(box, (W, narrow) => {
+    const lw = narrow ? 64 : 100, top = narrow ? 58 : 34, cw = (W - lw) / sets.length, rh = Math.min(48, Math.max(34, cw * .9)), H = top + makers.length * rh + 6;
+    const s = svg(W, H), max = Math.max(...N.flat()), rmax = Math.min(cw, rh) * .5;
+    sets.forEach((c, j) => { const x = lw + cw * (j + .5); el(s, "text", { x, y: top - 10, "text-anchor": narrow ? "start" : "middle", class: "lab s m", transform: narrow ? `rotate(-40 ${x} ${top - 10})` : "" }, ab(c)); });
+    makers.forEach((m, i) => {
+      const y = top + i * rh + rh / 2;
+      el(s, "text", { x: lw - 8, y: y + 4, "text-anchor": "end", class: "lab" }, ab(m));
+      el(s, "line", { x1: lw, x2: W, y1: y, y2: y, stroke: css("--rule") });
+      sets.forEach((c, j) => {
+        const v = N[i][j]; if (!v) return;
+        const r = Math.max(1.5, rmax * Math.sqrt(v / max)), x = lw + cw * (j + .5), home = m === c;
+        const ci = el(s, "circle", { cx: x, cy: y, r, fill: home ? "none" : css("--flow"), stroke: css("--flow"), "stroke-width": home ? 2 : 0, "fill-opacity": .85 });
+        ci.addEventListener("mousemove", e => showTip(`<b>Made in ${esc(ab(m))}, set in ${esc(ab(c))}</b><br>${fmt(v)} games`, e.clientX, e.clientY)); ci.addEventListener("mouseleave", hideTip);
+        if (r >= 13) el(s, "text", { x, y: y + 4, "text-anchor": "middle", class: "lab s", style: `fill:${home ? css("--fg") : "#fff"}` }, fmt(v));
+      });
+    });
+    box.appendChild(s);
+    const n = document.createElement("p"); n.className = "src"; n.textContent = "Rows: where made. Columns: where set. Open circles are games set at home. Hover for the numbers."; box.appendChild(n);
+  });
+}
+function trend(box) {
+  const keys = ["New York City", "Tokyo", "London", "Los Angeles", "Moscow and the Soviet Union", "Egypt"];
+  const cols = ["#CF3F35", "#156B87", "#7B3F8C", "#C98A12", "#4F6D2F", "#8C5A3C"], decs = ["1980", "1990", "2000", "2010", "2020"];
+  resp(box, (W, narrow) => {
+    const H = narrow ? 300 : 320, l = 44, r = narrow ? 8 : 150, t = 14, b = 30, s = svg(W, H);
+    const max = Math.max(...keys.flatMap(k => decs.map(d => R.share_series[k][d]))) * 1.08;
+    const X = i => l + (W - l - r) * i / (decs.length - 1), Y = v => t + (H - t - b) * (1 - v / max);
+    for (let v = 0; v <= max; v += .02) { el(s, "line", { x1: l, x2: W - r, y1: Y(v), y2: Y(v), stroke: css("--rule") }); el(s, "text", { x: l - 6, y: Y(v) + 4, "text-anchor": "end", class: "lab s m" }, Math.round(v * 100) + "%"); }
+    decs.forEach((d, i) => el(s, "text", { x: X(i), y: H - 8, "text-anchor": "middle", class: "lab s m" }, d + "s"));
+    const ends = [];
+    keys.forEach((k, ki) => {
+      const pts = decs.map((d, i) => [X(i), Y(R.share_series[k][d])]);
+      el(s, "path", { d: "M" + pts.map(p => p.join(",")).join("L"), fill: "none", stroke: cols[ki], "stroke-width": 2.4 });
+      pts.forEach((p, i) => { const c = el(s, "circle", { cx: p[0], cy: p[1], r: 3.5, fill: cols[ki] }); c.addEventListener("mousemove", e => showTip(`<b>${esc(k)}</b>, ${decs[i]}s<br>${(R.share_series[k][decs[i]] * 100).toFixed(1)}% of games (${fmt(R.series[k][decs[i]])})`, e.clientX, e.clientY)); c.addEventListener("mouseleave", hideTip); });
+      ends.push({ k, y: pts[pts.length - 1][1], c: cols[ki] });
+    });
+    if (!narrow) { ends.sort((a, b) => a.y - b.y); let last = -99; for (const e of ends) { const y = Math.max(e.y, last + 15); last = y; el(s, "text", { x: W - r + 8, y: y + 4, class: "lab s", style: `fill:${e.c}` }, e.k.replace("Moscow and the Soviet Union", "Moscow, USSR")); } }
+    box.appendChild(s);
+    if (narrow) { const lg = document.createElement("div"); lg.className = "legend"; lg.innerHTML = keys.map((k, i) => `<span><i style="background:${cols[i]}"></i>${esc(k)}</span>`).join(""); box.appendChild(lg); }
+  });
+}
+function spaceChart(box) {
+  const decs = ["1970", "1980", "1990", "2000", "2010", "2020"];
+  resp(box, (W) => {
+    const H = 210, l = 34, t = 10, b = 28, s = svg(W, H), max = Math.max(...decs.map(d => Math.max(R.space.moon_by_decade[d], R.space.mars_by_decade[d])));
+    const gw = (W - l) / decs.length, bw = Math.min(26, gw * .32), Y = v => t + (H - t - b) * (1 - v / max);
+    for (let v = 0; v <= max; v += 10) { el(s, "line", { x1: l, x2: W, y1: Y(v), y2: Y(v), stroke: css("--rule") }); el(s, "text", { x: l - 6, y: Y(v) + 4, "text-anchor": "end", class: "lab s m" }, v); }
+    decs.forEach((d, i) => {
+      const x = l + gw * (i + .5);
+      el(s, "rect", { x: x - bw - 1, y: Y(R.space.moon_by_decade[d]), width: bw, height: Y(0) - Y(R.space.moon_by_decade[d]), fill: "#8E8A99" });
+      el(s, "rect", { x: x + 1, y: Y(R.space.mars_by_decade[d]), width: bw, height: Y(0) - Y(R.space.mars_by_decade[d]), fill: "#C0582F" });
+      el(s, "text", { x, y: H - 8, "text-anchor": "middle", class: "lab s m" }, d === "1970" ? "1969 to 79" : d + "s");
+    });
+    box.appendChild(s);
+    const lg = document.createElement("div"); lg.className = "legend"; lg.innerHTML = `<span><i style="background:#8E8A99"></i>Moon</span><span><i style="background:#C0582F"></i>Mars</span><span>2020s: releases to date</span>`; box.appendChild(lg);
+  });
+}
+function ukChart(box) {
+  resp(box, (W, narrow) => {
+    const a = R.uk.top_places.slice(0, 8), b = R.uk.made_set_where.slice(0, 8);
+    const colW = narrow ? W : (W - 24) / 2, rh = 24, lw = 118;
+    const H = narrow ? (a.length + b.length) * rh + 70 : Math.max(a.length, b.length) * rh + 30, s = svg(W, H);
+    const draw = (rows, x0, y0, col, title) => {
+      const max = Math.max(...rows.map(r => r[1]));
+      el(s, "text", { x: x0, y: y0 + 10, class: "lab b" }, title);
+      rows.forEach((r, i) => { const y = y0 + 20 + i * rh, w = (colW - lw - 40) * r[1] / max;
+        el(s, "text", { x: x0 + lw - 6, y: y + 14, "text-anchor": "end", class: "lab s" }, short(r[0]).replace("United States", "USA").replace("United Kingdom", "UK"));
+        el(s, "rect", { x: x0 + lw, y: y + 3, width: Math.max(1, w), height: rh - 8, fill: col });
+        el(s, "text", { x: x0 + lw + w + 5, y: y + 14, class: "lab s m" }, fmt(r[1])); });
+    };
+    draw(a, 0, 0, css("--set"), "Set in Britain");
+    if (narrow) draw(b, 0, a.length * rh + 40, css("--made"), "Made in Britain, set in"); else draw(b, colW + 24, 0, css("--made"), "Made in Britain, set in");
+    box.appendChild(s);
+  });
+}
+function eraChart(box) { hbars(box, R.era_bins.map(r => [r.label, r.games]), css("--flow")); }
+function settersTable() {
+  const t = $("tSetters"), rows = R.set_made_locally.slice().sort((a, b) => b.games - a.games).slice(0, 18);
+  t.innerHTML = `<thead><tr><th>Setting</th><th class="num">Games</th><th class="num">Made there</th><th class="wide">Mostly made in</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td>${esc(short(r.country))}</td><td class="num">${fmt(r.games)}</td><td class="num">${pct(r.share_local)}</td><td class="wide">${esc(r.top_makers.map(short).join(", "))}</td></tr>`).join("") + "</tbody>";
+}
+hbars($("cCities"), R.top_cities.slice(0, 15).map(r => [r.name, r.games]), css("--set"));
+butterfly($("cButterfly")); matrix($("cMatrix"));
+hbars($("cHome"), R.home_share.map(r => [short(r.country), r.share_home]), css("--made"), { pct: true });
+trend($("cTrend")); eraChart($("cEra")); ukChart($("cUK")); spaceChart($("cSpace")); settersTable();
+for (const e of R.era_bins) $("eraSel").insertAdjacentHTML("beforeend", `<option value="${e.from},${e.to}">${esc(e.label)}</option>`);
+
+/* ===== data ===== */
+const TITLE = g => g[0] || `Untitled in English (${g[8]})`;
+let D = null, lmap = null;
+const S = { mode: "set", dec: "", era: "", src: "", sel: null };
+const KIND_NAME = ["city or town", "region or landmark", "historical state", "country", "continent or ocean"];
+const HOW_NAME = ["developer headquarters", "developer's country", "country of origin"];
+function gameOK(g) {
+  if (S.dec) { const d = +S.dec; if (!g[1] || g[1] < (d === 1970 ? 1960 : d) || g[1] > d + 9) return false; }
+  if (S.era) { const [a, b] = S.era.split(",").map(Number); if (!g[6] || g[6][1] < a || g[6][0] > b) return false; }
+  return true;
+}
+function linkOK(g, k) { return !S.src || g[5][k] === +S.src || (S.src !== "3" && g[5][k] === 3); }
+let AGG = null;
+function aggregate() {
+  const nP = D.places.length, nS = D.studios.length, nC = D.countries.length;
+  const pg = new Array(nP).fill(0), sg = new Array(nS).fill(0), cs = new Array(nC).fill(0), cm = new Array(nC).fill(0);
+  const flows = new Map(); let nGames = 0, nMade = 0;
+  for (const g of D.games) {
+    if (!gameOK(g) || !g[4].length) continue;
+    const ps = g[4].filter((p, k) => linkOK(g, k)); if (!ps.length) continue;
+    nGames++;
+    const cset = new Set();
+    for (const p of ps) { pg[p]++; const c = D.places[p][4]; if (c >= 0) cset.add(c); }
+    for (const c of cset) cs[c]++;
+    if (g[2] >= 0) { nMade++; sg[g[2]]++; const mc = D.studios[g[2]][3]; if (mc >= 0) { cm[mc]++; for (const c of cset) { const k = mc + ">" + c; flows.set(k, (flows.get(k) || 0) + 1); } } }
+  }
+  AGG = { pg, sg, cs, cm, flows, nGames, nMade };
+}
+
+/* ===== map ===== */
+const LY = { base: "plain", hills: true, hillK: 55, names: true, nameLvl: 1, lines: true, lineK: 55, colour: 85 };
+const LYDEF = { ...LY };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("gm_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("gm_layers", JSON.stringify(LY)); } catch (e) {} };
+let tiles = {}, landL = null, borderL = null, hillL = null, hillCv = null, HILLIMG = null, dotL = null, flowL = null, nameL = null, selL = null, renderer = null;
+const WORLD = L.latLngBounds([-85.0511, -180], [85.0511, 180]);
+const CanvasOverlay = L.ImageOverlay.extend({ _initImage() { const c = this._image = this._url; L.DomUtil.addClass(c, "leaflet-image-layer"); if (this._zoomAnimated) L.DomUtil.addClass(c, "leaflet-zoom-animated"); c.onselectstart = L.Util.falseFn; c.onmousemove = L.Util.falseFn; } });
+function ramp(t, a, b) { const A = a.match(/\w\w/g).map(h => parseInt(h, 16)), B = b.match(/\w\w/g).map(h => parseInt(h, 16)); return "#" + A.map((v, i) => Math.round(v + (B[i] - v) * t).toString(16).padStart(2, "0")).join(""); }
+function choroColour(n, max, which) {
+  if (!n) return null;
+  const t = Math.min(1, Math.log1p(n) / Math.log1p(max));
+  const dark = isDark();
+  if (which === "set") return dark ? ramp(t, "#3A2629", "#B4574C") : ramp(t, "#F8E7DD", "#D47A6C");
+  return dark ? ramp(t, "#1C3038", "#3F8FA8") : ramp(t, "#E1EEF2", "#6FA9BE");
+}
+function styleCountries() {
+  if (!landL) return;
+  const which = S.mode === "made" ? "made" : "set", arr = which === "set" ? AGG.cs : AGG.cm, max = Math.max(...arr);
+  const plain = LY.base === "plain", land = css("--land"), op = LY.colour / 100;
+  landL.eachLayer(l => {
+    const i = l.feature.properties.i, n = S.mode === "flow" ? 0 : arr[i], c = choroColour(n, max, which);
+    l.setStyle({ stroke: false, fillColor: c || land, fillOpacity: c ? (plain ? op : op * .75) : (plain ? 1 : 0) });
+  });
+}
+function radius(n, max) { return n ? Math.max(2.5, 22 * Math.sqrt(n / max)) : 0; }
+function drawDots() {
+  dotL.clearLayers();
+  const showSet = S.mode === "set" || S.mode === "both" || S.mode === "flow", showMade = S.mode === "made" || S.mode === "both" || S.mode === "flow";
+  const maxP = Math.max(1, ...AGG.pg.filter((_, i) => D.places[i][3] <= 2)), maxS = Math.max(1, ...AGG.sg);
+  const max = S.mode === "both" || S.mode === "flow" ? Math.max(maxP, maxS) : null;
+  const op = S.mode === "flow" ? .45 : .82;
+  const items = [];
+  if (showMade) D.studios.forEach((s, i) => { if (AGG.sg[i] && s[5]) items.push({ t: "s", i, n: AGG.sg[i], ll: [s[2], s[1]] }); });
+  if (showSet) D.places.forEach((p, i) => { if (AGG.pg[i] && p[3] <= 2) items.push({ t: "p", i, n: AGG.pg[i], ll: [p[2], p[1]] }); });
+  items.sort((a, b) => b.n - a.n);
+  for (const it of items) {
+    const r = radius(it.n, max || (it.t === "p" ? maxP : maxS)), col = it.t === "p" ? css("--set") : css("--made");
+    const m = L.circleMarker(it.ll, { renderer, radius: r, color: isDark() ? "#000" : "#fff", weight: 1, fillColor: col, fillOpacity: op, opacity: .95 });
+    const nm = it.t === "p" ? D.places[it.i][0] : D.studios[it.i][0];
+    m.bindTooltip(`<b>${esc(nm)}</b><br>${fmt(it.n)} game${it.n > 1 ? "s" : ""} ${it.t === "p" ? "set here" : "made here"}`, { direction: "top", offset: [0, -r] });
+    m.on("click", () => it.t === "p" ? showPlace(it.i, false) : showStudio(it.i, false));
+    m.addTo(dotL);
+  }
+}
+function arc(a, b, k = .22) {
+  // a gentle curve between two lat/lon points, taking the shorter way round; a curve that crosses the 180th meridian
+  // is returned twice (shifted by 360 degrees) so that both halves show on the single-world map
+  let [y1, x1] = a, [y2, x2] = b, shift = 0; if (Math.abs(x2 - x1) > 180) { shift = x2 < x1 ? 360 : -360; x2 += shift; }
+  const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1, cx = mx - dy * k, cy = Math.max(-80, Math.min(80, my + dx * k)), out = [];
+  for (let t = 0; t <= 1.0001; t += 1 / 32) { const u = 1 - t; out.push([u * u * y1 + 2 * u * t * cy + t * t * y2, u * u * x1 + 2 * u * t * cx + t * t * x2]); }
+  return shift ? [out, out.map(([y, x]) => [y, x - shift])] : [out];
+}
+function drawFlows() {
+  flowL.clearLayers(); if (S.mode !== "flow") return;
+  const arr = [...AGG.flows].filter(([k]) => { const [a, b] = k.split(">"); return a !== b; }).sort((a, b) => b[1] - a[1]).slice(0, 60);
+  const max = arr.length ? arr[0][1] : 1;
+  for (const [k, n] of arr.reverse()) {
+    const [a, b] = k.split(">").map(Number), A = D.countries[a], B = D.countries[b];
+    const line = L.polyline(arc([A[3], A[2]], [B[3], B[2]]), { renderer, color: css("--flow"), weight: .8 + 8 * Math.sqrt(n / max), opacity: .15 + .6 * Math.sqrt(n / max), lineCap: "round" });
+    line.bindTooltip(`<b>Made in ${esc(short(A[1]))}, set in ${esc(short(B[1]))}</b><br>${fmt(n)} games`, { sticky: true });
+    line.addTo(flowL);
+    L.circleMarker([B[3], B[2]], { renderer, radius: 2.5 + 3 * Math.sqrt(n / max), stroke: false, fillColor: css("--set"), fillOpacity: .9, interactive: false }).addTo(flowL);
+  }
+}
+function legend() {
+  const which = S.mode === "made" ? "made" : "set", arr = which === "set" ? AGG.cs : AGG.cm, max = Math.max(1, ...arr);
+  let h = "";
+  if (S.mode !== "flow") h += `<div>Countries: games ${which} anywhere inside</div><div class="ramp" style="background:linear-gradient(90deg,${choroColour(1, max, which)},${choroColour(max, max, which)})"></div><div class="rampl"><span>1</span><span>${fmt(Math.sqrt(max))}</span><span>${fmt(max)}</span></div>`;
+  h += `<div class="legend">${S.mode !== "made" ? `<span><i style="background:var(--set)"></i>set in a city, region or landmark</span>` : ""}${S.mode !== "set" ? `<span><i style="background:var(--made)"></i>studio headquarters</span>` : ""}${S.mode === "flow" ? `<span><i style="background:var(--flow);border-radius:0;height:4px"></i>the 60 busiest routes between countries, studio country to setting country</span>` : ""}</div>`;
+  h += `<div class="src" style="margin-top:4px">${fmt(AGG.nGames)} games match the filters; ${fmt(AGG.nMade)} with a known maker.</div>`;
+  $("legend").innerHTML = h;
+}
+function refresh() { aggregate(); styleCountries(); drawDots(); drawFlows(); legend(); if (S.sel) S.sel(); }
+
+/* hills: the shade PNG becomes a coloured, semi-transparent canvas (no CSS blending needed) */
+function composeHills() {
+  if (!HILLIMG) return;
+  const k = LY.hillK / 100, dark = isDark() || LY.base === "dark", n = HILLIMG.width;
+  const g = hillCv.getContext("2d"), out = g.createImageData(n, n), s = HILLIMG.data, d = out.data;
+  const sh = dark ? [0, 0, 0] : [58, 44, 30];
+  for (let i = 0; i < s.length; i += 4) {
+    const a = s[i] / 255, h = s[i + 1] / 255;
+    if (a >= h * .6) { d[i] = sh[0]; d[i + 1] = sh[1]; d[i + 2] = sh[2]; d[i + 3] = Math.min(255, a * 255 * k * (dark ? 1.1 : .9)); }
+    else { d[i] = 255; d[i + 1] = 255; d[i + 2] = 255; d[i + 3] = h * 255 * k * (dark ? .25 : .6); }
+  }
+  g.putImageData(out, 0, 0);
+}
+function loadHills() {
+  if (HILLIMG) return Promise.resolve();
+  return new Promise((ok, bad) => { const im = new Image(); im.onload = () => { const c = document.createElement("canvas"); c.width = im.width; c.height = im.height; const x = c.getContext("2d", { willReadFrequently: true }); x.drawImage(im, 0, 0); HILLIMG = x.getImageData(0, 0, c.width, c.height); hillCv.width = c.width; hillCv.height = c.height; ok(); }; im.onerror = bad; im.src = "data/hills.png"; });
+}
+let TOWNS = null;
+function placeNames() {
+  if (!nameL) return; nameL.clearLayers(); if (!LY.names || !TOWNS) return;
+  const z = lmap.getZoom(), bb = lmap.getBounds().pad(.05), lvl = LY.nameLvl;
+  const minR = lvl === 0 ? (z >= 5 ? 2 : 3) : lvl === 1 ? (z >= 6 ? 0 : z >= 5 ? 1 : z >= 4 ? 2 : 3) : (z >= 4 ? 0 : z >= 3 ? 1 : 2);
+  const boxes = [], cap = lvl === 2 ? 420 : 260; let n = 0;
+  for (const t of TOWNS) {
+    if (t[3] < minR || !bb.contains([t[2], t[1]])) continue;
+    const p = lmap.latLngToContainerPoint([t[2], t[1]]), fs = t[3] >= 3 ? 12 : 11;
+    const bx = [p.x - 4, p.y - 8, p.x + 10 + t[0].length * fs * .6, p.y + 7];
+    if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+    boxes.push(bx);
+    L.marker([t[2], t[1]], { pane: "names", interactive: false, keyboard: false, icon: L.divIcon({ className: "town r" + t[3], html: `<i></i>${esc(t[0])}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(nameL);
+    if (++n >= cap) break;
+  }
+}
+function applyLayers() {
+  for (const k in tiles) { if (k === LY.base) tiles[k].addTo(lmap); else tiles[k].remove(); }
+  lmap.getContainer().classList.toggle("sat", LY.base === "satellite");
+  lmap.getContainer().style.background = LY.base === "plain" ? css("--sea") : (LY.base === "dark" ? "#2b2b2b" : LY.base === "satellite" ? "#0b1a26" : "#e8e8e8");
+  styleCountries();
+  if (LY.hills) { loadHills().then(() => { composeHills(); hillL.addTo(lmap); }).catch(() => {}); } else hillL.remove();
+  if (LY.lines) { borderL.addTo(lmap); borderL.setStyle({ color: LY.base === "satellite" || LY.base === "dark" || isDark() ? "#f2eee6" : css("--line"), opacity: .15 + .85 * LY.lineK / 100, weight: .5 + LY.lineK / 100 }); } else borderL.remove();
+  if (LY.names) nameL.addTo(lmap); else nameL.remove();
+  placeNames(); drawDots();
+}
+function initLayers() {
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false" aria-controls="lyrPanel">Map layers</button>
+<div class="lyrPanel" id="lyrPanel" hidden>
+ <div class="row"><label for="lyBase" style="font-weight:600">Base map</label><div class="sub"><select id="lyBase" aria-label="Base map"><option value="plain">Plain paper (offline)</option><option value="light">Light grey (Esri)</option><option value="dark">Dark grey (Esri)</option><option value="satellite">Satellite (Esri)</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyHills"> Hills and mountains</label><div class="sub"><span>strength</span><input type="range" id="lyHillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" id="lyNames"> Place names</label><div class="sub"><span>how many</span><select id="lyNameLvl" aria-label="How many place names"><option value="0">Big cities only</option><option value="1">Cities and towns</option><option value="2">Lots</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyLines"> Borders and coasts</label><div class="sub"><span>strength</span><input type="range" id="lyLineK" min="10" max="100" step="5" aria-label="Border line strength"></div></div>
+ <div class="row"><label style="font-weight:600">Colour</label><div class="sub"><span>strength</span><input type="range" id="lyColour" min="20" max="100" step="5" aria-label="Colour strength"></div></div>
+ <button class="reset" id="lyReset">Reset layers</button>
+</div>`;
+    return d; } });
+  lmap.addControl(new Ctl());
+  const q = $, btn = lmap.getContainer().querySelector(".lyrBtn"), pan = q("lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; };
+  const on = (id, ev, f) => q(id).addEventListener(ev, e => { f(e.target); saveLY(); applyLayers(); });
+  on("lyBase", "change", t => { LY.base = t.value; if (t.value === "satellite") { LY.hills = false; q("lyHills").checked = false; } });
+  on("lyHills", "change", t => LY.hills = t.checked); on("lyHillK", "input", t => { LY.hillK = +t.value; LY.hills = true; q("lyHills").checked = true; });
+  on("lyNames", "change", t => LY.names = t.checked); on("lyNameLvl", "change", t => { LY.nameLvl = +t.value; LY.names = true; q("lyNames").checked = true; });
+  on("lyLines", "change", t => LY.lines = t.checked); on("lyLineK", "input", t => { LY.lineK = +t.value; LY.lines = true; q("lyLines").checked = true; });
+  on("lyColour", "input", t => LY.colour = +t.value);
+  q("lyReset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); applyLayers(); };
+  sync();
+  lmap.on("zoomend moveend", placeNames);
+}
+window.mapRestyle = () => { if (!lmap || !AGG) return; applyLayers(); drawFlows(); legend(); };
+
+/* ===== cards ===== */
+function gameLine(gi, side) {
+  const g = D.games[gi], st = g[2] >= 0 ? D.studios[g[2]] : null;
+  const where = side === "set" ? (st ? `made ${st[5] ? "by " + esc(st[0]) + (st[4] ? ", " + esc(st[4]) : "") : "in " + esc(st[0].replace(" (country only)", ""))}` : "maker unknown")
+    : (g[4].length ? "set in " + esc(g[4].map(p => D.places[p][0]).slice(0, 3).join(", ") + (g[4].length > 3 ? "…" : "")) : g[7] ? "set in space" : "");
+  return `<li data-g="${gi}"><b>${esc(TITLE(g))}</b> <span>${g[1] || "year unknown"} · ${where}</span></li>`;
+}
+function listGames(ids, side) {
+  ids.sort((a, b) => (D.games[b][1] || 0) - (D.games[a][1] || 0));
+  return `<ol>${ids.slice(0, 250).map(i => gameLine(i, side)).join("")}</ol>${ids.length > 250 ? `<p class="sub">Showing the 250 most recent of ${fmt(ids.length)}.</p>` : ""}`;
+}
+function wire() { $("card").querySelectorAll("li[data-g]").forEach(li => li.onclick = () => showGame(+li.dataset.g, true)); const b = $("card").querySelector(".back"); if (b && S.prev) b.onclick = () => S.prev(); }
+function lines(pairs, col) {
+  selL.clearLayers();
+  const seen = new Set();
+  for (const [a, b] of pairs) { const k = a.join() + b.join(); if (seen.has(k)) continue; seen.add(k); L.polyline(arc(a, b, .18), { renderer, color: col || css("--flow"), weight: 1.6, opacity: .7, interactive: false }).addTo(selL); }
+}
+function showPlace(pi, fly) {
+  const p = D.places[pi];
+  const run = () => {
+    const ids = []; D.games.forEach((g, i) => { if (gameOK(g) && g[4].some((x, k) => x === pi && linkOK(g, k))) ids.push(i); });
+    $("cardH").textContent = "Set here";
+    $("card").innerHTML = `<div class="big">${esc(p[0])}</div><p class="sub">${esc(KIND_NAME[p[3]])}${p[4] >= 0 ? " · " + esc(short(D.countries[p[4]][1])) : ""} · ${fmt(ids.length)} game${ids.length === 1 ? "" : "s"} with these filters<br>Location: ${esc(p[5])}</p>${listGames(ids, "set")}`;
+    const pairs = ids.map(i => D.games[i][2]).filter(s => s >= 0).map(s => [[D.studios[s][2], D.studios[s][1]], [p[2], p[1]]]);
+    lines(pairs); wire();
+  };
+  S.sel = run; S.prev = null; run();
+  if (fly) lmap.setView([p[2], p[1]], Math.max(lmap.getZoom(), p[3] === 0 ? 6 : 5));
+}
+function showStudio(si, fly) {
+  const s = D.studios[si];
+  const run = () => {
+    const ids = []; D.games.forEach((g, i) => { if (g[2] === si && gameOK(g)) ids.push(i); });
+    $("cardH").textContent = "Made here";
+    $("card").innerHTML = `<div class="big">${esc(s[0])}</div><p class="sub">${s[5] ? "Headquarters" + (s[4] ? " near " + esc(s[4]) : "") + (s[3] >= 0 ? ", " + esc(short(D.countries[s[3]][1])) : "") : "Only the country is known"} · ${fmt(ids.length)} placed game${ids.length === 1 ? "" : "s"}</p>${listGames(ids, "made")}`;
+    const pairs = []; for (const i of ids) for (const p of D.games[i][4]) if (D.places[p][3] <= 3) pairs.push([[s[2], s[1]], [D.places[p][2], D.places[p][1]]]);
+    lines(pairs); wire();
+  };
+  S.sel = run; S.prev = null; run();
+  if (fly) lmap.setView([s[2], s[1]], Math.max(lmap.getZoom(), 6));
+}
+function showCountry(ci) {
+  const c = D.countries[ci];
+  const run = () => {
+    const set = [], made = [];
+    D.games.forEach((g, i) => { if (!gameOK(g)) return; if (g[4].some((p, k) => D.places[p][4] === ci && linkOK(g, k))) set.push(i); if (g[2] >= 0 && D.studios[g[2]][3] === ci && g[4].length) made.push(i); });
+    const top = {}; for (const i of set) for (const p of D.games[i][4]) if (D.places[p][4] === ci && D.places[p][3] <= 1) top[p] = (top[p] || 0) + 1;
+    const tops = Object.entries(top).sort((a, b) => b[1] - a[1]).slice(0, 6).map(([p, n]) => `<span class="chip s">${esc(D.places[p][0])} ${n}</span>`).join("");
+    const mk = {}; for (const i of set) { const st = D.games[i][2]; if (st >= 0 && D.studios[st][3] >= 0) { const m = D.studios[st][3]; mk[m] = (mk[m] || 0) + 1; } }
+    const mks = Object.entries(mk).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([m, n]) => `<span class="chip m">${esc(short(D.countries[m][1]))} ${n}</span>`).join("");
+    const which = S.mode === "made" ? made : set;
+    $("cardH").textContent = "Country";
+    $("card").innerHTML = `<div class="big">${esc(short(c[1]))}</div><p class="sub">${fmt(set.length)} games set here · ${fmt(made.length)} placed games made here</p>${tops ? `<div>${tops}</div>` : ""}${mks ? `<p class="sub" style="margin-top:6px">Games set here were made in:</p><div>${mks}</div>` : ""}<p class="sub" style="margin-top:8px">${S.mode === "made" ? "Games made here" : "Games set here"}:</p>${listGames(which, S.mode === "made" ? "made" : "set")}`;
+    selL.clearLayers(); wire();
+  };
+  S.sel = run; S.prev = null; run();
+}
+function showGame(gi, keepPrev) {
+  const g = D.games[gi], st = g[2] >= 0 ? D.studios[g[2]] : null, prev = S.sel;
+  $("cardH").textContent = "Game";
+  const sp = g[7] ? `<p class="sub">Also set in space: ${esc(D.space_detail[g[8]] || "")}</p>` : "";
+  $("card").innerHTML = `${keepPrev && prev ? '<button class="back">back to the list</button>' : ""}<div class="big">${esc(TITLE(g))}</div><p class="sub">${g[1] || "year unknown"}${g[6] ? ` · set in the period ${g[6][0] < 0 ? -g[6][0] + " BC" : g[6][0]} to ${g[6][1] < 0 ? -g[6][1] + " BC" : g[6][1]}` : ""}</p>
+  <p><span class="chip m">made</span> ${st ? (st[5] ? esc(st[0]) + (st[4] ? ", near " + esc(st[4]) : "") : esc(st[0])) + ` <span class="sub">(${esc(HOW_NAME[g[3]])})</span>` : "not known"}</p>
+  <p><span class="chip s">set</span> ${g[4].map((p, k) => esc(D.places[p][0]) + ` <span class="sub">(${["", "Wikidata", "Wikipedia", "both"][g[5][k]]})</span>`).join("; ") || "space only"}</p>${sp}
+  <p class="sub"><a href="https://www.wikidata.org/wiki/${esc(g[8])}" target="_blank" rel="noopener">Wikidata ${esc(g[8])}</a>${g[9] ? ` · <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(g[9])}" target="_blank" rel="noopener">Wikipedia</a>` : ""}</p>`;
+  if (st) lines(g[4].filter(p => D.places[p][3] <= 3).map(p => [[st[2], st[1]], [D.places[p][2], D.places[p][1]]])); else selL.clearLayers();
+  S.prev = keepPrev && prev ? () => { prev(); } : null; wire();
+  if (!keepPrev) { const pts = g[4].map(p => [D.places[p][2], D.places[p][1]]).concat(st ? [[st[2], st[1]]] : []); if (pts.length) lmap.fitBounds(L.latLngBounds(pts).pad(.4), { maxZoom: 5 }); }
+}
+
+/* ===== search ===== */
+function initSearch() {
+  const q = $("q"), sug = $("sug"); let items = [], act = -1;
+  const idx = [];
+  D.places.forEach((p, i) => { if (p[3] <= 3) idx.push({ t: "p", i, n: p[0], s: KIND_NAME[p[3]] + (p[4] >= 0 && p[3] !== 3 ? ", " + short(D.countries[p[4]][1]) : "") }); });
+  const sn = new Map(); D.studios.forEach((s, i) => { if (s[5]) { const k = s[0]; if (!sn.has(k) || AGG.sg[i] > AGG.sg[sn.get(k)]) sn.set(k, i); } });
+  for (const [k, i] of sn) idx.push({ t: "s", i, n: k, s: "studio" + (D.studios[i][4] ? ", " + D.studios[i][4] : "") });
+  D.games.forEach((g, i) => { if (g[0]) idx.push({ t: "g", i, n: g[0], s: "game, " + (g[1] || "") }); });
+  const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  idx.forEach(o => o.f = fold(o.n));
+  const go = o => { sug.style.display = "none"; q.value = o.n; if (o.t === "p") showPlace(o.i, true); else if (o.t === "s") showStudio(o.i, true); else if (o.t === "g") showGame(o.i, false); else lmap.setView([o.lat, o.lon], 7); };
+  const render = () => { sug.innerHTML = items.map((o, k) => `<li role="option" aria-selected="${k === act}" data-k="${k}">${esc(o.n)} <span>${esc(o.s)}</span></li>`).join(""); sug.style.display = items.length ? "block" : "none"; sug.querySelectorAll("li").forEach(li => li.onmousedown = e => { e.preventDefault(); go(items[+li.dataset.k]); }); };
+  q.addEventListener("input", () => {
+    const v = fold(q.value.trim()); act = -1; if (v.length < 2) { items = []; render(); return; }
+    const rank = o => (o.f.startsWith(v) ? 0 : 1) + (o.t === "p" ? 0 : o.t === "s" ? .2 : .4);
+    items = idx.filter(o => o.f.includes(v)).sort((a, b) => rank(a) - rank(b) || a.n.length - b.n.length).slice(0, 10);
+    if (items.length < 10 && TOWNS) for (const t of TOWNS) { if (fold(t[0]).startsWith(v) && !items.some(o => o.n === t[0])) { items.push({ t: "town", n: t[0], s: "town (zoom to it)", lat: t[2], lon: t[1] }); if (items.length >= 10) break; } }
+    render();
+  });
+  q.addEventListener("keydown", e => { if (e.key === "ArrowDown") { act = Math.min(items.length - 1, act + 1); render(); e.preventDefault(); } else if (e.key === "ArrowUp") { act = Math.max(0, act - 1); render(); e.preventDefault(); } else if (e.key === "Enter" && items.length) { go(items[Math.max(0, act)]); } else if (e.key === "Escape") { sug.style.display = "none"; } });
+  q.addEventListener("blur", () => setTimeout(() => sug.style.display = "none", 150));
+}
+
+/* ===== space ===== */
+const BODIES = [
+  { k: 0, name: "The Moon", c: ["#d9d6d0", "#8f8b84"], spots: "#6f6b66", note: "Earth's moon" },
+  { k: 1, name: "Mars", c: ["#e08a5a", "#8e3b1c"], spots: "#6a2a14", note: "the red planet" },
+  { k: 7, name: "Outer space", c: ["#2a2b5e", "#0b0c22"], spots: "#ffffff", note: "spacecraft, the Solar System at large, the galaxy", stars: true },
+  { k: 3, name: "Titan", c: ["#e9b45a", "#9a6120"], spots: "#b67a2a", note: "Saturn's largest moon", haze: true },
+  { k: 2, name: "Venus", c: ["#f1dca0", "#b8923f"], spots: "#d8b86a", note: "under the clouds", haze: true },
+  { k: 4, name: "Jupiter's moons", c: ["#f0e07a", "#a0812a"], spots: "#c0582f", note: "Io and Callisto" },
+  { k: 5, name: "The Sun", c: ["#fff1a6", "#f08a1c"], spots: "#ffbf3f", note: "our star", glow: true },
+  { k: 6, name: "Mercury", c: ["#bdb5ad", "#6d655e"], spots: "#5b544e", note: "closest to the Sun" },
+  { k: 8, name: "Earth orbit and the ISS", c: ["#7fb3d9", "#1d4f7a"], spots: "#4f8a4a", note: "no games tagged" },
+];
+function rng(seed) { let s = seed; return () => (s = (s * 16807) % 2147483647) / 2147483647; }
+function drawSphere(cv, b, rot) {
+  const g = cv.getContext("2d"), W = cv.width, r = W * .38, cx = W / 2, cy = W / 2;
+  g.clearRect(0, 0, W, W);
+  if (b.stars) { const R = rng(7); g.fillStyle = "#0b0c22"; g.beginPath(); g.arc(cx, cy, W * .48, 0, 7); g.fill(); for (let i = 0; i < 140; i++) { const a = R() * 6.283, d = Math.sqrt(R()) * W * .47, x = cx + Math.cos(a) * d + ((rot * 8 + i * 3) % 6) * 0, y = cy + Math.sin(a) * d; g.fillStyle = `rgba(255,255,255,${.25 + .75 * Math.abs(Math.sin(rot * 2 + i))})`; g.fillRect(x, y, R() < .1 ? 2 : 1.2, R() < .1 ? 2 : 1.2); } return; }
+  if (b.glow) { const gr = g.createRadialGradient(cx, cy, r * .8, cx, cy, r * 1.3); gr.addColorStop(0, "rgba(255,190,60,.55)"); gr.addColorStop(1, "rgba(255,190,60,0)"); g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, r * 1.3, 0, 7); g.fill(); }
+  const gr = g.createRadialGradient(cx - r * .35, cy - r * .35, r * .1, cx, cy, r);
+  gr.addColorStop(0, b.c[0]); gr.addColorStop(1, b.c[1]); g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, r, 0, 7); g.fill();
+  g.save(); g.beginPath(); g.arc(cx, cy, r, 0, 7); g.clip();
+  const R = rng(b.k * 97 + 11);
+  for (let i = 0; i < 46; i++) {
+    const lon = R() * 6.283, lat = (R() - .5) * 2.8, sz = (.04 + R() * .12) * r, L = lon + rot;
+    const x = Math.sin(L) * Math.cos(lat), z = Math.cos(L) * Math.cos(lat), y = Math.sin(lat);
+    if (z < 0) continue;
+    g.globalAlpha = .18 + .3 * z; g.fillStyle = b.spots;
+    g.beginPath(); g.ellipse(cx + x * r, cy - y * r, sz * Math.max(.15, z), sz, 0, 0, 7); g.fill();
+  }
+  g.globalAlpha = .22; g.strokeStyle = "#fff"; g.lineWidth = .7;
+  for (let m = 0; m < 6; m++) { const L = m * Math.PI / 3 + rot, s = Math.sin(L); if (Math.cos(L) < 0) continue; g.beginPath(); g.ellipse(cx, cy, Math.abs(s) * r, r, 0, 0, 7); g.stroke(); }
+  if (b.haze) { g.globalAlpha = .35; const h = g.createRadialGradient(cx, cy, r * .6, cx, cy, r); h.addColorStop(0, "rgba(255,240,200,0)"); h.addColorStop(1, "rgba(255,240,200,.9)"); g.fillStyle = h; g.fillRect(0, 0, W, W); }
+  g.restore(); g.globalAlpha = 1;
+  const sh = g.createRadialGradient(cx - r * .4, cy - r * .4, r * .2, cx, cy, r * 1.02); sh.addColorStop(0, "rgba(0,0,0,0)"); sh.addColorStop(1, "rgba(0,0,0,.45)"); g.fillStyle = sh; g.beginPath(); g.arc(cx, cy, r, 0, 7); g.fill();
+}
+function initSpace() {
+  const box = $("planets"), by = {}; D.games.forEach((g, i) => { if (g[7]) for (const b of new Set(g[7])) (by[b] = by[b] || []).push(i); });
+  const cvs = [];
+  BODIES.forEach(b => {
+    const n = (by[b.k] || []).length;
+    if (b.k === 6 && !n) return;
+    const bt = document.createElement("button"); bt.className = "planet"; bt.setAttribute("aria-pressed", "false");
+    bt.innerHTML = `<canvas width="220" height="220" aria-hidden="true"></canvas><b>${esc(b.name)}</b><div class="n">${fmt(n)} <span>game${n === 1 ? "" : "s"}</span></div><div class="sub" style="color:var(--muted)">${esc(b.note)}</div>`;
+    bt.onclick = () => { box.querySelectorAll(".planet").forEach(x => x.setAttribute("aria-pressed", x === bt)); list(b, by[b.k] || []); };
+    box.appendChild(bt); cvs.push([bt.querySelector("canvas"), b]);
+  });
+  const list = (b, ids) => {
+    ids.sort((a, c) => (D.games[a][1] || 9999) - (D.games[c][1] || 9999));
+    $("spaceH").textContent = `${b.name}: ${fmt(ids.length)} game${ids.length === 1 ? "" : "s"}, oldest first`;
+    $("spaceList").innerHTML = ids.length ? ids.map(i => `<li><b>${esc(TITLE(D.games[i]))}</b> <span>${D.games[i][1] || "year unknown"}${D.space_detail[D.games[i][8]] && b.k === 7 ? " · " + esc(D.space_detail[D.games[i][8]].split("; ").filter(x => !["Moon", "Mars"].includes(x)).join(", ")) : ""}</span></li>`).join("") : "<li>No game in Wikidata or Wikipedia's categories is tagged with this place.</li>";
+  };
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let vis = false; new IntersectionObserver(e => vis = e[0].isIntersecting).observe(box);
+  let t0 = performance.now();
+  const tick = now => { if (vis || !t0) { const r = reduce ? .6 : (now - t0) / 9000; cvs.forEach(([c, b], i) => drawSphere(c, b, r * (b.stars ? .3 : 1) + i)); } if (!reduce) requestAnimationFrame(tick); };
+  cvs.forEach(([c, b], i) => drawSphere(c, b, i)); requestAnimationFrame(tick);
+  box.querySelector(".planet").click();
+}
+
+/* ===== boot ===== */
+async function boot() {
+  if (!window.L) { $("lmap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; }
+  const [pd, cj, tw] = await Promise.all(["data/page.json", "data/countries.json", "data/towns.json"].map(u => fetch(u).then(r => r.json())));
+  D = pd; TOWNS = tw; aggregate(); initSpace();
+  if (!window.L) return;
+  lmap = L.map("lmap", { minZoom: innerWidth < 600 ? 1 : 2, maxZoom: 10, zoomSnap: .5, worldCopyJump: false, maxBounds: WORLD.pad(.05), maxBoundsViscosity: .8, scrollWheelZoom: false, attributionControl: true });
+  lmap.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  lmap.fitBounds([[-50, -150], [72, 165]]);
+  renderer = L.canvas({ padding: .3 });
+  for (const [k, p] of [["names", 640], ["borders", 270], ["hills", 260], ["land", 250]]) lmap.createPane(k).style.zIndex = p;
+  lmap.getPane("names").style.pointerEvents = "none"; lmap.getPane("hills").style.pointerEvents = "none"; lmap.getPane("borders").style.pointerEvents = "none";
+  const esri = (svc, extra) => L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/${svc}/MapServer/tile/{z}/{y}/{x}`, Object.assign({ maxZoom: 16, attribution: "Tiles © Esri" + (extra || "") }, {}));
+  tiles = { light: esri("Canvas/World_Light_Gray_Base"), dark: esri("Canvas/World_Dark_Gray_Base"), satellite: esri("World_Imagery", ", Maxar, Earthstar Geographics") };
+  landL = L.geoJSON(cj, { pane: "land", renderer: L.canvas({ pane: "land", padding: .3 }), style: () => ({ stroke: false, fillColor: css("--land"), fillOpacity: 1 }),
+    onEachFeature: (f, l) => { l.on("click", () => showCountry(f.properties.i)); l.on("mouseover", () => { const c = D.countries[f.properties.i], i = f.properties.i; l.bindTooltip(`<b>${esc(short(c[1]))}</b><br>${fmt(AGG.cs[i])} set · ${fmt(AGG.cm[i])} made`, { sticky: true }).openTooltip(); }); } }).addTo(lmap);
+  borderL = L.geoJSON(cj, { pane: "borders", interactive: false, renderer: L.canvas({ pane: "borders", padding: .3 }), style: () => ({ color: css("--line"), weight: 1, opacity: .6, fill: false }) });
+  hillCv = document.createElement("canvas");
+  hillL = new CanvasOverlay(hillCv, WORLD, { pane: "hills", interactive: false, attribution: "Hills: AWS Terrain Tiles" });
+  flowL = L.layerGroup().addTo(lmap); dotL = L.layerGroup().addTo(lmap); selL = L.layerGroup().addTo(lmap); nameL = L.layerGroup();
+  L.control.scale({ imperial: false, position: "bottomleft" }).addTo(lmap);
+  lmap.attributionControl.addAttribution("Wikidata, English Wikipedia, Natural Earth, GeoNames");
+  initLayers(); applyLayers(); refresh(); initSearch();
+  lmap.on("click", () => lmap.scrollWheelZoom.enable());
+  $("loading").style.display = "none";
+  $("mapNote").textContent = `Dots: ${fmt(R.meta.places_dots)} places finer than a country, sized by games. Country shading counts every game set (or made) anywhere in the country, including games placed only at country level. Made dots are developer headquarters as recorded today. Scroll to zoom after clicking the map.`;
+  document.querySelectorAll("#modeSeg .btn").forEach(b => b.onclick = () => { S.mode = b.dataset.m; document.querySelectorAll("#modeSeg .btn").forEach(x => x.setAttribute("aria-pressed", x === b)); refresh(); });
+  $("decSel").onchange = e => { S.dec = e.target.value; refresh(); };
+  $("eraSel").onchange = e => { S.era = e.target.value; refresh(); };
+  $("srcSel").onchange = e => { S.src = e.target.value; refresh(); };
+}
+boot().catch(e => { $("loading").textContent = "Could not load the data: " + e.message; });
+</script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Where Games Are Set, and Where They Are Made},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Where Games Are Set, and Where They Are Made\\[2pt] Real Places in Video Games from Wikidata and English Wikipedia\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23735822}{https://doi.org/10.5281/zenodo.23735822}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Video games often borrow real places, but there is no public list of which places, chosen by whom. I combine two open sources to map them: the narrative locations recorded in Wikidata and the ``video games set in'' categories of English Wikipedia. Of {{meta.wikidata_games|int}} video games in Wikidata, {{meta.games_total|int}} can be tied to a real place: {{meta.games_earth|int}} on Earth and {{meta.games_space|int}} in space. Each Earth setting is geocoded offline and, for {{made_cov.share|pct}} of these games, matched to where the developer is based. New York City is the most used setting ({{city.New York City|int}} games), ahead of London ({{city.London|int}}) and Tokyo ({{city.Tokyo|int}}); the United States is a setting for {{top_set_countries.0.share|pct}} of Earth-bound games. The games are made mostly in three countries: the United States, Japan and the United Kingdom make {{made_share3|pct}} of those with a known maker. The busiest route from studio country to setting country runs from Japan to the United States ({{flow.Japan>United States of America|int}} games). American and Japanese studios set most of their games at home ({{home.usa.share_home|pct}} and {{home.japan.share_home|pct}}); British studios set more in the United States than in Britain. Settings such as Egypt ({{spot.egypt.games|int}} games with a known maker) and Monaco ({{spot.monaco.games|int}}) are made entirely elsewhere. The share of games set in the United States falls from {{trend.us_share_1990|pct}} of 1990s releases to {{trend.us_share_2020|pct}} of 2020s releases so far. Off Earth, the Moon ({{space.by_body.Moon|int}} games) leads Mars ({{space.by_body.Mars|int}}). The sources favour well-known Western and Japanese games, and one large Wikidata error had to be set aside; I describe both, and publish an interactive map and all derived tables.
+
+\textbf{Keywords:} video games; setting; game development; cultural geography; Wikidata; Wikipedia categories; geocoding; data visualisation; outer space
+\end{quote}
+
+\section{Introduction}
+
+Games love real places. Players have defended, flooded and rebuilt New York many times over, raced through the streets of Monaco every season and hunted for treasure in the tombs of Egypt. A setting is a choice: a studio decides which part of the world, real or imagined, its players will spend their time in. When it picks a real place, the choice says something about where the studio is, who it expects to play, and which places already carry meaning for that audience.
+
+The question in this note is simple and descriptive. Across the games for which open data record a real setting, where are those games set, and where were they made? Which places are chosen most, which routes from studio to setting are busiest, which countries set games at home and which are mostly settings for others, and how have these patterns changed over time? A second, smaller question covers the games set off Earth: on the Moon, Mars and elsewhere in space.
+
+The author's starting wish was a map of ``every game ever'' set in a real location. No such list exists. What does exist are two open sources maintained by volunteers, Wikidata and English Wikipedia, each with partial and uneven coverage. The approach here is to combine them carefully, to keep track of which source supports each link, and to state plainly what the result can and cannot say. The accompanying interactive page (\url{https://maps.tristanhotham.com/games-on-the-map/}) lets readers explore every game, place and studio in the data.
+
+\section{Data}
+
+\subsection{Wikidata}
+
+Wikidata is a free, collaborative knowledge base published under CC0 (Vrandečić and Krötzsch 2014). I queried it through the QLever SPARQL engine (Bast and Buchhold 2017) on {{meta.retrieved}}. The query returned {{meta.wikidata_games|int}} items that are an instance of video game or of one of its subclasses, with their English label, earliest publication date and English Wikipedia article where one exists ({{meta.wikidata_games_enwiki|int}} have one). For these games I took the narrative location (property P840), the developer (P178), the publisher (P123) and the country of origin (P495). For each narrative location I took its coordinates, country and, where given, the astronomical body it is located on (P376). For each developer I took the coordinates of its headquarters (P159), its own coordinates and its country.
+
+\subsection{English Wikipedia categories}
+
+English Wikipedia sorts many game articles into categories such as ``Video games set in Tokyo'' or ``Video games set in the 1980s''. I used the category tree below ``Category:Video games by setting'' to a depth of six, which holds {{meta.wp_categories|int}} categories whose names say ``set in'' or ``set on'', with their member article titles. Article titles were matched to Wikidata items through sitelinks, and only articles that are video games in Wikidata were kept. Category names and page titles are facts, but the category system is the work of English Wikipedia contributors and is published under CC BY-SA 4.0; I credit it and release the derived data under the same licence.
+
+\subsection{Geography}
+
+Country outlines and label points come from Natural Earth 1:50m admin 0 (public domain). Town names and some place locations come from GeoNames cities15000 (CC BY 4.0), the list of places with 15,000 people or more.
+
+\section{Methods}
+
+\subsection{Settings from Wikidata}
+
+A Wikidata narrative location is kept when the place has coordinates on Earth or is a real body or region of space (the Moon, Mars, Venus, Titan, Io, Callisto, Mercury, the Sun, the Solar System, the Milky Way, outer space). Of the narrative locations used by games, {{meta.wd_fictional_places|int}} were left out: fictional places without coordinates such as Raccoon City and Black Mesa, places on fictional bodies, abstract settings such as ``Earth'' as a whole, and a short hand-checked list of fictional places that carry coordinates (Skull Island, for example). Places are given a level: city or town, region or landmark, country, historical state, or broad region (continents, oceans and regions spanning several countries).
+
+\subsection{Settings from Wikipedia}
+
+Each ``set in'' or ``set on'' category name was parsed and classified. {{meta.wp_categories_era|int}} name a date (a year, decade, century or millennium) and give a setting period; {{meta.wp_categories_space|int}} name somewhere in space; {{meta.wp_categories_other|int}} name a kind of place (castles, hotels, prisons) or an undated period and are not used; {{meta.wp_categories_place|int}} name a real place. A few names carry both a period and a place (for example ``16th-century Sengoku period''). The place part was geocoded offline, in this order: the category's Wikidata main topic where it has coordinates; a Wikidata narrative location with the same English label; a Natural Earth country or a Wikidata country label; a short hand list; and an exact name match in GeoNames for towns of 100,000 people or more. The hand list places US states at their capitals, English counties at their county towns, Japanese prefectures at their main city and historical states at their capital or modern core, and every entry records what it was placed at. Three names could not be placed (Easter Island, Ascension Island and Northumberland).
+
+\subsection{Merging, the most specific place and a data error}
+
+Links from the two sources were merged on the Wikidata item of the game and the place, so each game and place pair is kept once with its source: Wikidata, Wikipedia, or both. If a game is set in a city, region or landmark and also in that place's country, the country link is set aside so that the game is not double counted; broad links are set aside when the game has any finer place on Earth. Historical states are counted in the modern country that contains their point (the Soviet Union in Russia, the Roman Empire in Italy).
+
+While checking the results I found that {{meta.links_dc_sport|int}} games, almost all North American league sports titles such as Madden NFL, NHL and MLB games, carry Washington, D.C. as a Wikidata narrative location with no support from Wikipedia. This looks like a systematic error. I set these links aside, using a documented title pattern, and kept them in the published data with the reason. In all, {{meta.links_set_aside|int}} links were set aside and {{meta.links_used|int}} are used.
+
+\subsection{Where made}
+
+For each game, the place of making is the headquarters of its developer: the developer with headquarters coordinates (the one with the most games if there are several); failing that, the developer's country; failing that, the game's country of origin. The country of a headquarters point is the Natural Earth country containing it. A readable ``studio town'' is the largest GeoNames town within 15 km of the point. Headquarters are recorded as they are now, not as they were when each game was made, and internal studios of large publishers are often recorded at the parent's address.
+
+\subsection{Summaries}
+
+Counts are numbers of distinct games. A game set in several places counts once for each place and once for each country. A game counts as set ``at home'' if any of its setting countries is the country where it was made. Release decades use the earliest publication date in Wikidata; {{meta.with_year|int}} of the {{meta.games_total|int}} games have one. All numbers in this note are produced by the published code and stored in \texttt{results.json}.
+
+\section{Results}
+
+\subsection{Coverage}
+
+The final data hold {{meta.games_total|int}} games: {{meta.games_earth|int}} with a real setting on Earth and {{meta.games_space|int}} with one in space, {{meta.games_earth_and_space|int}} of them in both. That is {{meta.share_of_wikidata|pct1}} of the video games in Wikidata. The two sources overlap only in part (Table~\ref{tab:sources}): {{meta.earth_by_source.both|int}} Earth-set games are placed by both, {{meta.earth_by_source.wikipedia|int}} by Wikipedia alone and {{meta.earth_by_source.wikidata|int}} by Wikidata alone. Wikipedia's categories therefore carry most of the weight. The settings are geocoded to {{meta.places|int}} places in {{meta.countries_set|int}} countries and territories; {{meta.places_cities|int}} are cities or towns.
+
+{{TABLE_SOURCES}}
+
+\subsection{Where games are set}
+
+New York City is the most used setting by some distance, with {{city.New York City|int}} games (Figures~\ref{fig:map} and~\ref{fig:cities}). London ({{city.London|int}}) and Tokyo ({{city.Tokyo|int}}) follow, then Los Angeles ({{city.Los Angeles|int}}), Paris ({{city.Paris|int}}) and San Francisco ({{city.San Francisco|int}}). Washington, D.C. has {{city.Washington, D.C.|int}} games once the sports error is set aside; with it, Washington would have ranked third.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_map.png}
+\caption{Where games are set (red: cities, regions and landmarks) and where their developers have their headquarters (blue). Circles are sized by the number of games. Robinson projection; Natural Earth outlines.}\label{fig:map}
+\end{figure}
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=.92\textwidth]{f_cities.png}
+\caption{The fifteen most used cities, by the number of games set in each (Wikidata and Wikipedia combined).}\label{fig:cities}
+\end{figure}
+
+By country (Table~\ref{tab:countries}), the United States is a setting for {{top_set_countries.0.games|int}} games, {{top_set_countries.0.share|pct}} of all those set on Earth. Japan ({{set_count.Japan|int}}) and the United Kingdom ({{set_count.United Kingdom|int}}) follow, then France, Italy, Russia (with the Soviet Union), Germany and China. Egypt, with {{set_count.Egypt|int}} games, is the most used setting in Africa or the Middle East.
+
+{{TABLE_COUNTRIES}}
+
+\subsection{Where games are made}
+
+For {{made_cov.known|int}} of the Earth-set games ({{made_cov.share|pct}}) a place of making is known: {{made_cov.hq|int}} from headquarters coordinates, {{made_cov.dev_country|int}} from the developer's country and {{made_cov.origin|int}} from the country of origin. Making is far more concentrated than setting. The United States made {{made_count.United States of America|int}} of these games, Japan {{made_count.Japan|int}} and the United Kingdom {{made_count.United Kingdom|int}}, together {{made_share3|pct}}. France ({{made_count.France|int}}) and Canada ({{made_count.Canada|int}}) are next, and no other country passes 150. The busiest studio towns are Tokyo, Osaka, Paris and Seattle.
+
+\subsection{From studio to setting}
+
+The busiest route from studio country to setting country runs from Japan to the United States ({{flow.Japan>United States of America|int}} games), followed by the United Kingdom to the United States ({{flow.United Kingdom>United States of America|int}}), the United States to the United Kingdom ({{flow.United States of America>United Kingdom|int}}), the United States to Russia ({{flow.United States of America>Russia|int}}) and Canada to the United States ({{flow.Canada>United States of America|int}}); see Figure~\ref{fig:flows}.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\textwidth]{f_flows.png}
+\caption{The forty busiest routes from the country where a game was made to a country where it is set, between Natural Earth country label points. Line width and darkness grow with the number of games; red dots mark the setting end.}\label{fig:flows}
+\end{figure}
+
+Studios in the two biggest producing countries mostly stay at home (Figure~\ref{fig:home}): {{home.usa.share_home|pct}} of American-made and {{home.japan.share_home|pct}} of Japanese-made placed games are set at least partly in their own country. Other producers mostly look abroad: {{home.uk.share_home|pct}} for the United Kingdom, {{home.france.share_home|pct}} for France, {{home.canada.share_home|pct}} for Canada and {{home.sweden.share_home|pct}} for Sweden. British studios set more games in the United States ({{flow.United Kingdom>United States of America|int}}) than in Britain ({{flow.United Kingdom>United Kingdom|int}}). Italy and China show high home shares, but on small numbers ({{home_italy_games|int}} and {{home_china_games|int}} games).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=.92\textwidth]{f_home.png}
+\caption{Share of each country's placed games that are set at home, for countries with at least 40 placed games whose maker is known.}\label{fig:home}
+\end{figure}
+
+Turned round, many popular settings are made almost entirely elsewhere. None of the {{spot.egypt.games|int}} games set in Egypt with a known maker were made in Egypt, and none of Monaco's {{spot.monaco.games|int}}, nearly all of them Formula One games. Mexico made {{spot.mexico.made_at_home|int}} of the {{spot.mexico.games|int}} games set there. Italy ({{spot.italy.share_local|pct}}), Germany ({{spot.germany.share_local|pct}}), Russia ({{spot.russia.share_local|pct}}) and China ({{spot.china.share_local|pct}}) each made under a tenth of the games set in them. Only Japan ({{spot.japan.share_local|pct}}) and the United States ({{spot.usa.share_local|pct}}) make a large share of the games set in them.
+
+\subsection{Change over time}
+
+The United States was a setting for {{trend.us_share_1990|pct}} of placed games released in the 1990s, {{trend.us_share_2000|pct}} in the 2000s, {{trend.us_share_2010|pct}} in the 2010s and {{trend.us_share_2020|pct}} of those released so far in the 2020s. Individual places rise and fall (Figure~\ref{fig:trend}). Tokyo's share nearly doubled, from {{trend.tokyo_1990|pct1}} of 1990s games to {{trend.tokyo_2010|pct1}} of 2010s games. Los Angeles peaked in the 1990s ({{trend.la_1990|pct1}}). Egypt declined steadily from {{trend.egypt_1980|pct1}} of 1980s games to {{trend.egypt_2010|pct1}} in the 2010s. Moscow and the Soviet Union were most used in the 1980s ({{trend.moscow_1980|pct1}}) and least in the 2020s so far ({{trend.moscow_2020|pct1}}).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=.92\textwidth]{f_trend.png}
+\caption{Share of each release decade's placed games set in six places. A game counts for a place if it is set there at all. The 1969 to 1979 releases are left out ({{by_decade.1970.games|int}} placed games).}\label{fig:trend}
+\end{figure}
+
+Wikipedia's period categories give a setting date to {{era.games|int}} games. Of these, {{era.cold_war|int}} are set between 1947 and 1991, {{era.ww2|int}} in a year of the Second World War, {{era.ww1|int}} in a year of the First, and {{era_bins.7.games|int}} in 2027 or later. Many single-year categories match the release year, so ``set in 1998'' often means ``set in the present''.
+
+\subsection{Britain}
+
+{{uk.set|int}} games are set in the United Kingdom, {{uk.set_share|pct}} of the Earth-bound total (Figure~\ref{fig:uk}). London has {{place.London|int}}, England as a whole {{place.England|int}}, Scotland {{place.Scotland|int}} and Wales {{place.Wales|int}}. Of British settings with a known maker, {{uk.set_made_at_home_share|pct}} were made in Britain; American studios made {{flow.United States of America>United Kingdom|int}} and Japanese studios {{flow.Japan>United Kingdom|int}}. British studios made {{uk.made|int}} placed games. Their busiest studio towns are London ({{uk.made_towns.0.1|int}}), the Coventry area ({{uk.made_towns.1.1|int}}, mostly Codemasters), Derby ({{uk.made_towns.2.1|int}}, mostly Core Design and Eurocom), Manchester ({{uk.made_towns.3.1|int}}) and Liverpool ({{uk.made_towns.4.1|int}}).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=.95\textwidth]{f_uk.png}
+\caption{Left: British places used as settings. Right: the countries where British-made games are set.}\label{fig:uk}
+\end{figure}
+
+\subsection{Space}
+
+{{space.games|int}} games are set somewhere real off Earth (Figure~\ref{fig:space}). Most are simply in outer space ({{space.by_body.Outer space|int}}, including games set on spacecraft and in the Solar System at large). Among bodies, the Moon has {{space.by_body.Moon|int}} games and Mars {{space.by_body.Mars|int}}, a ratio of {{space.moon_vs_mars|f1}} to one. Titan has {{space.by_body.Titan|int}}, Venus {{space.by_body.Venus|int}}, Jupiter's moons {{space.by_body.Jupiter's moons|int}} (Io in \emph{Dropzone}, 1984, and Callisto in \emph{The Callisto Protocol}, 2022) and the Sun and Mercury one each. No game in either source is tagged with the International Space Station or Earth orbit. The earliest Moon game in the data dates from {{space.moon_first.0.year|raw}}, the earliest Mars game from {{space.mars_first.0.year|raw}}. Most space settings come from Wikipedia's categories ({{space.by_source.wikipedia|int}} game and body pairs, against {{space.by_source.wikidata|int}} from Wikidata alone and {{space.by_source.both|int}} from both).
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=.95\textwidth]{f_space.png}
+\caption{Left: games set in space, by body. Right: games set on the Moon and on Mars, by release decade.}\label{fig:space}
+\end{figure}
+
+\section{Discussion}
+
+Three patterns stand out. First, a small number of places carry a large share of all settings, and they are the places most familiar to the audiences the industry has historically served: New York, London, Tokyo and Los Angeles. Second, the making of games is even more concentrated than their settings, so that most of the world appears in games as a destination rather than a home. Egypt is the clearest case: a favourite setting for decades, with no game set there made there in these data. Third, the pattern is slowly shifting. The United States is a setting for a falling share of games, and Tokyo for a rising one.
+
+The routes between studio and setting point the same way. Japanese, British and Canadian studios all send more games to the United States than to any other foreign setting, while American and Japanese studios are unusual in setting most of their games at home. Everyone else mostly looks outward, and above all towards America. The data show these patterns but not their causes; markets, publishers' preferences and the familiarity of places to players are all plausible reasons, and would need other evidence to separate.
+
+These findings describe the games that open data record, not all games. They should be read as a portrait of the documented, mostly Western and Japanese, part of the industry.
+
+\section{Limitations}
+
+\textbf{Coverage.} Most games have no setting recorded in either source, and many games have no Wikidata item. The data favour well-known games, games covered by English-language Wikipedia, and genres that Wikipedia editors categorise richly, such as sport, war and history. Games made and set in parts of the world with less English-language coverage are under-represented, and probably more so for small studios.
+
+\textbf{Sport.} Sports games add many links: the {{checks.f1_games|int}} yearly Formula One games and managers in the data are each filed under a median of {{checks.f1_median_places|int}} places from that season's calendar. This raises the counts for countries with a Grand Prix, notably Monaco and Belgium.
+
+\textbf{Errors in the sources.} The Washington, D.C. sports links show that bulk errors exist. I set aside the one I found; others may remain. Wikipedia categories are applied by hand and inconsistently, and some category names (``set in 1998'') record the time of play rather than a historical setting.
+
+\textbf{Geocoding.} Regions are shown as points (a US state at its capital, England at Wikidata's coordinates for England), which is adequate for counting but not for fine maps. Historical states are mapped to a modern country. Fictional stand-ins for real places (Liberty City for New York, Vice City for Miami) are not counted as the real place.
+
+\textbf{Where made.} Headquarters are recorded as they are now; studios move, merge and close, and internal studios of publishers are often recorded at the parent's address. The method picks one developer per game. For {{made_cov.unknown|int}} Earth-set games no place of making is known.
+
+\section{Conclusion}
+
+Combining Wikidata's narrative locations with English Wikipedia's setting categories gives a map of {{meta.games_total|int}} games tied to real places. New York is the world's favourite setting, the United States, Japan and the United Kingdom make most of the games, and the busiest route from studio to setting runs from Japan to the United States. Most countries appear in these games as somewhere to visit. Off Earth, the Moon beats Mars. The data are incomplete in known ways, and the published tables keep every link, its source and every set-aside link with its reason, so that others can extend or correct them.
+
+\section*{Data and code availability}
+
+Data and code: \url{https://github.com/Tristan-Hotham/games-on-the-map}. Interactive version: \url{https://maps.tristanhotham.com/games-on-the-map/}. Archived release: \url{https://doi.org/10.5281/zenodo.23735822}. The repository holds the game, place, link, space and period tables as CSV, the page data, the code and every number used here in \texttt{results.json}. Text, figures and derived data are released under CC BY-SA 4.0 (because the Wikipedia category data are CC BY-SA) and the code under the MIT licence. Wikidata content is CC0; GeoNames is CC BY 4.0; Natural Earth is in the public domain.
+
+\section*{AI statement}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+\small
+Bast, H. and Buchhold, B. (2017) QLever: a query engine for efficient SPARQL+text search. In \emph{Proceedings of the 2017 ACM Conference on Information and Knowledge Management (CIKM)}, 647 to 656. \url{https://qlever.cs.uni-freiburg.de}
+
+English Wikipedia contributors (2026) Category:Video games by setting. CC BY-SA 4.0. \url{https://en.wikipedia.org/wiki/Category:Video_games_by_setting} (retrieved 28 October 2026).
+
+GeoNames (2026) cities15000: all cities with a population of 15,000 or more. CC BY 4.0. \url{https://download.geonames.org/export/dump/} (retrieved October 2026).
+
+Natural Earth (2026) 1:50m Cultural Vectors: Admin 0 countries. Public domain. \url{https://www.naturalearthdata.com}
+
+Vrandečić, D. and Krötzsch, M. (2014) Wikidata: a free collaborative knowledgebase. \emph{Communications of the ACM} 57(10): 78 to 85.
+
+Wikidata contributors (2026) Wikidata. CC0. \url{https://www.wikidata.org} (queried 28 October 2026).
+\end{document}
